@@ -3,16 +3,16 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Mohamed Elkashef | Senior Product Analyst & Commercial Analytics Lead</title>
-  <meta name="description" content="Interactive Strategy RPG Portfolio of Mohamed Elkashef — Senior Product Analyst & Commercial Analytics / BI Lead with 7+ years XP in Fintech & Tech Operations." />
+  <title>Mohamed Elkashef — Senior Product Analyst & BI Lead</title>
+  <meta name="description" content="Executive Portfolio of Mohamed Elkashef — Senior Product Analyst, Commercial Analytics & Business Intelligence Lead specializing in SQL, BigQuery, Power BI, Looker Studio, Python, and Product Growth." />
 
-  <!-- Tailwind CSS CDN -->
+  <!-- Tailwind CSS -->
   <script src="https://cdn.tailwindcss.com"></script>
 
-  <!-- Google Fonts -->
+  <!-- Google Fonts: Inter & JetBrains Mono -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@500;700;800;900&family=Plus+Jakarta+Sans:wght@400;500;600;700&family=Space+Grotesk:wght@500;600;700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet">
 
   <!-- Lucide Icons -->
   <script src="https://unpkg.com/lucide@latest"></script>
@@ -22,17 +22,15 @@
       darkMode: 'class',
       theme: {
         extend: {
-          colors: {
-            obsidian: '#090D16',
-            surface: '#111827',
-            cyanNeon: '#00F5D4',
-            violetNeon: '#8B5CF6',
-            goldLoot: '#F59E0B',
-          },
           fontFamily: {
-            hud: ['Orbitron', 'sans-serif'],
-            space: ['Space Grotesk', 'sans-serif'],
-            sans: ['Plus Jakarta Sans', 'sans-serif'],
+            sans: ['Inter', 'system-ui', 'sans-serif'],
+            mono: ['JetBrains Mono', 'monospace'],
+          },
+          colors: {
+            zinc: {
+              925: '#0c0c0e',
+              950: '#09090b',
+            }
           }
         }
       }
@@ -40,408 +38,215 @@
   </script>
 
   <style>
-    :root {
-      --bg-primary: #090D16;
-      --cyan-glow: rgba(0, 245, 212, 0.35);
-      --violet-glow: rgba(139, 92, 246, 0.35);
-      --gold-glow: rgba(245, 158, 11, 0.35);
-    }
-
     body {
-      background-color: #090D16;
-      color: #F8FAFC;
-      font-family: 'Plus Jakarta Sans', sans-serif;
-      overflow-x: hidden;
+      font-family: 'Inter', sans-serif;
+      -webkit-font-smoothing: antialiased;
+    }
+
+    /* Subtle Modern Grid Background */
+    .bg-grid-pattern {
+      background-size: 32px 32px;
       background-image: 
-        radial-gradient(circle at 15% 15%, rgba(0, 245, 212, 0.07) 0%, transparent 35%),
-        radial-gradient(circle at 85% 30%, rgba(139, 92, 246, 0.08) 0%, transparent 40%),
-        linear-gradient(to bottom, rgba(17, 24, 39, 0.4) 1px, transparent 1px),
-        linear-gradient(to right, rgba(17, 24, 39, 0.4) 1px, transparent 1px);
-      background-size: 100% 100%, 100% 100%, 40px 40px, 40px 40px;
+        linear-gradient(to right, rgba(148, 163, 184, 0.05) 1px, transparent 1px),
+        linear-gradient(to bottom, rgba(148, 163, 184, 0.05) 1px, transparent 1px);
     }
 
-    /* HUD Glassmorphism Cards */
-    .hud-card {
-      background: rgba(17, 24, 39, 0.78);
-      backdrop-filter: blur(14px);
-      border: 1px solid rgba(0, 245, 212, 0.2);
-      box-shadow: 0 8px 32px rgba(0, 0, 0, 0.45), inset 0 0 15px rgba(0, 245, 212, 0.03);
-      transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+    /* Clean Bento Card */
+    .bento-card {
+      transition: transform 0.2s ease, border-color 0.2s ease, box-shadow 0.2s ease;
     }
-    .hud-card:hover {
-      border-color: rgba(0, 245, 212, 0.55);
-      box-shadow: 0 12px 40px rgba(0, 245, 212, 0.12), inset 0 0 20px rgba(0, 245, 212, 0.06);
-      transform: translateY(-3px);
+    .bento-card:hover {
+      transform: translateY(-2px);
     }
 
-    .hud-card-violet {
-      background: rgba(17, 24, 39, 0.78);
-      backdrop-filter: blur(14px);
-      border: 1px solid rgba(139, 92, 246, 0.25);
-      box-shadow: 0 8px 32px rgba(0, 0, 0, 0.45);
-      transition: all 0.3s ease;
-    }
-    .hud-card-violet:hover {
-      border-color: rgba(139, 92, 246, 0.65);
-      box-shadow: 0 12px 40px rgba(139, 92, 246, 0.16);
-      transform: translateY(-3px);
-    }
-
-    /* Corner Cyber Cutouts */
-    .cyber-corner {
-      clip-path: polygon(0 0, calc(100% - 14px) 0, 100% 14px, 100% 100%, 14px 100%, 0 calc(100% - 14px));
-    }
-
-    /* Photo Cyber Studio Filter for Real Photos */
-    .cyber-photo-filter {
-      filter: contrast(1.12) brightness(0.95) saturate(1.08);
-      transition: all 0.5s ease;
-    }
-
-    /* Scanline Overlay */
-    .scanlines::after {
-      content: "";
-      position: absolute;
-      inset: 0;
-      background: linear-gradient(to bottom, transparent 50%, rgba(0, 245, 212, 0.04) 51%);
-      background-size: 100% 4px;
-      pointer-events: none;
-    }
-
-    /* Executive Mode Overrides */
-    body.recruiter-mode {
-      background-image: none;
-      background-color: #0B0F19;
-    }
-    body.recruiter-mode .game-only {
-      display: none !important;
-    }
-    body.recruiter-mode .hud-card,
-    body.recruiter-mode .hud-card-violet {
-      border-color: rgba(255, 255, 255, 0.12);
-      box-shadow: none;
-    }
-
-    /* Custom Scrollbar */
-    ::-webkit-scrollbar {
-      width: 8px;
-    }
-    ::-webkit-scrollbar-track {
-      background: #090D16;
-    }
-    ::-webkit-scrollbar-thumb {
-      background: linear-gradient(180deg, #00F5D4, #8B5CF6);
-      border-radius: 4px;
+    @media print {
+      .no-print {
+        display: none !important;
+      }
     }
   </style>
 </head>
-<body class="selection:bg-cyanNeon selection:text-obsidian">
+<body class="bg-slate-50 text-slate-900 dark:bg-zinc-950 dark:text-zinc-100 bg-grid-pattern selection:bg-indigo-500 selection:text-white transition-colors duration-200">
 
-  <!-- TOP LIVE XP PROGRESS BAR -->
-  <div class="fixed top-0 left-0 right-0 z-50 h-1.5 bg-slate-900 border-b border-slate-800">
-    <div id="xpProgressBar" class="h-full bg-gradient-to-r from-cyanNeon via-violetNeon to-goldLoot transition-all duration-150" style="width: 14%;"></div>
-  </div>
+  <!-- Ambient Top Glow (Subtle & Executive) -->
+  <div class="pointer-events-none fixed top-0 left-1/2 -translate-x-1/2 w-[900px] h-[320px] bg-gradient-to-tr from-indigo-500/10 via-teal-500/10 to-transparent blur-3xl -z-10"></div>
 
-  <!-- STICKY TOP HUD HEADER -->
-  <header class="fixed top-1.5 left-0 right-0 z-40 bg-obsidian/90 backdrop-blur-md border-b border-slate-800/80">
-    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-16 flex items-center justify-between gap-3">
+  <!-- STICKY NAVIGATION BAR -->
+  <header class="sticky top-0 z-50 border-b border-slate-200/80 dark:border-zinc-800/80 bg-white/80 dark:bg-zinc-950/80 backdrop-blur-md no-print">
+    <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 h-16 flex items-center justify-between">
       
-      <!-- Player Badge -->
-      <a href="#lore" class="flex items-center gap-3 group">
-        <div class="w-10 h-10 rounded-lg bg-gradient-to-br from-cyanNeon/20 to-violetNeon/30 border border-cyanNeon/50 flex items-center justify-center font-hud font-bold text-cyanNeon group-hover:scale-105 transition">
+      <!-- Brand Identity -->
+      <a href="#top" class="flex items-center gap-3 group">
+        <div class="w-9 h-9 rounded-lg bg-slate-900 dark:bg-white text-white dark:text-zinc-950 flex items-center justify-center font-mono font-bold text-sm tracking-tighter">
           ME
         </div>
         <div>
-          <div class="flex items-center gap-2">
-            <span class="font-hud font-bold text-sm sm:text-base tracking-wider text-white">ELKASHEF</span>
-            <span id="currentLevelBadge" class="text-[10px] font-hud px-2 py-0.5 rounded bg-goldLoot/20 text-goldLoot border border-goldLoot/40">LVL 7</span>
-          </div>
-          <p class="text-[11px] text-slate-400 hidden sm:block">Sr. Product Analyst & Commercial BI Lead</p>
+          <span class="font-semibold text-sm sm:text-base tracking-tight block leading-none">Mohamed Elkashef</span>
+          <span class="text-[11px] text-slate-500 dark:text-zinc-400 font-mono">Product Analytics & BI Lead</span>
         </div>
       </a>
 
-      <!-- Desktop Quest Navigation -->
-      <nav class="hidden xl:flex items-center gap-1 text-xs font-space">
-        <a href="#lore" onclick="playClick()" class="px-2.5 py-1.5 rounded hover:bg-slate-800/80 text-slate-300 hover:text-cyanNeon transition">[01] Lore</a>
-        <a href="#timeline" onclick="playClick()" class="px-2.5 py-1.5 rounded hover:bg-slate-800/80 text-slate-300 hover:text-cyanNeon transition">[02] Campaign</a>
-        <a href="#skills" onclick="playClick()" class="px-2.5 py-1.5 rounded hover:bg-slate-800/80 text-slate-300 hover:text-cyanNeon transition">[03] Skill Tree</a>
-        <a href="#quests" onclick="playClick()" class="px-2.5 py-1.5 rounded hover:bg-slate-800/80 text-slate-300 hover:text-cyanNeon transition">[04] Quests</a>
-        <a href="#inventory" onclick="playClick()" class="px-2.5 py-1.5 rounded hover:bg-slate-800/80 text-slate-300 hover:text-cyanNeon transition">[05] Inventory</a>
-        <a href="#trophies" onclick="playClick()" class="px-2.5 py-1.5 rounded hover:bg-slate-800/80 text-slate-300 hover:text-cyanNeon transition">[06] Trophies</a>
-        <a href="#arcade" onclick="playClick()" class="px-2.5 py-1.5 rounded hover:bg-slate-800/80 text-goldLoot font-semibold transition game-only">[07] Arcade</a>
+      <!-- Section Links -->
+      <nav class="hidden md:flex items-center gap-6 text-xs font-medium text-slate-600 dark:text-zinc-400">
+        <a href="#about" class="hover:text-indigo-600 dark:hover:text-white transition">Overview</a>
+        <a href="#skills-tools" class="hover:text-indigo-600 dark:hover:text-white transition font-semibold text-indigo-600 dark:text-indigo-400">Skills & Tools</a>
+        <a href="#case-studies" class="hover:text-indigo-600 dark:hover:text-white transition">Case Studies</a>
+        <a href="#experience" class="hover:text-indigo-600 dark:hover:text-white transition">Career Path</a>
+        <a href="#certifications" class="hover:text-indigo-600 dark:hover:text-white transition">Certifications</a>
+        <a href="#simulator" class="hover:text-indigo-600 dark:hover:text-white transition">Interactive Case</a>
       </nav>
 
-      <!-- Controls: Mode Toggle, Sound, CV CTA -->
-      <div class="flex items-center gap-2">
-        <!-- Sound Toggle -->
-        <button id="soundToggleBtn" onclick="toggleSound()" title="Toggle UI Sound Effects" class="p-2 rounded-lg bg-slate-900 border border-slate-700 text-slate-400 hover:text-cyanNeon hover:border-cyanNeon/50 transition">
-          <i data-lucide="volume-x" id="soundIcon" class="w-4 h-4"></i>
+      <!-- Actions -->
+      <div class="flex items-center gap-2.5">
+        <button onclick="toggleTheme()" class="p-2 rounded-lg border border-slate-200 dark:border-zinc-800 text-slate-600 dark:text-zinc-400 hover:bg-slate-100 dark:hover:bg-zinc-900 transition" title="Switch Dark / Light Theme">
+          <i data-lucide="sun" id="themeIcon" class="w-4 h-4"></i>
         </button>
-
-        <!-- Dual Mode Toggle -->
-        <button id="modeToggleBtn" onclick="togglePortfolioMode()" class="flex items-center gap-2 px-3 py-1.5 rounded-lg bg-gradient-to-r from-violetNeon/20 to-cyanNeon/20 border border-cyanNeon/40 text-xs font-space font-semibold text-white hover:border-cyanNeon transition">
-          <span id="modeIcon">🎮</span>
-          <span id="modeLabel">Story RPG Mode</span>
+        <button onclick="window.print()" class="hidden sm:inline-flex items-center gap-1.5 px-3.5 py-2 rounded-lg border border-slate-200 dark:border-zinc-800 text-xs font-medium hover:bg-slate-100 dark:hover:bg-zinc-900 transition">
+          <i data-lucide="printer" class="w-3.5 h-3.5"></i>
+          <span>Print / PDF</span>
         </button>
-
-        <!-- Print / Download CV -->
-        <button onclick="window.print()" class="hidden sm:flex items-center gap-1.5 px-3 py-1.5 rounded-lg bg-cyanNeon text-obsidian font-space font-bold text-xs hover:bg-cyanNeon/90 transition shadow-lg shadow-cyanNeon/20">
-          <i data-lucide="file-down" class="w-3.5 h-3.5"></i>
-          <span>Save CV</span>
-        </button>
+        <a href="mailto:mokashef96@gmail.com" class="inline-flex items-center gap-1.5 px-3.5 py-2 rounded-lg bg-indigo-600 hover:bg-indigo-500 text-white text-xs font-medium transition shadow-sm">
+          <i data-lucide="mail" class="w-3.5 h-3.5"></i>
+          <span>Contact</span>
+        </a>
       </div>
+
     </div>
   </header>
 
-  <!-- MAIN CONTAINER -->
-  <main class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pt-24 pb-20 space-y-24">
+  <!-- MAIN CONTENT -->
+  <main id="top" class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 py-12 sm:py-16 space-y-24">
 
     <!-- ==========================================
-         SECTION 1: [01] CHARACTER LORE (HERO & ABOUT ME)
+         1. HERO & EXECUTIVE SUMMARY
          ========================================== -->
-    <section id="lore" class="scroll-mt-24">
-      <!-- Top Status Banner -->
-      <div class="flex flex-wrap items-center justify-between gap-2 mb-6 px-4 py-2 rounded-lg bg-slate-900/90 border border-slate-800 text-xs font-space">
-        <div class="flex items-center gap-2 text-cyanNeon">
-          <span class="w-2 h-2 rounded-full bg-cyanNeon animate-ping"></span>
-          <span class="font-hud uppercase tracking-wider">CHAPTER 01 // CHARACTER LORE & ATTRIBUTES</span>
-        </div>
-        <div class="text-slate-400 flex items-center gap-4">
-          <span>📍 Server: <strong class="text-white">Cairo, Egypt (Global / Relocation Ready)</strong></span>
-          <span class="hidden md:inline">⚡ Class: <strong class="text-violetNeon">Data Wizard + Product Strategist</strong></span>
-        </div>
-      </div>
-
-      <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 items-center">
+    <section id="about" class="scroll-mt-24">
+      <div class="grid grid-cols-1 lg:grid-cols-12 gap-10 items-center">
         
-        <!-- LEFT COLUMN: INTERACTIVE AVATAR FRAME (PHOTO SLOTS #1 & #2) -->
-        <div class="lg:col-span-5 flex flex-col items-center">
-          <div class="relative w-full max-w-md hud-card rounded-2xl p-5 overflow-hidden group">
-            <!-- Top HUD Frame Header -->
-            <div class="flex items-center justify-between text-xs font-hud text-slate-400 mb-3 pb-2 border-b border-slate-800">
-              <span class="text-cyanNeon">PLAYER_ID // ELKASHEF_96</span>
-              <span id="avatarStateLabel" class="px-2 py-0.5 rounded bg-violetNeon/20 text-violetNeon border border-violetNeon/40">CYBER RPG AVATAR</span>
-            </div>
-
-            <!-- Avatar Display Container -->
-            <div class="relative aspect-[4/4.3] w-full rounded-xl overflow-hidden bg-gradient-to-b from-slate-900 via-indigo-950/50 to-obsidian border border-cyanNeon/30 scanlines flex items-center justify-center">
-              
-              <!-- PHOTO SLOT #1: STYLIZED RPG AVATAR (Custom SVG tailored to Mohamed's exact look: Curly dark hair, signature rectangular glasses, trimmed beard, cyber blazer) -->
-              <div id="rpgAvatarView" class="w-full h-full flex flex-col items-center justify-end relative pt-4 transition-opacity duration-500">
-                <!-- Background HUD Halo -->
-                <div class="absolute top-6 w-52 h-52 rounded-full border border-cyanNeon/25 animate-pulse flex items-center justify-center">
-                  <div class="w-40 h-40 rounded-full border border-dashed border-violetNeon/30"></div>
-                </div>
-                <!-- Floating HUD Data Nodes -->
-                <div class="absolute top-4 left-4 text-[10px] font-hud text-cyanNeon/80 bg-obsidian/80 px-2 py-1 rounded border border-cyanNeon/30">
-                  SQL: 98%<br/>FUNNELS: +20%
-                </div>
-                <div class="absolute top-4 right-4 text-[10px] font-hud text-goldLoot/90 bg-obsidian/80 px-2 py-1 rounded border border-goldLoot/30">
-                  PORTFOLIO<br/>30M+ EGP
-                </div>
-
-                <!-- Custom Vector Portrait of Mohamed Elkashef -->
-                <svg viewBox="0 0 320 340" class="w-full h-full max-h-[310px] drop-shadow-[0_0_20px_rgba(0,245,212,0.25)]" xmlns="http://www.w3.org/2000/svg">
-                  <defs>
-                    <linearGradient id="skinGrad" x1="0" y1="0" x2="0" y2="1">
-                      <stop offset="0%" stop-color="#E0AC8B"/>
-                      <stop offset="100%" stop-color="#C68B67"/>
-                    </linearGradient>
-                    <linearGradient id="jacketGrad" x1="0" y1="0" x2="1" y2="1">
-                      <stop offset="0%" stop-color="#1E293B"/>
-                      <stop offset="50%" stop-color="#0F172A"/>
-                      <stop offset="100%" stop-color="#1E1B4B"/>
-                    </linearGradient>
-                    <linearGradient id="glassReflect" x1="0" y1="0" x2="1" y2="1">
-                      <stop offset="0%" stop-color="#00F5D4" stop-opacity="0.45"/>
-                      <stop offset="50%" stop-color="#3B82F6" stop-opacity="0.2"/>
-                      <stop offset="100%" stop-color="#8B5CF6" stop-opacity="0.35"/>
-                    </linearGradient>
-                  </defs>
-
-                  <!-- Shoulders / Cyber Blazer (Inspired by image_5.png blazer) -->
-                  <path d="M35 340 C40 265, 95 245, 160 245 C225 245, 280 265, 285 340 Z" fill="url(#jacketGrad)" stroke="#00F5D4" stroke-width="2"/>
-                  <!-- Inner Dark Collar Shirt -->
-                  <path d="M120 245 L160 315 L200 245 Z" fill="#090D16" stroke="#8B5CF6" stroke-width="1.5"/>
-                  <!-- Glowing Blazer Lapels -->
-                  <path d="M105 248 L152 320 M215 248 L168 320" stroke="#00F5D4" stroke-width="2.5" stroke-linecap="round"/>
-                  <!-- Cyber Chest Badge -->
-                  <circle cx="215" cy="295" r="8" fill="#090D16" stroke="#F59E0B" stroke-width="2"/>
-                  <circle cx="215" cy="295" r="3" fill="#00F5D4"/>
-
-                  <!-- Neck -->
-                  <rect x="135" y="205" width="50" height="50" rx="18" fill="#C68B67"/>
-
-                  <!-- Ears -->
-                  <ellipse cx="95" cy="155" rx="10" ry="18" fill="#C68B67"/>
-                  <ellipse cx="225" cy="155" rx="10" ry="18" fill="#C68B67"/>
-
-                  <!-- Head Base -->
-                  <path d="M100 115 C100 72, 220 72, 220 115 C222 175, 205 225, 160 228 C115 225, 98 175, 100 115 Z" fill="url(#skinGrad)"/>
-
-                  <!-- Short Curly Dark Hair & Faded Sides (Matched to image_3.png & image_5.png) -->
-                  <path d="M98 130 C93 95, 108 62, 160 60 C212 62, 227 95, 222 130 C218 110, 212 95, 198 88 C180 82, 140 82, 122 88 C108 95, 102 110, 98 130 Z" fill="#18181B"/>
-                  <!-- Curly Top Texture -->
-                  <circle cx="130" cy="68" r="14" fill="#18181B"/>
-                  <circle cx="150" cy="63" r="16" fill="#1F2937"/>
-                  <circle cx="172" cy="64" r="15" fill="#18181B"/>
-                  <circle cx="192" cy="70" r="13" fill="#18181B"/>
-                  <circle cx="115" cy="78" r="11" fill="#18181B"/>
-                  <circle cx="204" cy="80" r="11" fill="#18181B"/>
-
-                  <!-- Expressive Eyebrows -->
-                  <path d="M114 126 Q132 118 148 125" stroke="#18181B" stroke-width="5.5" stroke-linecap="round" fill="none"/>
-                  <path d="M172 125 Q188 118 206 126" stroke="#18181B" stroke-width="5.5" stroke-linecap="round" fill="none"/>
-
-                  <!-- Eyes -->
-                  <ellipse cx="132" cy="142" rx="9" ry="6" fill="#FFFFFF"/>
-                  <circle cx="132" cy="142" r="5" fill="#271810"/>
-                  <circle cx="134" cy="140" r="1.8" fill="#00F5D4"/>
-
-                  <ellipse cx="188" cy="142" rx="9" ry="6" fill="#FFFFFF"/>
-                  <circle cx="188" cy="142" r="5" fill="#271810"/>
-                  <circle cx="190" cy="140" r="1.8" fill="#00F5D4"/>
-
-                  <!-- Signature Rectangular Half-Rim Glasses with Blue/Cyan Screen Glare (Matched to image_3.png & image_5.png) -->
-                  <!-- Left Lens -->
-                  <rect x="108" y="130" width="46" height="27" rx="4" fill="url(#glassReflect)" stroke="#94A3B8" stroke-width="1.5"/>
-                  <path d="M107 131 H155" stroke="#0F172A" stroke-width="4.5" stroke-linecap="round"/>
-                  <!-- Right Lens -->
-                  <rect x="166" y="130" width="46" height="27" rx="4" fill="url(#glassReflect)" stroke="#94A3B8" stroke-width="1.5"/>
-                  <path d="M165 131 H213" stroke="#0F172A" stroke-width="4.5" stroke-linecap="round"/>
-                  <!-- Bridge & Temples -->
-                  <path d="M154 134 H166" stroke="#0F172A" stroke-width="3.5"/>
-                  <path d="M96 138 L108 133 M212 133 L224 138" stroke="#CBD5E1" stroke-width="3"/>
-
-                  <!-- Nose -->
-                  <path d="M160 138 L156 168 Q160 173 167 168" stroke="#A36A47" stroke-width="3" fill="none" stroke-linecap="round"/>
-
-                  <!-- Trimmed Beard, Mustache & Soul Patch (Matched to Mohamed's exact facial hair) -->
-                  <!-- Full Jawline Beard -->
-                  <path d="M101 155 C102 195, 125 227, 160 229 C195 227, 218 195, 219 155 C214 175, 202 204, 185 212 C170 218, 150 218, 135 212 C118 204, 106 175, 101 155 Z" fill="#1F242D" opacity="0.92"/>
-                  <!-- Mustache -->
-                  <path d="M133 184 Q147 175 160 181 Q173 175 187 184 Q175 188 160 185 Q145 188 133 184 Z" fill="#18181B"/>
-                  <!-- Confident Warm Smile -->
-                  <path d="M140 190 Q160 202 180 190" stroke="#7C2D12" stroke-width="3" fill="#F8FAFC"/>
-                  <!-- Soul Patch -->
-                  <path d="M153 201 Q160 212 167 201 Z" fill="#18181B"/>
-                </svg>
-              </div>
-
-              <!-- PHOTO SLOT #2: REAL PROFESSIONAL PHOTO VIEW -->
-              <!-- PHOTO SLOT #1 & #2: Replace `assets/photo-pro.jpg` with your solo blazer photo (image_5.png) -->
-              <img id="realPhotoView" src="assets/photo-pro.jpg" alt="Mohamed Elkashef Portrait" 
-                   class="hidden w-full h-full object-cover cyber-photo-filter"
-                   onerror="this.dataset.fallback='true'" />
-            </div>
-
-            <!-- Interactive Avatar Switcher & Custom Solo Photo Loader -->
-            <div class="mt-4 flex flex-wrap items-center justify-between gap-2">
-              <button onclick="switchAvatarView()" class="flex-1 py-2 px-3 rounded-lg bg-gradient-to-r from-cyanNeon/20 to-violetNeon/20 border border-cyanNeon/50 text-xs font-hud text-cyanNeon hover:bg-cyanNeon hover:text-obsidian transition flex items-center justify-center gap-2">
-                <i data-lucide="repeat" class="w-3.5 h-3.5"></i>
-                <span id="switchBtnText">Switch to Real Portrait</span>
-              </button>
-
-              <label class="cursor-pointer py-2 px-3 rounded-lg bg-slate-800/90 border border-slate-700 hover:border-violetNeon text-xs font-space text-slate-300 hover:text-white transition flex items-center gap-1.5" title="Load your solo photo (e.g. image_5.png or image_3.png) with instant Cyber-HUD Studio filter">
-                <i data-lucide="camera" class="w-3.5 h-3.5 text-violetNeon"></i>
-                <span>Load Solo Photo</span>
-                <input type="file" accept="image/*" class="hidden" onchange="loadUserSoloPhoto(event)" />
-              </label>
-            </div>
-          </div>
-        </div>
-
-        <!-- RIGHT COLUMN: CHARACTER LORE & CORE ATTRIBUTE BARS -->
+        <!-- Left Column: Positioning & Narrative -->
         <div class="lg:col-span-7 space-y-6">
-          <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-violetNeon/15 border border-violetNeon/40 text-violetNeon text-xs font-space font-semibold">
-            <span>⚔️ HYBRID CLASS: SENIOR PRODUCT ANALYST & BI ARCHITECT</span>
+          <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-indigo-500/10 border border-indigo-500/20 text-indigo-600 dark:text-indigo-400 text-xs font-mono">
+            <span class="w-2 h-2 rounded-full bg-emerald-500 animate-pulse"></span>
+            <span>7+ Years Experience • Fintech, Lending & Tech Operations</span>
           </div>
 
-          <h1 class="text-3xl sm:text-5xl font-hud font-extrabold tracking-tight leading-tight">
-            MOHAMED <span class="text-transparent bg-clip-text bg-gradient-to-r from-cyanNeon via-white to-violetNeon">ELKASHEF</span>
+          <h1 class="text-3xl sm:text-5xl font-extrabold tracking-tight leading-[1.15]">
+            Turning complex product & commercial data into <span class="text-transparent bg-clip-text bg-gradient-to-r from-indigo-500 to-teal-400">measurable growth.</span>
           </h1>
 
-          <!-- Narrative Lore Box -->
-          <div class="hud-card rounded-xl p-5 border-l-4 border-l-cyanNeon space-y-3">
-            <div class="text-xs font-hud text-goldLoot uppercase tracking-widest flex items-center gap-2">
-              <i data-lucide="scroll-text" class="w-4 h-4"></i>
-              <span>THE ORIGIN & STRATEGY LORE</span>
-            </div>
-            <p class="text-slate-300 text-sm sm:text-base leading-relaxed">
-              "Every great Product Strategist starts by understanding the player. Starting on the customer frontlines at <strong class="text-white">Vodafone</strong> and <strong class="text-white">Talabat</strong>, I decoded real human friction and operational SLAs. Evolving through high-growth Fintech battlegrounds at <strong class="text-cyanNeon">Khazna App</strong> and <strong class="text-violetNeon">Aman Holding</strong>, I mastered the art of turning millions of rows in <strong class="text-white">BigQuery</strong> and automated BI pipelines into product discovery insights, <strong class="text-goldLoot">+20% funnel conversion lifts</strong>, and executive growth strategies."
-            </p>
-          </div>
+          <p class="text-slate-600 dark:text-zinc-400 text-base sm:text-lg leading-relaxed">
+            I am <strong class="text-slate-900 dark:text-white font-semibold">Mohamed Elkashef</strong>, a <strong class="text-slate-900 dark:text-white font-semibold">Senior Product Analyst & Commercial Analytics Lead</strong>. I bridge the gap between deep technical data architecture (<span class="font-mono text-xs bg-slate-200/70 dark:bg-zinc-800 px-1.5 py-0.5 rounded">BigQuery SQL</span>, <span class="font-mono text-xs bg-slate-200/70 dark:bg-zinc-800 px-1.5 py-0.5 rounded">Python</span>, <span class="font-mono text-xs bg-slate-200/70 dark:bg-zinc-800 px-1.5 py-0.5 rounded">Power BI</span>, <span class="font-mono text-xs bg-slate-200/70 dark:bg-zinc-800 px-1.5 py-0.5 rounded">Looker Studio</span>, <span class="font-mono text-xs bg-slate-200/70 dark:bg-zinc-800 px-1.5 py-0.5 rounded">dbt</span>) and strategic Product Management (<span class="font-mono text-xs bg-slate-200/70 dark:bg-zinc-800 px-1.5 py-0.5 rounded">Activation Funnels</span>, <span class="font-mono text-xs bg-slate-200/70 dark:bg-zinc-800 px-1.5 py-0.5 rounded">Product Discovery</span>, <span class="font-mono text-xs bg-slate-200/70 dark:bg-zinc-800 px-1.5 py-0.5 rounded">A/B Testing</span>, <span class="font-mono text-xs bg-slate-200/70 dark:bg-zinc-800 px-1.5 py-0.5 rounded">Roadmapping</span>).
+          </p>
 
-          <!-- Core Character Attributes (Progress Bars) -->
-          <div class="hud-card rounded-xl p-5 space-y-4">
-            <div class="flex items-center justify-between border-b border-slate-800 pb-2">
-              <span class="font-hud text-xs text-cyanNeon tracking-wider">CORE CHARACTER STATS (7+ YEARS XP)</span>
-              <span class="font-hud text-xs text-goldLoot">OVERALL RATING: 96 OVR</span>
+          <!-- Key Executive Highlights -->
+          <div class="grid grid-cols-2 sm:grid-cols-4 gap-3 pt-2">
+            <div class="p-3.5 rounded-xl bg-white dark:bg-zinc-900/90 border border-slate-200 dark:border-zinc-800">
+              <div class="text-2xl font-extrabold text-indigo-600 dark:text-indigo-400 font-mono">+20%</div>
+              <div class="text-xs text-slate-500 dark:text-zinc-400 mt-0.5">Onboarding Funnel Conversion Lift</div>
             </div>
-
-            <!-- Stat 1 -->
-            <div>
-              <div class="flex justify-between text-xs font-space mb-1">
-                <span class="font-semibold text-white">🧭 Product Analytics, Discovery & Funnel Optimization</span>
-                <span class="font-hud text-cyanNeon">96 / 100</span>
-              </div>
-              <div class="w-full h-2.5 bg-slate-900 rounded-full overflow-hidden p-0.5 border border-slate-800">
-                <div class="h-full bg-gradient-to-r from-cyanNeon to-violetNeon rounded-full" style="width: 96%"></div>
-              </div>
-              <p class="text-[11px] text-slate-400 mt-1">User Behavior Analytics • Activation Funnels • Feature Optimization • A/B Testing • Roadmap Support</p>
+            <div class="p-3.5 rounded-xl bg-white dark:bg-zinc-900/90 border border-slate-200 dark:border-zinc-800">
+              <div class="text-2xl font-extrabold text-teal-600 dark:text-teal-400 font-mono">30M+</div>
+              <div class="text-xs text-slate-500 dark:text-zinc-400 mt-0.5">EGP Monthly Portfolio Managed</div>
             </div>
-
-            <!-- Stat 2 -->
-            <div>
-              <div class="flex justify-between text-xs font-space mb-1">
-                <span class="font-semibold text-white">📊 BI Architecture, SQL & Data Modeling</span>
-                <span class="font-hud text-cyanNeon">98 / 100</span>
-              </div>
-              <div class="w-full h-2.5 bg-slate-900 rounded-full overflow-hidden p-0.5 border border-slate-800">
-                <div class="h-full bg-gradient-to-r from-cyanNeon to-emerald-400 rounded-full" style="width: 98%"></div>
-              </div>
-              <p class="text-[11px] text-slate-400 mt-1">Advanced SQL (BigQuery) • Power BI (DAX, M) • Looker Studio • Tableau • Metabase • Dimensional Modeling</p>
+            <div class="p-3.5 rounded-xl bg-white dark:bg-zinc-900/90 border border-slate-200 dark:border-zinc-800">
+              <div class="text-2xl font-extrabold text-emerald-600 dark:text-emerald-400 font-mono">100%</div>
+              <div class="text-xs text-slate-500 dark:text-zinc-400 mt-0.5">Sales Commission Payout Accuracy</div>
             </div>
-
-            <!-- Stat 3 -->
-            <div>
-              <div class="flex justify-between text-xs font-space mb-1">
-                <span class="font-semibold text-white">⚙️ Data Pipelines & Process Automation</span>
-                <span class="font-hud text-violetNeon">92 / 100</span>
-              </div>
-              <div class="w-full h-2.5 bg-slate-900 rounded-full overflow-hidden p-0.5 border border-slate-800">
-                <div class="h-full bg-gradient-to-r from-violetNeon to-cyanNeon rounded-full" style="width: 92%"></div>
-              </div>
-              <p class="text-[11px] text-slate-400 mt-1">Python • Google Apps Script • AppSheet Admin Panels • Lean Six Sigma Green Belt (LSSGB) • Workflow Automation</p>
-            </div>
-
-            <!-- Stat 4 -->
-            <div>
-              <div class="flex justify-between text-xs font-space mb-1">
-                <span class="font-semibold text-white">👑 Commercial Strategy & Cross-Functional Leadership</span>
-                <span class="font-hud text-goldLoot">95 / 100</span>
-              </div>
-              <div class="w-full h-2.5 bg-slate-900 rounded-full overflow-hidden p-0.5 border border-slate-800">
-                <div class="h-full bg-gradient-to-r from-goldLoot to-amber-300 rounded-full" style="width: 95%"></div>
-              </div>
-              <p class="text-[11px] text-slate-400 mt-1">Executive Stakeholder Alignment • KPI Cascading • Sales Forecasting • Root Cause Analysis (RCA) • Team Mentoring</p>
+            <div class="p-3.5 rounded-xl bg-white dark:bg-zinc-900/90 border border-slate-200 dark:border-zinc-800">
+              <div class="text-2xl font-extrabold text-amber-600 dark:text-amber-400 font-mono">7+ Yrs</div>
+              <div class="text-xs text-slate-500 dark:text-zinc-400 mt-0.5">Fintech & Tech Analytics Impact</div>
             </div>
           </div>
 
-          <!-- Hero Action Buttons -->
-          <div class="flex flex-wrap gap-3 pt-1">
-            <a href="#quests" onclick="playClick()" class="px-5 py-3 rounded-xl bg-gradient-to-r from-cyanNeon to-emerald-400 text-obsidian font-hud font-bold text-xs tracking-wider hover:opacity-95 transition flex items-center gap-2 shadow-lg shadow-cyanNeon/20">
-              <i data-lucide="swords" class="w-4 h-4"></i>
-              <span>EXPLORE COMPLETED QUESTS</span>
+          <!-- Primary CTA Links -->
+          <div class="flex flex-wrap items-center gap-3 pt-2">
+            <a href="#skills-tools" class="px-5 py-2.5 rounded-xl bg-slate-900 dark:bg-white text-white dark:text-zinc-950 font-semibold text-xs sm:text-sm hover:opacity-90 transition flex items-center gap-2">
+              <i data-lucide="layers" class="w-4 h-4"></i>
+              <span>Explore Full Skills & Tools Matrix</span>
             </a>
-            <a href="https://www.linkedin.com/in/elkashef/" target="_blank" rel="noopener" class="px-5 py-3 rounded-xl bg-slate-900 border border-violetNeon/50 text-white font-hud font-bold text-xs tracking-wider hover:border-violetNeon hover:bg-violetNeon/10 transition flex items-center gap-2">
-              <i data-lucide="linkedin" class="w-4 h-4 text-violetNeon"></i>
-              <span>LINKEDIN PROFILE</span>
+            <a href="https://www.linkedin.com/in/elkashef/" target="_blank" rel="noopener" class="px-4 py-2.5 rounded-xl border border-slate-300 dark:border-zinc-800 hover:border-indigo-500 text-xs sm:text-sm font-medium transition flex items-center gap-2">
+              <i data-lucide="linkedin" class="w-4 h-4 text-indigo-500"></i>
+              <span>LinkedIn</span>
             </a>
-            <a href="mailto:mokashef96@gmail.com" class="px-4 py-3 rounded-xl bg-slate-900 border border-slate-700 text-slate-300 font-space font-semibold text-xs hover:border-cyanNeon hover:text-cyanNeon transition flex items-center gap-2">
-              <i data-lucide="mail" class="w-4 h-4"></i>
-              <span>mokashef96@gmail.com</span>
+            <a href="https://wa.me/201021195267" target="_blank" rel="noopener" class="px-4 py-2.5 rounded-xl border border-slate-300 dark:border-zinc-800 hover:border-emerald-500 text-xs sm:text-sm font-medium transition flex items-center gap-2">
+              <i data-lucide="phone" class="w-4 h-4 text-emerald-500"></i>
+              <span>+20 102 119 5267</span>
             </a>
+          </div>
+        </div>
+
+        <!-- Right Column: Live Analytics & Product Architecture Terminal (Replaces Photo) -->
+        <div class="lg:col-span-5">
+          <div class="rounded-2xl bg-zinc-900 text-zinc-100 border border-zinc-800 shadow-2xl overflow-hidden">
+            <!-- Terminal Header -->
+            <div class="px-4 py-3 bg-zinc-950 border-b border-zinc-800 flex items-center justify-between">
+              <div class="flex items-center gap-1.5">
+                <span class="w-2.5 h-2.5 rounded-full bg-rose-500/80"></span>
+                <span class="w-2.5 h-2.5 rounded-full bg-amber-500/80"></span>
+                <span class="w-2.5 h-2.5 rounded-full bg-emerald-500/80"></span>
+              </div>
+              <span class="font-mono text-[11px] text-zinc-400">product_funnel_diagnostics.sql — BigQuery</span>
+              <span class="text-[10px] font-mono px-2 py-0.5 rounded bg-teal-500/10 text-teal-400 border border-teal-500/20">VERIFIED</span>
+            </div>
+
+            <!-- Code & Funnel Output Preview -->
+            <div class="p-5 space-y-4 font-mono text-xs">
+              <div class="text-zinc-400 leading-relaxed">
+                <span class="text-indigo-400">WITH</span> user_funnel <span class="text-indigo-400">AS</span> (<br/>
+                &nbsp;&nbsp;<span class="text-indigo-400">SELECT</span> user_id, kyc_step, onboarding_status,<br/>
+                &nbsp;&nbsp;&nbsp;&nbsp;<span class="text-teal-400">LEAD</span>(event_timestamp) <span class="text-indigo-400">OVER</span> (<span class="text-indigo-400">PARTITION BY</span> user_id <span class="text-indigo-400">ORDER BY</span> event_timestamp) <span class="text-indigo-400">AS</span> next_step<br/>
+                &nbsp;&nbsp;<span class="text-indigo-400">FROM</span> `fintech_prod.analytics.onboarding_events`<br/>
+                )<br/>
+                <span class="text-zinc-500">-- Output: Identified KYC friction & drove +20% activation lift</span>
+              </div>
+
+              <!-- Visual Mini Funnel Inside Card -->
+              <div class="p-3.5 rounded-xl bg-zinc-950/90 border border-zinc-800/90 space-y-2.5 font-sans">
+                <div class="flex items-center justify-between text-[11px] text-zinc-400">
+                  <span class="font-semibold text-zinc-200">Core Domain Pillars</span>
+                  <span class="font-mono text-teal-400">Hybrid Profile</span>
+                </div>
+                <div>
+                  <div class="flex justify-between text-xs mb-1">
+                    <span class="text-zinc-300">Data Analysis, SQL & BI Architecture</span>
+                    <span class="font-mono text-indigo-400">Expert</span>
+                  </div>
+                  <div class="w-full h-1.5 bg-zinc-800 rounded-full overflow-hidden">
+                    <div class="h-full bg-indigo-500 rounded-full" style="width: 98%"></div>
+                  </div>
+                </div>
+                <div>
+                  <div class="flex justify-between text-xs mb-1">
+                    <span class="text-zinc-300">Product Discovery, Funnels & A/B Testing</span>
+                    <span class="font-mono text-teal-400">Expert</span>
+                  </div>
+                  <div class="w-full h-1.5 bg-zinc-800 rounded-full overflow-hidden">
+                    <div class="h-full bg-teal-400 rounded-full" style="width: 95%"></div>
+                  </div>
+                </div>
+                <div>
+                  <div class="flex justify-between text-xs mb-1">
+                    <span class="text-zinc-300">Data Pipelines & Low-Code Automation</span>
+                    <span class="font-mono text-amber-400">Advanced</span>
+                  </div>
+                  <div class="w-full h-1.5 bg-zinc-800 rounded-full overflow-hidden">
+                    <div class="h-full bg-amber-400 rounded-full" style="width: 92%"></div>
+                  </div>
+                </div>
+              </div>
+
+              <!-- Quick Tool Badges -->
+              <div class="flex flex-wrap gap-1.5 pt-1 font-mono text-[11px]">
+                <span class="px-2 py-0.5 rounded bg-zinc-800 text-zinc-200">BigQuery</span>
+                <span class="px-2 py-0.5 rounded bg-zinc-800 text-zinc-200">Power BI (DAX)</span>
+                <span class="px-2 py-0.5 rounded bg-zinc-800 text-zinc-200">Looker Studio</span>
+                <span class="px-2 py-0.5 rounded bg-zinc-800 text-zinc-200">Python</span>
+                <span class="px-2 py-0.5 rounded bg-zinc-800 text-zinc-200">Tableau</span>
+                <span class="px-2 py-0.5 rounded bg-zinc-800 text-zinc-200">dbt</span>
+                <span class="px-2 py-0.5 rounded bg-zinc-800 text-zinc-200">AppSheet</span>
+                <span class="px-2 py-0.5 rounded bg-zinc-800 text-zinc-200">Apps Script</span>
+              </div>
+            </div>
           </div>
         </div>
 
@@ -449,222 +254,353 @@
     </section>
 
     <!-- ==========================================
-         INTERACTIVE GAME MANUAL INDEX (TABLE OF CONTENTS)
+         2. COMPREHENSIVE SKILLS & TOOLS MATRIX (STAR SECTION)
          ========================================== -->
-    <section class="game-only">
-      <div class="hud-card rounded-2xl p-6 border border-cyanNeon/30">
-        <div class="flex flex-col sm:flex-row sm:items-center justify-between gap-2 mb-5">
-          <div>
-            <span class="text-xs font-hud text-cyanNeon uppercase tracking-widest">FAST TRAVEL SYSTEM // QUEST DIRECTORY</span>
-            <h2 class="text-xl font-hud font-bold text-white">GAME MANUAL TABLE OF CONTENTS</h2>
-          </div>
-          <span class="text-xs text-slate-400 font-space">Select any module below to teleport directly to that chapter</span>
-        </div>
-
-        <div class="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-7 gap-3">
-          <a href="#lore" onclick="playClick()" class="p-3 rounded-xl bg-slate-900/90 border border-slate-800 hover:border-cyanNeon transition group">
-            <div class="text-[10px] font-hud text-cyanNeon mb-1">CH 01</div>
-            <div class="font-space font-bold text-xs text-white group-hover:text-cyanNeon">About & Stats</div>
-            <div class="text-[10px] text-slate-400 mt-0.5">Character Lore</div>
-          </a>
-          <a href="#timeline" onclick="playClick()" class="p-3 rounded-xl bg-slate-900/90 border border-slate-800 hover:border-cyanNeon transition group">
-            <div class="text-[10px] font-hud text-cyanNeon mb-1">CH 02</div>
-            <div class="font-space font-bold text-xs text-white group-hover:text-cyanNeon">Career Path</div>
-            <div class="text-[10px] text-slate-400 mt-0.5">LVL 1 to LVL 7</div>
-          </a>
-          <a href="#skills" onclick="playClick()" class="p-3 rounded-xl bg-slate-900/90 border border-slate-800 hover:border-violetNeon transition group">
-            <div class="text-[10px] font-hud text-violetNeon mb-1">CH 03</div>
-            <div class="font-space font-bold text-xs text-white group-hover:text-violetNeon">Certificates</div>
-            <div class="text-[10px] text-slate-400 mt-0.5">Skill Tree Badges</div>
-          </a>
-          <a href="#quests" onclick="playClick()" class="p-3 rounded-xl bg-slate-900/90 border border-slate-800 hover:border-cyanNeon transition group">
-            <div class="text-[10px] font-hud text-cyanNeon mb-1">CH 04</div>
-            <div class="font-space font-bold text-xs text-white group-hover:text-cyanNeon">Portfolio</div>
-            <div class="text-[10px] text-slate-400 mt-0.5">Case Studies</div>
-          </a>
-          <a href="#inventory" onclick="playClick()" class="p-3 rounded-xl bg-slate-900/90 border border-slate-800 hover:border-violetNeon transition group">
-            <div class="text-[10px] font-hud text-violetNeon mb-1">CH 05</div>
-            <div class="font-space font-bold text-xs text-white group-hover:text-violetNeon">Tech Arsenal</div>
-            <div class="text-[10px] text-slate-400 mt-0.5">Tools & Loadout</div>
-          </a>
-          <a href="#trophies" onclick="playClick()" class="p-3 rounded-xl bg-slate-900/90 border border-slate-800 hover:border-goldLoot transition group">
-            <div class="text-[10px] font-hud text-goldLoot mb-1">CH 06</div>
-            <div class="font-space font-bold text-xs text-white group-hover:text-goldLoot">Testimonials</div>
-            <div class="text-[10px] text-slate-400 mt-0.5">Trophies & Guild</div>
-          </a>
-          <a href="#arcade" onclick="playClick()" class="p-3 rounded-xl bg-gradient-to-br from-goldLoot/20 to-violetNeon/20 border border-goldLoot/40 hover:border-goldLoot transition group">
-            <div class="text-[10px] font-hud text-goldLoot mb-1">CH 07</div>
-            <div class="font-space font-bold text-xs text-white group-hover:text-goldLoot">The Arcade</div>
-            <div class="text-[10px] text-goldLoot/80 mt-0.5">Play Mini-Game</div>
-          </a>
-        </div>
-      </div>
-    </section>
-
-    <!-- ==========================================
-         SECTION 2: [02] CAMPAIGN TIMELINE (CAREER PATH)
-         ========================================== -->
-    <section id="timeline" class="scroll-mt-24 space-y-8">
-      <div class="flex flex-col md:flex-row md:items-end justify-between gap-4">
+    <section id="skills-tools" class="scroll-mt-24 space-y-8">
+      <div class="flex flex-col md:flex-row md:items-end justify-between gap-4 border-b border-slate-200 dark:border-zinc-800 pb-6">
         <div>
-          <span class="text-xs font-hud text-cyanNeon uppercase tracking-widest">CHAPTER 02 // LEVEL PROGRESSION</span>
-          <h2 class="text-2xl sm:text-4xl font-hud font-bold text-white mt-1">THE CAMPAIGN TIMELINE (2018 – PRESENT)</h2>
+          <span class="text-xs font-mono uppercase tracking-wider text-indigo-600 dark:text-indigo-400">01 // Technical & Strategic Arsenal</span>
+          <h2 class="text-2xl sm:text-3xl font-bold tracking-tight mt-1">Skills, Methodologies & Tools Matrix</h2>
+          <p class="text-sm text-slate-600 dark:text-zinc-400 mt-1">
+            Filter by domain or search any tool/skill to see how I apply it in real production environments.
+          </p>
         </div>
-        <button onclick="reverseTimelineOrder()" class="self-start md:self-auto px-4 py-2 rounded-lg bg-slate-900 border border-cyanNeon/40 text-xs font-space font-semibold text-cyanNeon hover:bg-cyanNeon/10 transition flex items-center gap-2">
-          <i data-lucide="arrow-up-down" class="w-3.5 h-3.5"></i>
-          <span id="timelineOrderLabel">Order: Latest Level First (LVL 7 ➔ LVL 1)</span>
+
+        <!-- Search Input -->
+        <div class="relative w-full md:w-72">
+          <i data-lucide="search" class="w-4 h-4 absolute left-3 top-1/2 -translate-y-1/2 text-slate-400"></i>
+          <input id="skillSearchInput" type="text" oninput="filterSkillsMatrix()" placeholder="Search SQL, Power BI, Funnel, dbt..." 
+                 class="w-full pl-9 pr-4 py-2 rounded-xl bg-white dark:bg-zinc-900 border border-slate-200 dark:border-zinc-800 text-xs focus:outline-none focus:border-indigo-500 transition" />
+        </div>
+      </div>
+
+      <!-- Category Filter Pills -->
+      <div class="flex flex-wrap gap-2">
+        <button onclick="setSkillCategory('all')" class="skill-tab-btn px-4 py-2 rounded-xl text-xs font-semibold bg-indigo-600 text-white transition" data-cat="all">
+          All Skills & Tools (28)
+        </button>
+        <button onclick="setSkillCategory('bi-data')" class="skill-tab-btn px-4 py-2 rounded-xl text-xs font-medium bg-white dark:bg-zinc-900 border border-slate-200 dark:border-zinc-800 hover:border-indigo-500 transition" data-cat="bi-data">
+          📊 Data Analysis & BI Tools (10)
+        </button>
+        <button onclick="setSkillCategory('product')" class="skill-tab-btn px-4 py-2 rounded-xl text-xs font-medium bg-white dark:bg-zinc-900 border border-slate-200 dark:border-zinc-800 hover:border-indigo-500 transition" data-cat="product">
+          🧭 Product Management & Analytics (8)
+        </button>
+        <button onclick="setSkillCategory('engineering')" class="skill-tab-btn px-4 py-2 rounded-xl text-xs font-medium bg-white dark:bg-zinc-900 border border-slate-200 dark:border-zinc-800 hover:border-indigo-500 transition" data-cat="engineering">
+          ⚙️ Data Pipelines & Automation (6)
+        </button>
+        <button onclick="setSkillCategory('strategy')" class="skill-tab-btn px-4 py-2 rounded-xl text-xs font-medium bg-white dark:bg-zinc-900 border border-slate-200 dark:border-zinc-800 hover:border-indigo-500 transition" data-cat="strategy">
+          📈 Commercial Ops & Leadership (4)
         </button>
       </div>
 
-      <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 items-start">
-        
-        <!-- TIMELINE LEVELS LIST -->
-        <div id="timelineContainer" class="lg:col-span-8 space-y-6 relative before:absolute before:top-4 before:bottom-4 before:left-4 sm:before:left-6 before:w-0.5 before:bg-gradient-to-b before:from-cyanNeon before:via-violetNeon before:to-goldLoot">
-          
-          <!-- LEVEL 7 -->
-          <div class="timeline-item relative pl-12 sm:pl-16">
-            <div class="absolute left-1.5 sm:left-3.5 top-4 w-6 h-6 rounded-full bg-obsidian border-2 border-cyanNeon flex items-center justify-center text-[10px] font-hud font-bold text-cyanNeon shadow-[0_0_12px_#00F5D4]">7</div>
-            <div class="hud-card rounded-xl p-5">
-              <div class="flex flex-wrap items-center justify-between gap-2 mb-2">
-                <span class="px-2.5 py-0.5 rounded bg-cyanNeon/20 text-cyanNeon font-hud text-[11px] border border-cyanNeon/40">LVL 7 // CURRENT ACTIVE QUEST (JAN 2026 – PRESENT)</span>
-                <span class="text-xs font-space text-goldLoot font-semibold">+2,500 XP</span>
-              </div>
-              <h3 class="text-lg sm:text-xl font-bold text-white">Operations Manager <span class="text-cyanNeon">@ Private Business</span></h3>
-              <ul class="mt-3 space-y-2 text-xs sm:text-sm text-slate-300 list-disc list-inside">
-                <li><strong class="text-white">Product Funnel & Growth Strategy:</strong> Partnered with product leaders and stakeholders to define Product Performance metrics and map end-to-end activation funnels to accelerate adoption and mitigate risks.</li>
-                <li><strong class="text-white">Data Pipeline & BI Automation:</strong> Automated data extraction and dimensional modeling workflows using <span class="text-cyanNeon">Google Apps Script</span> and deployed real-time interactive dashboards via <span class="text-cyanNeon">Looker Studio</span>.</li>
-                <li><strong class="text-white">Global Platform Expansion:</strong> Architected and deployed a centralized operational Admin Panel via <span class="text-violetNeon">AppSheet</span> to standardize cross-border workflows.</li>
-                <li><strong class="text-white">User Behavior & Pricing Analytics:</strong> Leveraged customer interaction and sentiment analytics alongside sophisticated pricing assessments and demand forecasting.</li>
-              </ul>
-            </div>
-          </div>
+      <!-- Skills & Tools Cards Grid -->
+      <div id="skillsMatrixGrid" class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
 
-          <!-- LEVEL 6 -->
-          <div class="timeline-item relative pl-12 sm:pl-16">
-            <div class="absolute left-1.5 sm:left-3.5 top-4 w-6 h-6 rounded-full bg-obsidian border-2 border-violetNeon flex items-center justify-center text-[10px] font-hud font-bold text-violetNeon">6</div>
-            <div class="hud-card-violet rounded-xl p-5">
-              <div class="flex flex-wrap items-center justify-between gap-2 mb-2">
-                <span class="px-2.5 py-0.5 rounded bg-violetNeon/20 text-violetNeon font-hud text-[11px] border border-violetNeon/40">LVL 6 // AUG 2025 – JAN 2026</span>
-                <span class="text-xs font-space text-goldLoot font-semibold">🏆 100% COMMISSION ACCURACY</span>
-              </div>
-              <h3 class="text-lg sm:text-xl font-bold text-white">Commercial Analytics Supervisor <span class="text-violetNeon">@ Aman Holding</span></h3>
-              <ul class="mt-3 space-y-2 text-xs sm:text-sm text-slate-300 list-disc list-inside">
-                <li><strong class="text-white">Executive BI Automation:</strong> Orchestrated automated performance dashboards in <span class="text-cyanNeon">Power BI</span> and <span class="text-cyanNeon">Looker Studio</span> for real-time C-level visibility into commercial health and SLA adherence.</li>
-                <li><strong class="text-white">Target Cascading & Commission Ownership:</strong> Developed company-wide sales KPIs across regions/channels and led the end-to-end monthly commission payout cycle with <span class="text-goldLoot">100% accuracy</span> across Sales, Finance, and HR.</li>
-                <li><strong class="text-white">Strategic Forecasting & RCA:</strong> Built robust historical sales forecasting models and partnered with Data Engineering on Root Cause Analysis (RCA) to resolve pipeline bottlenecks.</li>
-              </ul>
+        <!-- === GROUP 1: DATA ANALYSIS & BI TOOLS === -->
+        <div class="skill-item bento-card p-5 rounded-2xl bg-white dark:bg-zinc-900/80 border border-slate-200 dark:border-zinc-800/90 flex flex-col justify-between" data-cat="bi-data" data-keywords="sql bigquery window functions ctes query optimization database">
+          <div>
+            <div class="flex items-center justify-between gap-2 mb-2">
+              <span class="px-2.5 py-0.5 rounded-md bg-indigo-500/10 text-indigo-600 dark:text-indigo-400 font-mono text-[11px] font-medium">Data & Warehousing</span>
+              <span class="font-mono text-xs text-emerald-600 dark:text-emerald-400 font-semibold">Expert • 98%</span>
             </div>
+            <h3 class="font-bold text-base">Advanced SQL & Google BigQuery</h3>
+            <p class="text-xs text-slate-600 dark:text-zinc-400 mt-1.5 leading-relaxed">
+              Complex query optimization on massive Fintech datasets, Window Functions, CTEs, cohort retention queries, and automated data extraction.
+            </p>
           </div>
-
-          <!-- LEVEL 5 -->
-          <div class="timeline-item relative pl-12 sm:pl-16">
-            <div class="absolute left-1.5 sm:left-3.5 top-4 w-6 h-6 rounded-full bg-obsidian border-2 border-cyanNeon flex items-center justify-center text-[10px] font-hud font-bold text-cyanNeon">5</div>
-            <div class="hud-card rounded-xl p-5">
-              <div class="flex flex-wrap items-center justify-between gap-2 mb-2">
-                <span class="px-2.5 py-0.5 rounded bg-cyanNeon/20 text-cyanNeon font-hud text-[11px] border border-cyanNeon/40">LVL 5 // DEC 2024 – JUL 2025</span>
-                <span class="text-xs font-space text-cyanNeon font-semibold">FINTECH PRODUCT & BI</span>
-              </div>
-              <h3 class="text-lg sm:text-xl font-bold text-white">Commercial Analytics & Process Integration Lead <span class="text-cyanNeon">@ Khazna App</span></h3>
-              <ul class="mt-3 space-y-2 text-xs sm:text-sm text-slate-300 list-disc list-inside">
-                <li><strong class="text-white">Product Discovery & Activation Funnels:</strong> Collaborated with Product and Sales teams to map user activation funnels, uncovering feature optimization opportunities that drove measurable Product Growth.</li>
-                <li><strong class="text-white">Cross-Functional Product Alignment:</strong> Served as the lead product data partner uniting Product, Engineering, Finance, and Strategy teams around core growth KPIs and roadmap priorities.</li>
-                <li><strong class="text-white">Workflow Automation:</strong> Automated manual daily and weekly reporting workflows using <span class="text-cyanNeon">BigQuery, Looker Studio, Metabase, and Google Sheets</span>.</li>
-              </ul>
-            </div>
+          <div class="mt-4 pt-3 border-t border-slate-100 dark:border-zinc-800/80 flex flex-wrap gap-1.5 font-mono text-[10px] text-slate-500 dark:text-zinc-400">
+            <span>#BigQuery</span><span>#WindowFunctions</span><span>#QueryOptimization</span>
           </div>
-
-          <!-- LEVEL 4 -->
-          <div class="timeline-item relative pl-12 sm:pl-16">
-            <div class="absolute left-1.5 sm:left-3.5 top-4 w-6 h-6 rounded-full bg-obsidian border-2 border-violetNeon flex items-center justify-center text-[10px] font-hud font-bold text-violetNeon">4</div>
-            <div class="hud-card-violet rounded-xl p-5">
-              <div class="flex flex-wrap items-center justify-between gap-2 mb-2">
-                <span class="px-2.5 py-0.5 rounded bg-violetNeon/20 text-violetNeon font-hud text-[11px] border border-violetNeon/40">LVL 4 // MAR 2023 – NOV 2024</span>
-                <span class="text-xs font-space text-goldLoot font-semibold">BIGQUERY & A/B TESTING</span>
-              </div>
-              <h3 class="text-lg sm:text-xl font-bold text-white">Commercial Operations Supervisor <span class="text-violetNeon">@ Khazna App</span></h3>
-              <ul class="mt-3 space-y-2 text-xs sm:text-sm text-slate-300 list-disc list-inside">
-                <li><strong class="text-white">BigQuery SQL Mastery:</strong> Wrote highly optimized SQL queries on large, complex Fintech datasets to generate high-value strategic insights for senior leadership.</li>
-                <li><strong class="text-white">Experimentation & BI:</strong> Evaluated product feature performance using <span class="text-cyanNeon">A/B Testing</span> and presented interactive Looker & Power BI reports.</li>
-                <li><strong class="text-white">Analytics Team Leadership:</strong> Led, mentored, and refined KPI frameworks for a high-performing operations analytics team.</li>
-              </ul>
-            </div>
-          </div>
-
-          <!-- LEVEL 3 -->
-          <div class="timeline-item relative pl-12 sm:pl-16">
-            <div class="absolute left-1.5 sm:left-3.5 top-4 w-6 h-6 rounded-full bg-obsidian border-2 border-goldLoot flex items-center justify-center text-[10px] font-hud font-bold text-goldLoot">3</div>
-            <div class="hud-card rounded-xl p-5 border-goldLoot/30">
-              <div class="flex flex-wrap items-center justify-between gap-2 mb-2">
-                <span class="px-2.5 py-0.5 rounded bg-goldLoot/20 text-goldLoot font-hud text-[11px] border border-goldLoot/40">LVL 3 // NOV 2021 – MAR 2023</span>
-                <span class="text-xs font-space text-goldLoot font-bold">🚀 +20% CONVERSION & 30M+ EGP PORTFOLIO</span>
-              </div>
-              <h3 class="text-lg sm:text-xl font-bold text-white">Partner Success Manager & Community Support <span class="text-goldLoot">@ Khazna App</span></h3>
-              <ul class="mt-3 space-y-2 text-xs sm:text-sm text-slate-300 list-disc list-inside">
-                <li><strong class="text-white">Onboarding Funnel Revamp:</strong> Revitalized digital onboarding and KYC registration processes by eliminating critical user friction points, delivering a documented <span class="text-goldLoot font-bold">+20% increase in activation conversion rates</span>.</li>
-                <li><strong class="text-white">High-Value Revenue Ownership:</strong> Directly managed key enterprise accounts generating over <span class="text-cyanNeon font-bold">30 Million EGP in monthly revenue</span> with exceptional partner retention.</li>
-              </ul>
-            </div>
-          </div>
-
-          <!-- LEVEL 1 & 2 -->
-          <div class="timeline-item relative pl-12 sm:pl-16">
-            <div class="absolute left-1.5 sm:left-3.5 top-4 w-6 h-6 rounded-full bg-obsidian border-2 border-slate-500 flex items-center justify-center text-[10px] font-hud font-bold text-slate-300">1-2</div>
-            <div class="hud-card rounded-xl p-5">
-              <div class="flex flex-wrap items-center justify-between gap-2 mb-2">
-                <span class="px-2.5 py-0.5 rounded bg-slate-800 text-slate-300 font-hud text-[11px] border border-slate-700">LVL 1 & 2 // MAR 2018 – NOV 2021 (THE ORIGIN STORY)</span>
-                <span class="text-xs font-space text-slate-400">CUSTOMER & PARTNER OPS</span>
-              </div>
-              <h3 class="text-lg sm:text-xl font-bold text-white">Regional Account Advisor <span class="text-cyanNeon">@ Talabat</span> & Customer Operations Specialist <span class="text-violetNeon">@ Vodafone</span></h3>
-              <ul class="mt-3 space-y-2 text-xs sm:text-sm text-slate-300 list-disc list-inside">
-                <li><strong class="text-white">Talabat (Jan 2020 – Sep 2020):</strong> Managed regional partner portfolios end-to-end (onboarding, activation, SLA compliance) and coordinated workforce optimization with HR & WFM.</li>
-                <li><strong class="text-white">Vodafone (Mar 2018 – Nov 2021):</strong> Coached and trained customer operations teams, drove strict SLA adherence, and provided premium support for high-value accounts.</li>
-                <li><strong class="text-white">Academic Foundation:</strong> Bachelor's Degree in Education — <span class="text-cyanNeon">Al-Azhar University (2015 – 2018)</span>.</li>
-              </ul>
-            </div>
-          </div>
-
         </div>
 
-        <!-- RIGHT SIDEBAR: VISUAL ACTION CARD (PHOTO SLOT #3) -->
-        <div class="lg:col-span-4 lg:sticky lg:top-24 space-y-6">
-          <div class="hud-card rounded-2xl p-5 overflow-hidden">
-            <div class="text-xs font-hud text-cyanNeon mb-2 flex items-center justify-between">
-              <span>FIELD COMMANDER // IN-ACTION</span>
-              <span>SLOT #03</span>
+        <div class="skill-item bento-card p-5 rounded-2xl bg-white dark:bg-zinc-900/80 border border-slate-200 dark:border-zinc-800/90 flex flex-col justify-between" data-cat="bi-data" data-keywords="power bi dax power query m dashboards microsoft business intelligence">
+          <div>
+            <div class="flex items-center justify-between gap-2 mb-2">
+              <span class="px-2.5 py-0.5 rounded-md bg-indigo-500/10 text-indigo-600 dark:text-indigo-400 font-mono text-[11px] font-medium">Business Intelligence</span>
+              <span class="font-mono text-xs text-emerald-600 dark:text-emerald-400 font-semibold">Expert • 96%</span>
             </div>
-
-            <!-- PHOTO SLOT #3: Replace `assets/photo-action.jpg` with your solo white-shirt close-up (image_3.png) -->
-            <div class="relative aspect-[4/3] rounded-xl overflow-hidden bg-slate-900 border border-slate-800 flex items-center justify-center">
-              <svg viewBox="0 0 400 300" class="w-full h-full" xmlns="http://www.w3.org/2000/svg">
-                <rect width="400" height="300" fill="#0B1120"/>
-                <!-- Cyber Dashboard Screen in Background -->
-                <rect x="20" y="20" width="230" height="150" rx="8" fill="#111827" stroke="#00F5D4" stroke-width="1.5"/>
-                <!-- Funnel Chart on Screen -->
-                <polygon points="45,50 225,50 195,80 75,80" fill="#00F5D4" opacity="0.8"/>
-                <polygon points="75,86 195,86 175,116 95,116" fill="#8B5CF6" opacity="0.85"/>
-                <polygon points="95,122 175,122 160,152 110,152" fill="#F59E0B" opacity="0.9"/>
-                <text x="40" y="42" fill="#00F5D4" font-family="Orbitron" font-size="10">ACTIVATION FUNNEL: +20% LIFT</text>
-
-                <!-- Stylized Mohamed Commander Silhouette (Glasses + White Collar Shirt from image_3.png) -->
-                <circle cx="310" cy="135" r="42" fill="#C68B67"/>
-                <!-- Curly Hair -->
-                <path d="M268 125 C270 85, 350 85, 352 125 C340 105, 280 105, 268 125 Z" fill="#18181B"/>
-                <!-- Signature Glasses -->
-                <rect x="278" y="122" width="26" height="15" rx="3" fill="#00F5D4" fill-opacity="0.35" stroke="#0F172A" stroke-width="2.5"/>
-                <rect x="312" y="122" width="26" height="15" rx="3" fill="#00F5D4" fill-opacity="0.35" stroke="#0F172A" stroke-width="2.5"/>
-                <line x1="304" y1="126" x2="312" y2="126" stroke="#0F172A" stroke-width="2.5"/>
-                <!-- Beard -->
-                <path d="M270 145 C275 182, 345 182, 350 145 C340 168, 280 168, 270 145 Z" fill="#18181B"/>
-                <!-- Crisp White Shirt (from image_3.png) -->
-                <path d="M235 300 C245 210, 375 210, 385 300 Z" fill="#F8FAFC" stroke="#CBD5E1" stroke-width="2"/>
-                <path d="M285 205 L310 245 L335 205" fill="none" stroke="#94A3B8" stroke-width="2"/>
-              </svg>
-            </div>
-
-            <h4 class="font-hud font-bold text-sm text-white mt-4">BRIDGING DATA & PRODUCT STRATEGY</h4>
-            <p class="text-xs text-slate-400 mt-1 leading-relaxed">
-              From writing complex BigQuery SQL models to sitting with Product & Sales leaders to redesign user onboarding flows—every query serves a clear business outcome.
+            <h3 class="font-bold text-base">Power BI (DAX & Power Query M)</h3>
+            <p class="text-xs text-slate-600 dark:text-zinc-400 mt-1.5 leading-relaxed">
+              End-to-end data modeling, custom DAX measures, executive KPI dashboards, and automated commercial health tracking at Aman Holding & Khazna.
             </p>
+          </div>
+          <div class="mt-4 pt-3 border-t border-slate-100 dark:border-zinc-800/80 flex flex-wrap gap-1.5 font-mono text-[10px] text-slate-500 dark:text-zinc-400">
+            <span>#DAX</span><span>#PowerQueryM</span><span>#StarSchema</span><span>#ExecutiveBI</span>
+          </div>
+        </div>
+
+        <div class="skill-item bento-card p-5 rounded-2xl bg-white dark:bg-zinc-900/80 border border-slate-200 dark:border-zinc-800/90 flex flex-col justify-between" data-cat="bi-data" data-keywords="google looker studio data studio dashboards reporting bi">
+          <div>
+            <div class="flex items-center justify-between gap-2 mb-2">
+              <span class="px-2.5 py-0.5 rounded-md bg-indigo-500/10 text-indigo-600 dark:text-indigo-400 font-mono text-[11px] font-medium">Business Intelligence</span>
+              <span class="font-mono text-xs text-emerald-600 dark:text-emerald-400 font-semibold">Expert • 98%</span>
+            </div>
+            <h3 class="font-bold text-base">Google Looker Studio</h3>
+            <p class="text-xs text-slate-600 dark:text-zinc-400 mt-1.5 leading-relaxed">
+              Real-time interactive dashboards connected directly to BigQuery and Google Sheets for product performance, SLA tracking, and user engagement.
+            </p>
+          </div>
+          <div class="mt-4 pt-3 border-t border-slate-100 dark:border-zinc-800/80 flex flex-wrap gap-1.5 font-mono text-[10px] text-slate-500 dark:text-zinc-400">
+            <span>#LookerStudio</span><span>#RealTimeKPIs</span><span>#AutomatedReporting</span>
+          </div>
+        </div>
+
+        <div class="skill-item bento-card p-5 rounded-2xl bg-white dark:bg-zinc-900/80 border border-slate-200 dark:border-zinc-800/90 flex flex-col justify-between" data-cat="bi-data" data-keywords="python pandas numpy scipy scikit-learn matplotlib data science">
+          <div>
+            <div class="flex items-center justify-between gap-2 mb-2">
+              <span class="px-2.5 py-0.5 rounded-md bg-indigo-500/10 text-indigo-600 dark:text-indigo-400 font-mono text-[11px] font-medium">Programming & Data Science</span>
+              <span class="font-mono text-xs text-indigo-500 font-semibold">Advanced • 90%</span>
+            </div>
+            <h3 class="font-bold text-base">Python (Pandas, NumPy, SciPy, Scikit-learn)</h3>
+            <p class="text-xs text-slate-600 dark:text-zinc-400 mt-1.5 leading-relaxed">
+              Statistical analysis, automated data manipulation, predictive demand forecasting, Matplotlib visualization, and Playwright web automation.
+            </p>
+          </div>
+          <div class="mt-4 pt-3 border-t border-slate-100 dark:border-zinc-800/80 flex flex-wrap gap-1.5 font-mono text-[10px] text-slate-500 dark:text-zinc-400">
+            <span>#Pandas</span><span>#NumPy</span><span>#ScikitLearn</span><span>#Playwright</span>
+          </div>
+        </div>
+
+        <div class="skill-item bento-card p-5 rounded-2xl bg-white dark:bg-zinc-900/80 border border-slate-200 dark:border-zinc-800/90 flex flex-col justify-between" data-cat="bi-data" data-keywords="tableau data visualization storytelling dashboards">
+          <div>
+            <div class="flex items-center justify-between gap-2 mb-2">
+              <span class="px-2.5 py-0.5 rounded-md bg-indigo-500/10 text-indigo-600 dark:text-indigo-400 font-mono text-[11px] font-medium">Data Visualization</span>
+              <span class="font-mono text-xs text-indigo-500 font-semibold">Advanced • 88%</span>
+            </div>
+            <h3 class="font-bold text-base">Tableau & Visual Storytelling</h3>
+            <p class="text-xs text-slate-600 dark:text-zinc-400 mt-1.5 leading-relaxed">
+              Certified in Tableau Data Visualization (Cartona); crafting executive visual narratives that translate complex customer datasets into clear actions.
+            </p>
+          </div>
+          <div class="mt-4 pt-3 border-t border-slate-100 dark:border-zinc-800/80 flex flex-wrap gap-1.5 font-mono text-[10px] text-slate-500 dark:text-zinc-400">
+            <span>#Tableau</span><span>#DataStorytelling</span><span>#VisualAnalytics</span>
+          </div>
+        </div>
+
+        <div class="skill-item bento-card p-5 rounded-2xl bg-white dark:bg-zinc-900/80 border border-slate-200 dark:border-zinc-800/90 flex flex-col justify-between" data-cat="bi-data" data-keywords="metabase bi sql dashboards self-service">
+          <div>
+            <div class="flex items-center justify-between gap-2 mb-2">
+              <span class="px-2.5 py-0.5 rounded-md bg-indigo-500/10 text-indigo-600 dark:text-indigo-400 font-mono text-[11px] font-medium">Business Intelligence</span>
+              <span class="font-mono text-xs text-emerald-600 dark:text-emerald-400 font-semibold">Expert • 92%</span>
+            </div>
+            <h3 class="font-bold text-base">Metabase</h3>
+            <p class="text-xs text-slate-600 dark:text-zinc-400 mt-1.5 leading-relaxed">
+              Building self-service product and commercial dashboards, automated alerts, and parameterized SQL questions for cross-functional squads.
+            </p>
+          </div>
+          <div class="mt-4 pt-3 border-t border-slate-100 dark:border-zinc-800/80 flex flex-wrap gap-1.5 font-mono text-[10px] text-slate-500 dark:text-zinc-400">
+            <span>#Metabase</span><span>#SelfServiceBI</span><span>#ProductMetrics</span>
+          </div>
+        </div>
+
+        <div class="skill-item bento-card p-5 rounded-2xl bg-white dark:bg-zinc-900/80 border border-slate-200 dark:border-zinc-800/90 flex flex-col justify-between" data-cat="bi-data" data-keywords="postgresql snowflake cloud sql relational databases">
+          <div>
+            <div class="flex items-center justify-between gap-2 mb-2">
+              <span class="px-2.5 py-0.5 rounded-md bg-indigo-500/10 text-indigo-600 dark:text-indigo-400 font-mono text-[11px] font-medium">Cloud Databases</span>
+              <span class="font-mono text-xs text-indigo-500 font-semibold">Advanced • 90%</span>
+            </div>
+            <h3 class="font-bold text-base">PostgreSQL, Snowflake & Cloud SQL</h3>
+            <p class="text-xs text-slate-600 dark:text-zinc-400 mt-1.5 leading-relaxed">
+              Relational schema architecture, cross-database transformations, indexing, and cloud data warehouse querying across modern data stacks.
+            </p>
+          </div>
+          <div class="mt-4 pt-3 border-t border-slate-100 dark:border-zinc-800/80 flex flex-wrap gap-1.5 font-mono text-[10px] text-slate-500 dark:text-zinc-400">
+            <span>#PostgreSQL</span><span>#Snowflake</span><span>#CloudSQL</span>
+          </div>
+        </div>
+
+        <div class="skill-item bento-card p-5 rounded-2xl bg-white dark:bg-zinc-900/80 border border-slate-200 dark:border-zinc-800/90 flex flex-col justify-between" data-cat="bi-data" data-keywords="excel google sheets financial modeling forecasting commissions">
+          <div>
+            <div class="flex items-center justify-between gap-2 mb-2">
+              <span class="px-2.5 py-0.5 rounded-md bg-indigo-500/10 text-indigo-600 dark:text-indigo-400 font-mono text-[11px] font-medium">Spreadsheet Modeling</span>
+              <span class="font-mono text-xs text-emerald-600 dark:text-emerald-400 font-semibold">Expert • 98%</span>
+            </div>
+            <h3 class="font-bold text-base">Advanced Excel & Google Sheets Modeling</h3>
+            <p class="text-xs text-slate-600 dark:text-zinc-400 mt-1.5 leading-relaxed">
+              Sophisticated pricing assessments, automated sales commission calculation engines, dynamic pivot models, and historical demand forecasting.
+            </p>
+          </div>
+          <div class="mt-4 pt-3 border-t border-slate-100 dark:border-zinc-800/80 flex flex-wrap gap-1.5 font-mono text-[10px] text-slate-500 dark:text-zinc-400">
+            <span>#FinancialModeling</span><span>#Forecasting</span><span>#PricingModels</span>
+          </div>
+        </div>
+
+        <!-- === GROUP 2: PRODUCT MANAGEMENT & PRODUCT ANALYTICS === -->
+        <div class="skill-item bento-card p-5 rounded-2xl bg-white dark:bg-zinc-900/80 border border-slate-200 dark:border-zinc-800/90 flex flex-col justify-between" data-cat="product" data-keywords="user activation funnels conversion optimization cro onboarding kyc">
+          <div>
+            <div class="flex items-center justify-between gap-2 mb-2">
+              <span class="px-2.5 py-0.5 rounded-md bg-teal-500/10 text-teal-600 dark:text-teal-400 font-mono text-[11px] font-medium">Product Growth</span>
+              <span class="font-mono text-xs text-emerald-600 dark:text-emerald-400 font-semibold">Expert • 96%</span>
+            </div>
+            <h3 class="font-bold text-base">User Activation Funnels & CRO</h3>
+            <p class="text-xs text-slate-600 dark:text-zinc-400 mt-1.5 leading-relaxed">
+              Mapping end-to-end digital onboarding and KYC flows, diagnosing drop-off bottlenecks, and delivering a documented +20% conversion lift at Khazna.
+            </p>
+          </div>
+          <div class="mt-4 pt-3 border-t border-slate-100 dark:border-zinc-800/80 flex flex-wrap gap-1.5 font-mono text-[10px] text-slate-500 dark:text-zinc-400">
+            <span>#ActivationFunnels</span><span>#DropOffAnalysis</span><span>#Onboarding</span>
+          </div>
+        </div>
+
+        <div class="skill-item bento-card p-5 rounded-2xl bg-white dark:bg-zinc-900/80 border border-slate-200 dark:border-zinc-800/90 flex flex-col justify-between" data-cat="product" data-keywords="product discovery pdc user research opportunity sizing">
+          <div>
+            <div class="flex items-center justify-between gap-2 mb-2">
+              <span class="px-2.5 py-0.5 rounded-md bg-teal-500/10 text-teal-600 dark:text-teal-400 font-mono text-[11px] font-medium">Product Management</span>
+              <span class="font-mono text-xs text-emerald-600 dark:text-emerald-400 font-semibold">Certified • 95%</span>
+            </div>
+            <h3 class="font-bold text-base">Product Discovery & Opportunity Sizing</h3>
+            <p class="text-xs text-slate-600 dark:text-zinc-400 mt-1.5 leading-relaxed">
+              Certified by Product School (PDC) & Sprints; partnering with PMs to size opportunities with product data before engineering commits resources.
+            </p>
+          </div>
+          <div class="mt-4 pt-3 border-t border-slate-100 dark:border-zinc-800/80 flex flex-wrap gap-1.5 font-mono text-[10px] text-slate-500 dark:text-zinc-400">
+            <span>#ProductDiscovery</span><span>#OpportunitySizing</span><span>#ProductSchool</span>
+          </div>
+        </div>
+
+        <div class="skill-item bento-card p-5 rounded-2xl bg-white dark:bg-zinc-900/80 border border-slate-200 dark:border-zinc-800/90 flex flex-col justify-between" data-cat="product" data-keywords="a/b testing experimentation hypothesis feature optimization">
+          <div>
+            <div class="flex items-center justify-between gap-2 mb-2">
+              <span class="px-2.5 py-0.5 rounded-md bg-teal-500/10 text-teal-600 dark:text-teal-400 font-mono text-[11px] font-medium">Product Experimentation</span>
+              <span class="font-mono text-xs text-emerald-600 dark:text-emerald-400 font-semibold">Expert • 92%</span>
+            </div>
+            <h3 class="font-bold text-base">A/B Testing & Feature Optimization</h3>
+            <p class="text-xs text-slate-600 dark:text-zinc-400 mt-1.5 leading-relaxed">
+              Designing hypothesis-driven experiments, evaluating post-launch feature adoption metrics, and translating results into concrete product iterations.
+            </p>
+          </div>
+          <div class="mt-4 pt-3 border-t border-slate-100 dark:border-zinc-800/80 flex flex-wrap gap-1.5 font-mono text-[10px] text-slate-500 dark:text-zinc-400">
+            <span>#ABTesting</span><span>#FeatureAdoption</span><span>#Experimentation</span>
+          </div>
+        </div>
+
+        <div class="skill-item bento-card p-5 rounded-2xl bg-white dark:bg-zinc-900/80 border border-slate-200 dark:border-zinc-800/90 flex flex-col justify-between" data-cat="product" data-keywords="product roadmapping prc prioritization kpis">
+          <div>
+            <div class="flex items-center justify-between gap-2 mb-2">
+              <span class="px-2.5 py-0.5 rounded-md bg-teal-500/10 text-teal-600 dark:text-teal-400 font-mono text-[11px] font-medium">Product Strategy</span>
+              <span class="font-mono text-xs text-emerald-600 dark:text-emerald-400 font-semibold">Certified • 94%</span>
+            </div>
+            <h3 class="font-bold text-base">Product Roadmapping & Prioritization</h3>
+            <p class="text-xs text-slate-600 dark:text-zinc-400 mt-1.5 leading-relaxed">
+              Certified in Product Roadmapping (PRC); aligning Product, Engineering, Finance, and Commercial teams around north-star growth metrics.
+            </p>
+          </div>
+          <div class="mt-4 pt-3 border-t border-slate-100 dark:border-zinc-800/80 flex flex-wrap gap-1.5 font-mono text-[10px] text-slate-500 dark:text-zinc-400">
+            <span>#Roadmapping</span><span>#NorthStarKPIs</span><span>#Prioritization</span>
+          </div>
+        </div>
+
+        <div class="skill-item bento-card p-5 rounded-2xl bg-white dark:bg-zinc-900/80 border border-slate-200 dark:border-zinc-800/90 flex flex-col justify-between" data-cat="product" data-keywords="user behavior analytics cohort retention churn">
+          <div>
+            <div class="flex items-center justify-between gap-2 mb-2">
+              <span class="px-2.5 py-0.5 rounded-md bg-teal-500/10 text-teal-600 dark:text-teal-400 font-mono text-[11px] font-medium">Product Analytics</span>
+              <span class="font-mono text-xs text-emerald-600 dark:text-emerald-400 font-semibold">Expert • 95%</span>
+            </div>
+            <h3 class="font-bold text-base">User Behavior, Cohort & Retention Analysis</h3>
+            <p class="text-xs text-slate-600 dark:text-zinc-400 mt-1.5 leading-relaxed">
+              Tracking customer lifecycle journeys, repeat usage patterns, and monetization cohorts to maximize Customer Lifetime Value (LTV).
+            </p>
+          </div>
+          <div class="mt-4 pt-3 border-t border-slate-100 dark:border-zinc-800/80 flex flex-wrap gap-1.5 font-mono text-[10px] text-slate-500 dark:text-zinc-400">
+            <span>#CohortAnalysis</span><span>#UserRetention</span><span>#BehavioralData</span>
+          </div>
+        </div>
+
+        <div class="skill-item bento-card p-5 rounded-2xl bg-white dark:bg-zinc-900/80 border border-slate-200 dark:border-zinc-800/90 flex flex-col justify-between" data-cat="product" data-keywords="sentiment analysis customer interaction call analytics design thinking">
+          <div>
+            <div class="flex items-center justify-between gap-2 mb-2">
+              <span class="px-2.5 py-0.5 rounded-md bg-teal-500/10 text-teal-600 dark:text-teal-400 font-mono text-[11px] font-medium">VoC & UX Insights</span>
+              <span class="font-mono text-xs text-emerald-600 dark:text-emerald-400 font-semibold">Expert • 93%</span>
+            </div>
+            <h3 class="font-bold text-base">Sentiment Analysis & Design Thinking</h3>
+            <p class="text-xs text-slate-600 dark:text-zinc-400 mt-1.5 leading-relaxed">
+              Combining quantitative product logs with qualitative call analytics, customer sentiment data, and human-centered Design Thinking.
+            </p>
+          </div>
+          <div class="mt-4 pt-3 border-t border-slate-100 dark:border-zinc-800/80 flex flex-wrap gap-1.5 font-mono text-[10px] text-slate-500 dark:text-zinc-400">
+            <span>#SentimentAnalysis</span><span>#DesignThinking</span><span>#CallAnalytics</span>
+          </div>
+        </div>
+
+        <!-- === GROUP 3: DATA PIPELINES, ENGINEERING & AUTOMATION === -->
+        <div class="skill-item bento-card p-5 rounded-2xl bg-white dark:bg-zinc-900/80 border border-slate-200 dark:border-zinc-800/90 flex flex-col justify-between" data-cat="engineering" data-keywords="dbt data build tool airflow docker data pipelines elt">
+          <div>
+            <div class="flex items-center justify-between gap-2 mb-2">
+              <span class="px-2.5 py-0.5 rounded-md bg-amber-500/10 text-amber-600 dark:text-amber-400 font-mono text-[11px] font-medium">Analytics Engineering</span>
+              <span class="font-mono text-xs text-amber-500 font-semibold">Advanced • 88%</span>
+            </div>
+            <h3 class="font-bold text-base">dbt, Apache Airflow & Docker</h3>
+            <p class="text-xs text-slate-600 dark:text-zinc-400 mt-1.5 leading-relaxed">
+              Constructing modular SQL data models with dbt, orchestrating automated ELT workflows with Apache Airflow, and containerizing pipelines via Docker.
+            </p>
+          </div>
+          <div class="mt-4 pt-3 border-t border-slate-100 dark:border-zinc-800/80 flex flex-wrap gap-1.5 font-mono text-[10px] text-slate-500 dark:text-zinc-400">
+            <span>#dbt</span><span>#ApacheAirflow</span><span>#Docker</span><span>#DataPipelines</span>
+          </div>
+        </div>
+
+        <div class="skill-item bento-card p-5 rounded-2xl bg-white dark:bg-zinc-900/80 border border-slate-200 dark:border-zinc-800/90 flex flex-col justify-between" data-cat="engineering" data-keywords="google apps script gas workflow automation pipelines">
+          <div>
+            <div class="flex items-center justify-between gap-2 mb-2">
+              <span class="px-2.5 py-0.5 rounded-md bg-amber-500/10 text-amber-600 dark:text-amber-400 font-mono text-[11px] font-medium">Workflow Automation</span>
+              <span class="font-mono text-xs text-emerald-600 dark:text-emerald-400 font-semibold">Expert • 95%</span>
+            </div>
+            <h3 class="font-bold text-base">Google Apps Script & n8n Automation</h3>
+            <p class="text-xs text-slate-600 dark:text-zinc-400 mt-1.5 leading-relaxed">
+              Automating end-to-end data extraction, scheduled ETL jobs, and cross-platform API integrations that eliminate hours of manual reporting overhead.
+            </p>
+          </div>
+          <div class="mt-4 pt-3 border-t border-slate-100 dark:border-zinc-800/80 flex flex-wrap gap-1.5 font-mono text-[10px] text-slate-500 dark:text-zinc-400">
+            <span>#GoogleAppsScript</span><span>#n8n</span><span>#ProcessAutomation</span>
+          </div>
+        </div>
+
+        <div class="skill-item bento-card p-5 rounded-2xl bg-white dark:bg-zinc-900/80 border border-slate-200 dark:border-zinc-800/90 flex flex-col justify-between" data-cat="engineering" data-keywords="google appsheet admin panel low code internal tools">
+          <div>
+            <div class="flex items-center justify-between gap-2 mb-2">
+              <span class="px-2.5 py-0.5 rounded-md bg-amber-500/10 text-amber-600 dark:text-amber-400 font-mono text-[11px] font-medium">Operational Platforms</span>
+              <span class="font-mono text-xs text-emerald-600 dark:text-emerald-400 font-semibold">Expert • 94%</span>
+            </div>
+            <h3 class="font-bold text-base">Google AppSheet & Dimensional Modeling</h3>
+            <p class="text-xs text-slate-600 dark:text-zinc-400 mt-1.5 leading-relaxed">
+              Architecting centralized operational Admin Panels via AppSheet backed by clean dimensional data models to support cross-border business expansion.
+            </p>
+          </div>
+          <div class="mt-4 pt-3 border-t border-slate-100 dark:border-zinc-800/80 flex flex-wrap gap-1.5 font-mono text-[10px] text-slate-500 dark:text-zinc-400">
+            <span>#AppSheet</span><span>#AdminPanels</span><span>#DimensionalModeling</span>
+          </div>
+        </div>
+
+        <!-- === GROUP 4: COMMERCIAL STRATEGY, SIX SIGMA & LEADERSHIP === -->
+        <div class="skill-item bento-card p-5 rounded-2xl bg-white dark:bg-zinc-900/80 border border-slate-200 dark:border-zinc-800/90 flex flex-col justify-between" data-cat="strategy" data-keywords="lean six sigma green belt lssgb root cause analysis rca process improvement">
+          <div>
+            <div class="flex items-center justify-between gap-2 mb-2">
+              <span class="px-2.5 py-0.5 rounded-md bg-purple-500/10 text-purple-600 dark:text-purple-400 font-mono text-[11px] font-medium">Process Excellence</span>
+              <span class="font-mono text-xs text-emerald-600 dark:text-emerald-400 font-semibold">LSSGB Certified</span>
+            </div>
+            <h3 class="font-bold text-base">Lean Six Sigma (LSSGB) & Root Cause Analysis</h3>
+            <p class="text-xs text-slate-600 dark:text-zinc-400 mt-1.5 leading-relaxed">
+              Partnering with Data Engineering and Operations on Root Cause Analysis (RCA) to resolve data pipeline anomalies and optimize lead-to-close workflows.
+            </p>
+          </div>
+          <div class="mt-4 pt-3 border-t border-slate-100 dark:border-zinc-800/80 flex flex-wrap gap-1.5 font-mono text-[10px] text-slate-500 dark:text-zinc-400">
+            <span>#SixSigmaGreenBelt</span><span>#RCA</span><span>#OperationalRigor</span>
+          </div>
+        </div>
+
+        <div class="skill-item bento-card p-5 rounded-2xl bg-white dark:bg-zinc-900/80 border border-slate-200 dark:border-zinc-800/90 flex flex-col justify-between" data-cat="strategy" data-keywords="kpi cascading sales forecasting commission cycle executive leadership">
+          <div>
+            <div class="flex items-center justify-between gap-2 mb-2">
+              <span class="px-2.5 py-0.5 rounded-md bg-purple-500/10 text-purple-600 dark:text-purple-400 font-mono text-[11px] font-medium">Commercial Strategy</span>
+              <span class="font-mono text-xs text-emerald-600 dark:text-emerald-400 font-semibold">Expert • 96%</span>
+            </div>
+            <h3 class="font-bold text-base">KPI Architecture, Forecasting & Team Leadership</h3>
+            <p class="text-xs text-slate-600 dark:text-zinc-400 mt-1.5 leading-relaxed">
+              Cascading targets across Sales, Finance & HR, owning monthly commission cycles with 100% accuracy, and mentoring high-performing analytics teams.
+            </p>
+          </div>
+          <div class="mt-4 pt-3 border-t border-slate-100 dark:border-zinc-800/80 flex flex-wrap gap-1.5 font-mono text-[10px] text-slate-500 dark:text-zinc-400">
+            <span>#SalesForecasting</span><span>#CommissionEngine</span><span>#TeamMentoring</span>
           </div>
         </div>
 
@@ -672,816 +608,398 @@
     </section>
 
     <!-- ==========================================
-         SECTION 3: [03] SKILL TREE & BADGES (CERTIFICATES)
+         3. SELECTED CASE STUDIES (PORTFOLIO)
          ========================================== -->
-    <section id="skills" class="scroll-mt-24 space-y-8">
-      <div class="flex flex-col md:flex-row md:items-end justify-between gap-4">
-        <div>
-          <span class="text-xs font-hud text-violetNeon uppercase tracking-widest">CHAPTER 03 // UNLOCKED CREDENTIALS</span>
-          <h2 class="text-2xl sm:text-4xl font-hud font-bold text-white mt-1">SKILL TREE & CERTIFICATIONS</h2>
-        </div>
-
-        <!-- Filter Buttons -->
-        <div class="flex flex-wrap gap-2">
-          <button onclick="filterCerts('all')" class="cert-filter-btn active px-3.5 py-1.5 rounded-lg bg-cyanNeon text-obsidian font-hud font-bold text-xs transition" data-filter="all">ALL BADGES (8)</button>
-          <button onclick="filterCerts('product')" class="cert-filter-btn px-3.5 py-1.5 rounded-lg bg-slate-900 border border-slate-700 text-slate-300 hover:border-violetNeon font-hud text-xs transition" data-filter="product">PRODUCT MGMT (4)</button>
-          <button onclick="filterCerts('data')" class="cert-filter-btn px-3.5 py-1.5 rounded-lg bg-slate-900 border border-slate-700 text-slate-300 hover:border-cyanNeon font-hud text-xs transition" data-filter="data">DATA & BI (3)</button>
-          <button onclick="filterCerts('process')" class="cert-filter-btn px-3.5 py-1.5 rounded-lg bg-slate-900 border border-slate-700 text-slate-300 hover:border-goldLoot font-hud text-xs transition" data-filter="process">SIX SIGMA (1)</button>
-        </div>
+    <section id="case-studies" class="scroll-mt-24 space-y-8">
+      <div class="border-b border-slate-200 dark:border-zinc-800 pb-6">
+        <span class="text-xs font-mono uppercase tracking-wider text-indigo-600 dark:text-indigo-400">02 // Proven Impact</span>
+        <h2 class="text-2xl sm:text-3xl font-bold tracking-tight mt-1">Featured Product & Data Case Studies</h2>
       </div>
 
-      <!-- Certificates Grid -->
-      <div id="certsGrid" class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4">
-        
-        <!-- Cert 1 -->
-        <div class="cert-card hud-card-violet rounded-xl p-5 flex flex-col justify-between" data-category="product">
-          <div>
-            <div class="flex items-center justify-between text-xs font-hud text-violetNeon mb-3">
-              <span>🛡️ PRODUCT TREE</span>
-              <span>2025</span>
-            </div>
-            <h3 class="font-bold text-white text-base">Specialization Certificate: Product Management</h3>
-            <p class="text-xs text-slate-400 mt-1">Issued by <strong class="text-slate-200">Sprints</strong></p>
-          </div>
-          <div class="mt-4 pt-3 border-t border-slate-800/80 flex items-center justify-between text-[11px] text-cyanNeon font-space">
-            <span>Status: Unlocked</span>
-            <span>+500 XP</span>
-          </div>
-        </div>
-
-        <!-- Cert 2 -->
-        <div class="cert-card hud-card-violet rounded-xl p-5 flex flex-col justify-between" data-category="product">
-          <div>
-            <div class="flex items-center justify-between text-xs font-hud text-violetNeon mb-3">
-              <span>🧭 PRODUCT TREE</span>
-              <span>2025</span>
-            </div>
-            <h3 class="font-bold text-white text-base">Product Discovery (PDC) Micro-Certification</h3>
-            <p class="text-xs text-slate-400 mt-1">Issued by <strong class="text-slate-200">Product School</strong></p>
-          </div>
-          <div class="mt-4 pt-3 border-t border-slate-800/80 flex items-center justify-between text-[11px] text-cyanNeon font-space">
-            <span>Status: Unlocked</span>
-            <span>+400 XP</span>
-          </div>
-        </div>
-
-        <!-- Cert 3 -->
-        <div class="cert-card hud-card-violet rounded-xl p-5 flex flex-col justify-between" data-category="product">
-          <div>
-            <div class="flex items-center justify-between text-xs font-hud text-violetNeon mb-3">
-              <span>🗺️ PRODUCT TREE</span>
-              <span>2025</span>
-            </div>
-            <h3 class="font-bold text-white text-base">Product Roadmapping (PRC) Micro-Certification</h3>
-            <p class="text-xs text-slate-400 mt-1">Issued by <strong class="text-slate-200">Product School</strong></p>
-          </div>
-          <div class="mt-4 pt-3 border-t border-slate-800/80 flex items-center justify-between text-[11px] text-cyanNeon font-space">
-            <span>Status: Unlocked</span>
-            <span>+400 XP</span>
-          </div>
-        </div>
-
-        <!-- Cert 4 -->
-        <div class="cert-card hud-card rounded-xl p-5 flex flex-col justify-between" data-category="process">
-          <div>
-            <div class="flex items-center justify-between text-xs font-hud text-goldLoot mb-3">
-              <span>⚙️ PROCESS MASTERY</span>
-              <span>2025</span>
-            </div>
-            <h3 class="font-bold text-white text-base">Lean Six Sigma Green Belt (LSSGB)</h3>
-            <p class="text-xs text-slate-400 mt-1">Issued by <strong class="text-slate-200">Six Sigma School</strong></p>
-          </div>
-          <div class="mt-4 pt-3 border-t border-slate-800/80 flex items-center justify-between text-[11px] text-goldLoot font-space">
-            <span>Status: Unlocked</span>
-            <span>+600 XP</span>
-          </div>
-        </div>
-
-        <!-- Cert 5 -->
-        <div class="cert-card hud-card rounded-xl p-5 flex flex-col justify-between" data-category="data">
-          <div>
-            <div class="flex items-center justify-between text-xs font-hud text-cyanNeon mb-3">
-              <span>🐍 DATA WIZARDRY</span>
-              <span>2026</span>
-            </div>
-            <h3 class="font-bold text-white text-base">Intermediate Python for Data Analysis</h3>
-            <p class="text-xs text-slate-400 mt-1">Issued by <strong class="text-slate-200">DataCamp</strong></p>
-          </div>
-          <div class="mt-4 pt-3 border-t border-slate-800/80 flex items-center justify-between text-[11px] text-cyanNeon font-space">
-            <span>Status: Unlocked</span>
-            <span>+450 XP</span>
-          </div>
-        </div>
-
-        <!-- Cert 6 -->
-        <div class="cert-card hud-card rounded-xl p-5 flex flex-col justify-between" data-category="data">
-          <div>
-            <div class="flex items-center justify-between text-xs font-hud text-cyanNeon mb-3">
-              <span>📊 BI ARCHITECTURE</span>
-              <span>2024</span>
-            </div>
-            <h3 class="font-bold text-white text-base">Power BI: Executive Dashboards</h3>
-            <p class="text-xs text-slate-400 mt-1">Issued by <strong class="text-slate-200">LinkedIn Learning</strong></p>
-          </div>
-          <div class="mt-4 pt-3 border-t border-slate-800/80 flex items-center justify-between text-[11px] text-cyanNeon font-space">
-            <span>Status: Unlocked</span>
-            <span>+350 XP</span>
-          </div>
-        </div>
-
-        <!-- Cert 7 -->
-        <div class="cert-card hud-card-violet rounded-xl p-5 flex flex-col justify-between" data-category="product">
-          <div>
-            <div class="flex items-center justify-between text-xs font-hud text-violetNeon mb-3">
-              <span>💡 UX & DISCOVERY</span>
-              <span>2024</span>
-            </div>
-            <h3 class="font-bold text-white text-base">Design Thinking: Understanding the Process</h3>
-            <p class="text-xs text-slate-400 mt-1">Issued by <strong class="text-slate-200">LinkedIn Learning</strong></p>
-          </div>
-          <div class="mt-4 pt-3 border-t border-slate-800/80 flex items-center justify-between text-[11px] text-violetNeon font-space">
-            <span>Status: Unlocked</span>
-            <span>+350 XP</span>
-          </div>
-        </div>
-
-        <!-- Cert 8 -->
-        <div class="cert-card hud-card rounded-xl p-5 flex flex-col justify-between" data-category="data">
-          <div>
-            <div class="flex items-center justify-between text-xs font-hud text-cyanNeon mb-3">
-              <span>📈 VISUALIZATION</span>
-              <span>2023</span>
-            </div>
-            <h3 class="font-bold text-white text-base">Data Visualization in Tableau</h3>
-            <p class="text-xs text-slate-400 mt-1">Issued by <strong class="text-slate-200">Cartona</strong></p>
-          </div>
-          <div class="mt-4 pt-3 border-t border-slate-800/80 flex items-center justify-between text-[11px] text-cyanNeon font-space">
-            <span>Status: Unlocked</span>
-            <span>+350 XP</span>
-          </div>
-        </div>
-
-      </div>
-    </section>
-
-    <!-- ==========================================
-         SECTION 4: [04] COMPLETED QUESTS (PORTFOLIO CASE STUDIES)
-         ========================================== -->
-    <section id="quests" class="scroll-mt-24 space-y-8">
-      <div class="flex flex-col md:flex-row md:items-end justify-between gap-4">
-        <div>
-          <span class="text-xs font-hud text-cyanNeon uppercase tracking-widest">CHAPTER 04 // BATTLE-TESTED CASE STUDIES</span>
-          <h2 class="text-2xl sm:text-4xl font-hud font-bold text-white mt-1">COMPLETED QUESTS (PORTFOLIO)</h2>
-        </div>
-
-        <!-- Quest Filter Tabs -->
-        <div class="flex flex-wrap gap-2">
-          <button onclick="filterQuests('all')" class="quest-filter-btn px-3.5 py-1.5 rounded-lg bg-cyanNeon text-obsidian font-hud font-bold text-xs transition" data-filter="all">ALL QUESTS (5)</button>
-          <button onclick="filterQuests('product')" class="quest-filter-btn px-3.5 py-1.5 rounded-lg bg-slate-900 border border-slate-700 text-slate-300 font-hud text-xs transition" data-filter="product">PRODUCT GROWTH</button>
-          <button onclick="filterQuests('data')" class="quest-filter-btn px-3.5 py-1.5 rounded-lg bg-slate-900 border border-slate-700 text-slate-300 font-hud text-xs transition" data-filter="data">DATA & BI PIPELINES</button>
-          <button onclick="filterQuests('ops')" class="quest-filter-btn px-3.5 py-1.5 rounded-lg bg-slate-900 border border-slate-700 text-slate-300 font-hud text-xs transition" data-filter="ops">COMMERCIAL OPS</button>
-        </div>
-      </div>
-
-      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-
-        <!-- QUEST 01 -->
-        <div class="quest-card hud-card-violet rounded-2xl p-6 flex flex-col justify-between" data-category="product">
-          <div class="space-y-3">
-            <div class="flex items-center justify-between text-xs font-hud">
-              <span class="px-2.5 py-0.5 rounded bg-violetNeon/20 text-violetNeon border border-violetNeon/40">QUEST #01 // PRODUCT GROWTH</span>
-              <span class="text-goldLoot">★★★★★</span>
-            </div>
-            <h3 class="text-xl font-bold text-white">Digital Onboarding & KYC Activation Funnel Revamp</h3>
-            <p class="text-xs text-slate-300 leading-relaxed">
-              <strong class="text-cyanNeon">The Challenge:</strong> High user drop-off rates during digital registration and KYC compliance verification at Khazna App.
-            </p>
-            <p class="text-xs text-slate-300 leading-relaxed">
-              <strong class="text-violetNeon">The Strategy:</strong> Mapped the end-to-end user activation funnel, quantified friction points using SQL & behavioral analytics, and partnered with Product & Operations to streamline the flow.
-            </p>
-          </div>
-          <div class="mt-5 pt-4 border-t border-slate-800 space-y-3">
-            <div class="p-2.5 rounded-lg bg-goldLoot/10 border border-goldLoot/30 text-xs font-hud text-goldLoot flex items-center justify-between">
-              <span>LOOT UNLOCKED:</span>
-              <span>+20% CONVERSION LIFT</span>
-            </div>
-            <div class="flex flex-wrap gap-1.5 text-[11px] font-space">
-              <span class="px-2 py-0.5 rounded bg-slate-800 text-slate-300">Funnel Analysis</span>
-              <span class="px-2 py-0.5 rounded bg-slate-800 text-slate-300">Product Discovery</span>
-              <span class="px-2 py-0.5 rounded bg-slate-800 text-slate-300">KYC Optimization</span>
-            </div>
-          </div>
-        </div>
-
-        <!-- QUEST 02 -->
-        <div class="quest-card hud-card rounded-2xl p-6 flex flex-col justify-between" data-category="data">
-          <div class="space-y-3">
-            <div class="flex items-center justify-between text-xs font-hud">
-              <span class="px-2.5 py-0.5 rounded bg-cyanNeon/20 text-cyanNeon border border-cyanNeon/40">QUEST #02 // DATA & BI ENGINE</span>
-              <span class="text-goldLoot">★★★★★</span>
-            </div>
-            <h3 class="text-xl font-bold text-white">Automated Executive BI & Real-Time Reporting Ecosystem</h3>
-            <p class="text-xs text-slate-300 leading-relaxed">
-              <strong class="text-cyanNeon">The Challenge:</strong> Commercial and executive teams spent hours weekly compiling fragmented manual reports across multiple data sources.
-            </p>
-            <p class="text-xs text-slate-300 leading-relaxed">
-              <strong class="text-violetNeon">The Strategy:</strong> Architected automated data pipelines integrating <strong class="text-white">BigQuery, Google Apps Script, Power BI (DAX), and Looker Studio</strong> with dimensional modeling.
-            </p>
-          </div>
-          <div class="mt-5 pt-4 border-t border-slate-800 space-y-3">
-            <div class="p-2.5 rounded-lg bg-cyanNeon/10 border border-cyanNeon/30 text-xs font-hud text-cyanNeon flex items-center justify-between">
-              <span>LOOT UNLOCKED:</span>
-              <span>REAL-TIME C-LEVEL BI</span>
-            </div>
-            <div class="flex flex-wrap gap-1.5 text-[11px] font-space">
-              <span class="px-2 py-0.5 rounded bg-slate-800 text-slate-300">BigQuery SQL</span>
-              <span class="px-2 py-0.5 rounded bg-slate-800 text-slate-300">Power BI</span>
-              <span class="px-2 py-0.5 rounded bg-slate-800 text-slate-300">Looker Studio</span>
-              <span class="px-2 py-0.5 rounded bg-slate-800 text-slate-300">Apps Script</span>
-            </div>
-          </div>
-        </div>
-
-        <!-- QUEST 03 -->
-        <div class="quest-card hud-card rounded-2xl p-6 flex flex-col justify-between" data-category="ops">
-          <div class="space-y-3">
-            <div class="flex items-center justify-between text-xs font-hud">
-              <span class="px-2.5 py-0.5 rounded bg-goldLoot/20 text-goldLoot border border-goldLoot/40">QUEST #03 // COMMERCIAL ANALYTICS</span>
-              <span class="text-goldLoot">★★★★★</span>
-            </div>
-            <h3 class="text-xl font-bold text-white">Enterprise Sales Commission & Forecasting Engine</h3>
-            <p class="text-xs text-slate-300 leading-relaxed">
-              <strong class="text-cyanNeon">The Challenge:</strong> Complex multi-region sales targets and high-risk monthly commission calculations across large commercial teams at Aman Holding.
-            </p>
-            <p class="text-xs text-slate-300 leading-relaxed">
-              <strong class="text-violetNeon">The Strategy:</strong> Cascaded unified KPIs across Sales, Finance, and HR; built historical sales forecasting models and automated validation workflows.
-            </p>
-          </div>
-          <div class="mt-5 pt-4 border-t border-slate-800 space-y-3">
-            <div class="p-2.5 rounded-lg bg-goldLoot/10 border border-goldLoot/30 text-xs font-hud text-goldLoot flex items-center justify-between">
-              <span>LOOT UNLOCKED:</span>
-              <span>100% PAYOUT ACCURACY</span>
-            </div>
-            <div class="flex flex-wrap gap-1.5 text-[11px] font-space">
-              <span class="px-2 py-0.5 rounded bg-slate-800 text-slate-300">Sales Forecasting</span>
-              <span class="px-2 py-0.5 rounded bg-slate-800 text-slate-300">KPI Design</span>
-              <span class="px-2 py-0.5 rounded bg-slate-800 text-slate-300">Root Cause Analysis</span>
-            </div>
-          </div>
-        </div>
-
-        <!-- QUEST 04 -->
-        <div class="quest-card hud-card-violet rounded-2xl p-6 flex flex-col justify-between" data-category="product">
-          <div class="space-y-3">
-            <div class="flex items-center justify-between text-xs font-hud">
-              <span class="px-2.5 py-0.5 rounded bg-violetNeon/20 text-violetNeon border border-violetNeon/40">QUEST #04 // PRODUCT OPS</span>
-              <span class="text-goldLoot">★★★★☆</span>
-            </div>
-            <h3 class="text-xl font-bold text-white">Cross-Border Operations Admin Panel Architecture</h3>
-            <p class="text-xs text-slate-300 leading-relaxed">
-              <strong class="text-cyanNeon">The Challenge:</strong> Decentralized operational workflows hindering rapid multi-market business expansion.
-            </p>
-            <p class="text-xs text-slate-300 leading-relaxed">
-              <strong class="text-violetNeon">The Strategy:</strong> Designed scalable dimensional data models and deployed a centralized internal Admin Panel via <strong class="text-white">Google AppSheet & Apps Script</strong>.
-            </p>
-          </div>
-          <div class="mt-5 pt-4 border-t border-slate-800 space-y-3">
-            <div class="p-2.5 rounded-lg bg-violetNeon/10 border border-violetNeon/30 text-xs font-hud text-violetNeon flex items-center justify-between">
-              <span>LOOT UNLOCKED:</span>
-              <span>SCALABLE GLOBAL OPS</span>
-            </div>
-            <div class="flex flex-wrap gap-1.5 text-[11px] font-space">
-              <span class="px-2 py-0.5 rounded bg-slate-800 text-slate-300">AppSheet</span>
-              <span class="px-2 py-0.5 rounded bg-slate-800 text-slate-300">Dimensional Modeling</span>
-              <span class="px-2 py-0.5 rounded bg-slate-800 text-slate-300">Process Standardization</span>
-            </div>
-          </div>
-        </div>
-
-        <!-- QUEST 05 -->
-        <div class="quest-card hud-card rounded-2xl p-6 flex flex-col justify-between" data-category="data">
-          <div class="space-y-3">
-            <div class="flex items-center justify-between text-xs font-hud">
-              <span class="px-2.5 py-0.5 rounded bg-cyanNeon/20 text-cyanNeon border border-cyanNeon/40">QUEST #05 // EXPERIMENTATION</span>
-              <span class="text-goldLoot">★★★★★</span>
-            </div>
-            <h3 class="text-xl font-bold text-white">Feature Adoption, A/B Testing & Sentiment Engine</h3>
-            <p class="text-xs text-slate-300 leading-relaxed">
-              <strong class="text-cyanNeon">The Challenge:</strong> Aligning Product, Engineering, and Commercial teams on which product features truly drive retention and monetization.
-            </p>
-            <p class="text-xs text-slate-300 leading-relaxed">
-              <strong class="text-violetNeon">The Strategy:</strong> Combined BigQuery behavioral cohorts, A/B testing frameworks, and customer call/sentiment analytics to guide product roadmap prioritization.
-            </p>
-          </div>
-          <div class="mt-5 pt-4 border-t border-slate-800 space-y-3">
-            <div class="p-2.5 rounded-lg bg-cyanNeon/10 border border-cyanNeon/30 text-xs font-hud text-cyanNeon flex items-center justify-between">
-              <span>LOOT UNLOCKED:</span>
-              <span>DATA-BACKED ROADMAP</span>
-            </div>
-            <div class="flex flex-wrap gap-1.5 text-[11px] font-space">
-              <span class="px-2 py-0.5 rounded bg-slate-800 text-slate-300">A/B Testing</span>
-              <span class="px-2 py-0.5 rounded bg-slate-800 text-slate-300">Sentiment Analytics</span>
-              <span class="px-2 py-0.5 rounded bg-slate-800 text-slate-300">Python & SQL</span>
-            </div>
-          </div>
-        </div>
-
-      </div>
-    </section>
-
-    <!-- ==========================================
-         SECTION 5: [05] INVENTORY & LOADOUT (TOOLS & TECH STACK)
-         ========================================== -->
-    <section id="inventory" class="scroll-mt-24 space-y-8">
-      <div>
-        <span class="text-xs font-hud text-violetNeon uppercase tracking-widest">CHAPTER 05 // TACTICAL EQUIPMENT</span>
-        <h2 class="text-2xl sm:text-4xl font-hud font-bold text-white mt-1">INVENTORY & TECH LOADOUT</h2>
-        <p class="text-xs sm:text-sm text-slate-400 mt-1">Click or hover over any weapon/artifact in the inventory to inspect proficiency and tactical use-case.</p>
-      </div>
-
-      <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 items-start">
-        
-        <!-- Inventory Slots Grid -->
-        <div class="lg:col-span-8 grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 gap-3">
-          <button onmouseenter="inspectItem('BigQuery & Advanced SQL', '98%', 'Primary Data Weapon', 'Writing optimized queries over millions of Fintech rows, cohort modeling, and funnel extraction.')" onclick="inspectItem('BigQuery & Advanced SQL', '98%', 'Primary Data Weapon', 'Writing optimized queries over millions of Fintech rows, cohort modeling, and funnel extraction.')" class="hud-card p-4 rounded-xl text-left hover:border-cyanNeon group">
-            <div class="text-xs font-hud text-cyanNeon">SLOT 01</div>
-            <div class="font-bold text-white text-sm mt-1 group-hover:text-cyanNeon">BigQuery (SQL)</div>
-            <div class="text-[11px] text-slate-400 mt-1">Mastery: 98%</div>
-          </button>
-
-          <button onmouseenter="inspectItem('Power BI (DAX & M)', '96%', 'Executive Vision Gear', 'Designing automated C-level dashboards, complex DAX measures, and real-time SLA tracking.')" onclick="inspectItem('Power BI (DAX & M)', '96%', 'Executive Vision Gear', 'Designing automated C-level dashboards, complex DAX measures, and real-time SLA tracking.')" class="hud-card p-4 rounded-xl text-left hover:border-cyanNeon group">
-            <div class="text-xs font-hud text-cyanNeon">SLOT 02</div>
-            <div class="font-bold text-white text-sm mt-1 group-hover:text-cyanNeon">Power BI (DAX)</div>
-            <div class="text-[11px] text-slate-400 mt-1">Mastery: 96%</div>
-          </button>
-
-          <button onmouseenter="inspectItem('Google Looker Studio', '98%', 'Real-Time BI Gear', 'Deploying interactive commercial & product performance dashboards connected directly to BigQuery.')" onclick="inspectItem('Google Looker Studio', '98%', 'Real-Time BI Gear', 'Deploying interactive commercial & product performance dashboards connected directly to BigQuery.')" class="hud-card p-4 rounded-xl text-left hover:border-cyanNeon group">
-            <div class="text-xs font-hud text-cyanNeon">SLOT 03</div>
-            <div class="font-bold text-white text-sm mt-1 group-hover:text-cyanNeon">Looker Studio</div>
-            <div class="text-[11px] text-slate-400 mt-1">Mastery: 98%</div>
-          </button>
-
-          <button onmouseenter="inspectItem('Product Discovery & Funnels', '95%', 'Product Artifact', 'Mapping end-to-end activation funnels, identifying drop-offs, and driving +20% conversion lifts.')" onclick="inspectItem('Product Discovery & Funnels', '95%', 'Product Artifact', 'Mapping end-to-end activation funnels, identifying drop-offs, and driving +20% conversion lifts.')" class="hud-card-violet p-4 rounded-xl text-left hover:border-violetNeon group">
-            <div class="text-xs font-hud text-violetNeon">SLOT 04</div>
-            <div class="font-bold text-white text-sm mt-1 group-hover:text-violetNeon">Funnel Analytics</div>
-            <div class="text-[11px] text-slate-400 mt-1">Mastery: 95%</div>
-          </button>
-
-          <button onmouseenter="inspectItem('A/B Testing & Experimentation', '92%', 'Product Artifact', 'Evaluating feature launches, validating product hypotheses, and guiding roadmap prioritization.')" onclick="inspectItem('A/B Testing & Experimentation', '92%', 'Product Artifact', 'Evaluating feature launches, validating product hypotheses, and guiding roadmap prioritization.')" class="hud-card-violet p-4 rounded-xl text-left hover:border-violetNeon group">
-            <div class="text-xs font-hud text-violetNeon">SLOT 05</div>
-            <div class="font-bold text-white text-sm mt-1 group-hover:text-violetNeon">A/B Testing</div>
-            <div class="text-[11px] text-slate-400 mt-1">Mastery: 92%</div>
-          </button>
-
-          <button onmouseenter="inspectItem('Python (Data Analysis)', '88%', 'Scripting Weapon', 'Data wrangling, statistical analysis, demand forecasting, and automation scripts.')" onclick="inspectItem('Python (Data Analysis)', '88%', 'Scripting Weapon', 'Data wrangling, statistical analysis, demand forecasting, and automation scripts.')" class="hud-card p-4 rounded-xl text-left hover:border-cyanNeon group">
-            <div class="text-xs font-hud text-cyanNeon">SLOT 06</div>
-            <div class="font-bold text-white text-sm mt-1 group-hover:text-cyanNeon">Python</div>
-            <div class="text-[11px] text-slate-400 mt-1">Mastery: 88%</div>
-          </button>
-
-          <button onmouseenter="inspectItem('Tableau & Metabase', '90%', 'Visualization Gear', 'Translating complex commercial & geospatial datasets into clear visual stories.')" onclick="inspectItem('Tableau & Metabase', '90%', 'Visualization Gear', 'Translating complex commercial & geospatial datasets into clear visual stories.')" class="hud-card p-4 rounded-xl text-left hover:border-cyanNeon group">
-            <div class="text-xs font-hud text-cyanNeon">SLOT 07</div>
-            <div class="font-bold text-white text-sm mt-1 group-hover:text-cyanNeon">Tableau & Metabase</div>
-            <div class="text-[11px] text-slate-400 mt-1">Mastery: 90%</div>
-          </button>
-
-          <button onmouseenter="inspectItem('AppSheet & Google Apps Script', '94%', 'Automation Artifact', 'Building centralized Admin Panels for cross-border ops and automating data extraction pipelines.')" onclick="inspectItem('AppSheet & Google Apps Script', '94%', 'Automation Artifact', 'Building centralized Admin Panels for cross-border ops and automating data extraction pipelines.')" class="hud-card-violet p-4 rounded-xl text-left hover:border-violetNeon group">
-            <div class="text-xs font-hud text-violetNeon">SLOT 08</div>
-            <div class="font-bold text-white text-sm mt-1 group-hover:text-violetNeon">AppSheet & GAS</div>
-            <div class="text-[11px] text-slate-400 mt-1">Mastery: 94%</div>
-          </button>
-
-          <button onmouseenter="inspectItem('Product Roadmapping & PRDs', '94%', 'Strategy Artifact', 'Aligning Product, Engineering, Finance, and Sales teams around core growth metrics.')" onclick="inspectItem('Product Roadmapping & PRDs', '94%', 'Strategy Artifact', 'Aligning Product, Engineering, Finance, and Sales teams around core growth metrics.')" class="hud-card-violet p-4 rounded-xl text-left hover:border-violetNeon group">
-            <div class="text-xs font-hud text-violetNeon">SLOT 09</div>
-            <div class="font-bold text-white text-sm mt-1 group-hover:text-violetNeon">Roadmapping</div>
-            <div class="text-[11px] text-slate-400 mt-1">Mastery: 94%</div>
-          </button>
-
-          <button onmouseenter="inspectItem('Lean Six Sigma (LSSGB) & RCA', '95%', 'Process Buff', 'Root Cause Analysis (RCA), end-to-end process mapping, and operational risk mitigation.')" onclick="inspectItem('Lean Six Sigma (LSSGB) & RCA', '95%', 'Process Buff', 'Root Cause Analysis (RCA), end-to-end process mapping, and operational risk mitigation.')" class="hud-card p-4 rounded-xl text-left hover:border-goldLoot group">
-            <div class="text-xs font-hud text-goldLoot">SLOT 10</div>
-            <div class="font-bold text-white text-sm mt-1 group-hover:text-goldLoot">Six Sigma & RCA</div>
-            <div class="text-[11px] text-slate-400 mt-1">Mastery: 95%</div>
-          </button>
-
-          <button onmouseenter="inspectItem('Advanced Excel & Forecasting', '98%', 'Core Modeling Weapon', 'Sophisticated pricing assessments, commission validation models, and time-series sales forecasting.')" onclick="inspectItem('Advanced Excel & Forecasting', '98%', 'Core Modeling Weapon', 'Sophisticated pricing assessments, commission validation models, and time-series sales forecasting.')" class="hud-card p-4 rounded-xl text-left hover:border-cyanNeon group">
-            <div class="text-xs font-hud text-cyanNeon">SLOT 11</div>
-            <div class="font-bold text-white text-sm mt-1 group-hover:text-cyanNeon">Excel Modeling</div>
-            <div class="text-[11px] text-slate-400 mt-1">Mastery: 98%</div>
-          </button>
-
-          <button onmouseenter="inspectItem('Customer Sentiment Analytics', '92%', 'Insight Scanner', 'Analyzing user interaction data and call analytics to optimize feature adoption and retention.')" onclick="inspectItem('Customer Sentiment Analytics', '92%', 'Insight Scanner', 'Analyzing user interaction data and call analytics to optimize feature adoption and retention.')" class="hud-card-violet p-4 rounded-xl text-left hover:border-violetNeon group">
-            <div class="text-xs font-hud text-violetNeon">SLOT 12</div>
-            <div class="font-bold text-white text-sm mt-1 group-hover:text-violetNeon">Sentiment Analysis</div>
-            <div class="text-[11px] text-slate-400 mt-1">Mastery: 92%</div>
-          </button>
-        </div>
-
-        <!-- Item Inspection Panel -->
-        <div class="lg:col-span-4 hud-card rounded-2xl p-6 border-2 border-cyanNeon/40">
-          <div class="text-xs font-hud text-goldLoot uppercase tracking-wider mb-2">ITEM INSPECTION PANEL</div>
-          <h3 id="inspectTitle" class="text-xl font-hud font-bold text-white">BigQuery & Advanced SQL</h3>
-          <div class="flex items-center gap-2 mt-2">
-            <span id="inspectType" class="px-2.5 py-0.5 rounded bg-cyanNeon/20 text-cyanNeon font-hud text-[11px]">Primary Data Weapon</span>
-            <span id="inspectMastery" class="font-hud text-xs text-goldLoot">Mastery: 98%</span>
-          </div>
-          <p id="inspectDesc" class="text-xs sm:text-sm text-slate-300 mt-4 leading-relaxed">
-            Writing optimized queries over millions of Fintech rows, cohort modeling, and funnel extraction.
-          </p>
-        </div>
-
-      </div>
-    </section>
-
-    <!-- ==========================================
-         SECTION 6: [06] GUILD REVIEWS & TROPHIES (TESTIMONIALS & AWARDS)
-         ========================================== -->
-    <section id="trophies" class="scroll-mt-24 space-y-8">
-      <div>
-        <span class="text-xs font-hud text-goldLoot uppercase tracking-widest">CHAPTER 06 // HALL OF FAME</span>
-        <h2 class="text-2xl sm:text-4xl font-hud font-bold text-white mt-1">TROPHY CABINET & GUILD REVIEWS</h2>
-      </div>
-
-      <!-- Trophy Metrics Grid -->
-      <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4">
-        <div class="hud-card rounded-2xl p-5 border-goldLoot/40 text-center">
-          <div class="text-3xl font-hud font-black text-goldLoot">30M+ EGP</div>
-          <div class="text-xs font-hud text-white mt-1">MONTHLY PORTFOLIO MANAGED</div>
-          <p class="text-[11px] text-slate-400 mt-1">High-value enterprise account retention & growth at Khazna</p>
-        </div>
-        <div class="hud-card rounded-2xl p-5 border-cyanNeon/40 text-center">
-          <div class="text-3xl font-hud font-black text-cyanNeon">+20%</div>
-          <div class="text-xs font-hud text-white mt-1">FUNNEL CONVERSION LIFT</div>
-          <p class="text-[11px] text-slate-400 mt-1">Documented increase in digital onboarding & KYC activation</p>
-        </div>
-        <div class="hud-card rounded-2xl p-5 border-violetNeon/40 text-center">
-          <div class="text-3xl font-hud font-black text-violetNeon">100%</div>
-          <div class="text-xs font-hud text-white mt-1">COMMISSION CYCLE ACCURACY</div>
-          <p class="text-[11px] text-slate-400 mt-1">End-to-end monthly payouts validated across Sales, HR & Finance</p>
-        </div>
-        <div class="hud-card rounded-2xl p-5 border-emerald-400/40 text-center">
-          <div class="text-3xl font-hud font-black text-emerald-400">7+ YRS</div>
-          <div class="text-xs font-hud text-white mt-1">TECH & FINTECH IMPACT</div>
-          <p class="text-[11px] text-slate-400 mt-1">Vodafone • Talabat • Khazna App • Aman Holding</p>
-        </div>
-      </div>
-
-      <!-- NPC Dialogue Testimonials -->
       <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
-        <div class="hud-card rounded-2xl p-6 relative">
-          <div class="flex items-center gap-3 mb-3">
-            <div class="w-10 h-10 rounded-lg bg-violetNeon/20 border border-violetNeon flex items-center justify-center font-hud text-violetNeon font-bold">PM</div>
-            <div>
-              <h4 class="font-hud text-xs font-bold text-white">PRODUCT & STRATEGY LEADERSHIP</h4>
-              <p class="text-[11px] text-slate-400">Fintech Guild Review // Khazna App</p>
+
+        <!-- Case Study 1 -->
+        <div class="bento-card rounded-2xl p-6 bg-white dark:bg-zinc-900/80 border border-slate-200 dark:border-zinc-800 flex flex-col justify-between">
+          <div class="space-y-3">
+            <div class="flex items-center justify-between">
+              <span class="text-xs font-mono px-2.5 py-1 rounded-md bg-teal-500/10 text-teal-600 dark:text-teal-400 font-medium">Product Growth & Funnel Analytics</span>
+              <span class="font-mono text-xs font-bold text-emerald-600 dark:text-emerald-400">+20% Conversion Lift</span>
             </div>
+            <h3 class="text-xl font-bold">Digital Onboarding & KYC Activation Funnel Revamp</h3>
+            <p class="text-xs sm:text-sm text-slate-600 dark:text-zinc-400 leading-relaxed">
+              <strong>Challenge:</strong> High user drop-off during digital registration and KYC compliance verification at Khazna App.<br/>
+              <strong>Solution:</strong> Mapped the end-to-end activation funnel using SQL event logs, pinpointed user friction stages, and collaborated with Product & Operations to redesign the registration flow while preserving full KYC compliance.
+            </p>
           </div>
-          <p class="text-xs sm:text-sm text-slate-300 italic leading-relaxed">
-            "Mohamed doesn't just hand over SQL tables or dashboards—he acts as a true Product Partner. When we needed to diagnose our user activation funnel and align Engineering, Sales, and Finance, his BigQuery analysis and onboarding improvements directly lifted conversion by 20%."
-          </p>
+          <div class="mt-6 pt-4 border-t border-slate-100 dark:border-zinc-800 flex flex-wrap gap-2 font-mono text-[11px] text-slate-500 dark:text-zinc-400">
+            <span class="px-2 py-0.5 rounded bg-slate-100 dark:bg-zinc-800">BigQuery SQL</span>
+            <span class="px-2 py-0.5 rounded bg-slate-100 dark:bg-zinc-800">Funnel Mapping</span>
+            <span class="px-2 py-0.5 rounded bg-slate-100 dark:bg-zinc-800">Product Discovery</span>
+            <span class="px-2 py-0.5 rounded bg-slate-100 dark:bg-zinc-800">KYC Optimization</span>
+          </div>
         </div>
 
-        <div class="hud-card rounded-2xl p-6 relative">
-          <div class="flex items-center gap-3 mb-3">
-            <div class="w-10 h-10 rounded-lg bg-cyanNeon/20 border border-cyanNeon flex items-center justify-center font-hud text-cyanNeon font-bold">CD</div>
-            <div>
-              <h4 class="font-hud text-xs font-bold text-white">COMMERCIAL & OPERATIONS DIRECTOR</h4>
-              <p class="text-[11px] text-slate-400">Executive Guild Review // Aman Holding</p>
+        <!-- Case Study 2 -->
+        <div class="bento-card rounded-2xl p-6 bg-white dark:bg-zinc-900/80 border border-slate-200 dark:border-zinc-800 flex flex-col justify-between">
+          <div class="space-y-3">
+            <div class="flex items-center justify-between">
+              <span class="text-xs font-mono px-2.5 py-1 rounded-md bg-indigo-500/10 text-indigo-600 dark:text-indigo-400 font-medium">BI Architecture & Automation</span>
+              <span class="font-mono text-xs font-bold text-indigo-600 dark:text-indigo-400">Real-Time Executive Visibility</span>
             </div>
+            <h3 class="text-xl font-bold">Automated Executive BI & Reporting Pipeline</h3>
+            <p class="text-xs sm:text-sm text-slate-600 dark:text-zinc-400 leading-relaxed">
+              <strong>Challenge:</strong> Commercial and operations teams spent excessive hours on manual daily and weekly spreadsheet reporting.<br/>
+              <strong>Solution:</strong> Built automated data extraction and dimensional modeling workflows integrating <strong>BigQuery, Google Apps Script, Power BI (DAX), Looker Studio, and Metabase</strong> to deliver real-time KPI dashboards to C-level leadership.
+            </p>
           </div>
-          <p class="text-xs sm:text-sm text-slate-300 italic leading-relaxed">
-            "Having Mohamed lead Commercial Analytics transformed our executive visibility. He automated our Power BI and Looker Studio reporting, built reliable forecasting models, and managed the entire sales force commission cycle with 100% accuracy."
-          </p>
+          <div class="mt-6 pt-4 border-t border-slate-100 dark:border-zinc-800 flex flex-wrap gap-2 font-mono text-[11px] text-slate-500 dark:text-zinc-400">
+            <span class="px-2 py-0.5 rounded bg-slate-100 dark:bg-zinc-800">Power BI (DAX)</span>
+            <span class="px-2 py-0.5 rounded bg-slate-100 dark:bg-zinc-800">Looker Studio</span>
+            <span class="px-2 py-0.5 rounded bg-slate-100 dark:bg-zinc-800">BigQuery</span>
+            <span class="px-2 py-0.5 rounded bg-slate-100 dark:bg-zinc-800">Google Apps Script</span>
+          </div>
+        </div>
+
+        <!-- Case Study 3 -->
+        <div class="bento-card rounded-2xl p-6 bg-white dark:bg-zinc-900/80 border border-slate-200 dark:border-zinc-800 flex flex-col justify-between">
+          <div class="space-y-3">
+            <div class="flex items-center justify-between">
+              <span class="text-xs font-mono px-2.5 py-1 rounded-md bg-amber-500/10 text-amber-600 dark:text-amber-400 font-medium">Commercial Analytics & Forecasting</span>
+              <span class="font-mono text-xs font-bold text-amber-600 dark:text-amber-400">100% Payout Accuracy</span>
+            </div>
+            <h3 class="text-xl font-bold">Enterprise Sales Commission & Forecasting System</h3>
+            <p class="text-xs sm:text-sm text-slate-600 dark:text-zinc-400 leading-relaxed">
+              <strong>Challenge:</strong> Aligning multi-regional sales targets and managing complex monthly commission payouts across Sales, Finance, and HR at Aman Holding.<br/>
+              <strong>Solution:</strong> Cascaded unified sales KPIs, built historical time-series forecasting models, and instituted automated validation checks achieving 100% payout accuracy.
+            </p>
+          </div>
+          <div class="mt-6 pt-4 border-t border-slate-100 dark:border-zinc-800 flex flex-wrap gap-2 font-mono text-[11px] text-slate-500 dark:text-zinc-400">
+            <span class="px-2 py-0.5 rounded bg-slate-100 dark:bg-zinc-800">Sales Forecasting</span>
+            <span class="px-2 py-0.5 rounded bg-slate-100 dark:bg-zinc-800">KPI Modeling</span>
+            <span class="px-2 py-0.5 rounded bg-slate-100 dark:bg-zinc-800">Root Cause Analysis</span>
+          </div>
+        </div>
+
+        <!-- Case Study 4 -->
+        <div class="bento-card rounded-2xl p-6 bg-white dark:bg-zinc-900/80 border border-slate-200 dark:border-zinc-800 flex flex-col justify-between">
+          <div class="space-y-3">
+            <div class="flex items-center justify-between">
+              <span class="text-xs font-mono px-2.5 py-1 rounded-md bg-purple-500/10 text-purple-600 dark:text-purple-400 font-medium">Product Ops & Data Engineering</span>
+              <span class="font-mono text-xs font-bold text-purple-600 dark:text-purple-400">Scalable Architecture</span>
+            </div>
+            <h3 class="text-xl font-bold">Cross-Border Operations Admin Panel & Modern Data Stack</h3>
+            <p class="text-xs sm:text-sm text-slate-600 dark:text-zinc-400 leading-relaxed">
+              <strong>Challenge:</strong> Decentralized operational workflows hindering cross-border business expansion and consistent data lineage.<br/>
+              <strong>Solution:</strong> Architected a centralized Admin Panel via <strong>Google AppSheet</strong> & dimensional modeling, alongside modern fintech ELT pipelines utilizing <strong>BigQuery, dbt, Apache Airflow, and Python</strong>.
+            </p>
+          </div>
+          <div class="mt-6 pt-4 border-t border-slate-100 dark:border-zinc-800 flex flex-wrap gap-2 font-mono text-[11px] text-slate-500 dark:text-zinc-400">
+            <span class="px-2 py-0.5 rounded bg-slate-100 dark:bg-zinc-800">AppSheet</span>
+            <span class="px-2 py-0.5 rounded bg-slate-100 dark:bg-zinc-800">dbt</span>
+            <span class="px-2 py-0.5 rounded bg-slate-100 dark:bg-zinc-800">Apache Airflow</span>
+            <span class="px-2 py-0.5 rounded bg-slate-100 dark:bg-zinc-800">Python</span>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- ==========================================
+         4. CAREER PATH (EXPERIENCE TIMELINE)
+         ========================================== -->
+    <section id="experience" class="scroll-mt-24 space-y-8">
+      <div class="border-b border-slate-200 dark:border-zinc-800 pb-6">
+        <span class="text-xs font-mono uppercase tracking-wider text-indigo-600 dark:text-indigo-400">03 // Career Trajectory</span>
+        <h2 class="text-2xl sm:text-3xl font-bold tracking-tight mt-1">Professional Experience (2018 – Present)</h2>
+      </div>
+
+      <div class="space-y-6">
+
+        <!-- Role 1 -->
+        <div class="p-6 rounded-2xl bg-white dark:bg-zinc-900/80 border border-slate-200 dark:border-zinc-800">
+          <div class="flex flex-wrap items-center justify-between gap-2">
+            <div>
+              <h3 class="text-lg font-bold">Operations Manager</h3>
+              <p class="text-sm text-indigo-600 dark:text-indigo-400 font-medium">Private Business</p>
+            </div>
+            <span class="font-mono text-xs px-3 py-1 rounded-full bg-slate-100 dark:bg-zinc-800 text-slate-600 dark:text-zinc-300">Jan 2026 – Present</span>
+          </div>
+          <ul class="mt-4 space-y-2 text-xs sm:text-sm text-slate-600 dark:text-zinc-400 list-disc list-inside">
+            <li>Partner with product leaders and stakeholders to define <strong>Product Performance metrics</strong> and map end-to-end product activation funnels to accelerate adoption.</li>
+            <li>Automate data extraction and dimensional modeling workflows using <strong>Google Apps Script</strong> and deploy real-time interactive KPI dashboards in <strong>Looker Studio</strong>.</li>
+            <li>Architect and deploy a centralized Admin Panel via <strong>AppSheet</strong> to standardize internal processes and support cross-border expansion.</li>
+            <li>Leverage <strong>User Behavior Analytics</strong>, call/sentiment data, pricing assessments, and demand forecasting to guide Feature Optimization.</li>
+          </ul>
+        </div>
+
+        <!-- Role 2 -->
+        <div class="p-6 rounded-2xl bg-white dark:bg-zinc-900/80 border border-slate-200 dark:border-zinc-800">
+          <div class="flex flex-wrap items-center justify-between gap-2">
+            <div>
+              <h3 class="text-lg font-bold">Commercial Analytics Supervisor</h3>
+              <p class="text-sm text-indigo-600 dark:text-indigo-400 font-medium">Aman Holding</p>
+            </div>
+            <span class="font-mono text-xs px-3 py-1 rounded-full bg-slate-100 dark:bg-zinc-800 text-slate-600 dark:text-zinc-300">Aug 2025 – Jan 2026</span>
+          </div>
+          <ul class="mt-4 space-y-2 text-xs sm:text-sm text-slate-600 dark:text-zinc-400 list-disc list-inside">
+            <li>Orchestrated automated performance dashboards using <strong>Power BI</strong> and <strong>Looker Studio</strong>, providing executive leadership with real-time visibility into commercial health and SLA adherence.</li>
+            <li>Developed and cascaded company-wide sales KPIs across regions and channels in coordination with Sales, Finance, and HR.</li>
+            <li>Led the end-to-end monthly sales commission calculation and payout cycle with <strong>100% accuracy</strong>.</li>
+            <li>Built historical sales forecasting models and collaborated with Data Engineering on <strong>Root Cause Analysis (RCA)</strong> to resolve data quality bottlenecks.</li>
+          </ul>
+        </div>
+
+        <!-- Role 3 -->
+        <div class="p-6 rounded-2xl bg-white dark:bg-zinc-900/80 border border-slate-200 dark:border-zinc-800">
+          <div class="flex flex-wrap items-center justify-between gap-2">
+            <div>
+              <h3 class="text-lg font-bold">Commercial Analytics & Process Integration Lead</h3>
+              <p class="text-sm text-indigo-600 dark:text-indigo-400 font-medium">Khazna App</p>
+            </div>
+            <span class="font-mono text-xs px-3 py-1 rounded-full bg-slate-100 dark:bg-zinc-800 text-slate-600 dark:text-zinc-300">Dec 2024 – Jul 2025</span>
+          </div>
+          <ul class="mt-4 space-y-2 text-xs sm:text-sm text-slate-600 dark:text-zinc-400 list-disc list-inside">
+            <li>Collaborated with Product and Sales teams to map the <strong>user activation funnel</strong> and support product discovery, identifying feature optimization opportunities that drove measurable Product Growth.</li>
+            <li>Served as the lead product data partner uniting Product, Engineering, Finance, and Strategy around core growth metrics and product roadmap decisions.</li>
+            <li>Automated manual daily and weekly reporting workflows utilizing <strong>BigQuery, Looker Studio, Metabase, and Google Sheets</strong>.</li>
+          </ul>
+        </div>
+
+        <!-- Role 4 -->
+        <div class="p-6 rounded-2xl bg-white dark:bg-zinc-900/80 border border-slate-200 dark:border-zinc-800">
+          <div class="flex flex-wrap items-center justify-between gap-2">
+            <div>
+              <h3 class="text-lg font-bold">Commercial Operations Supervisor</h3>
+              <p class="text-sm text-indigo-600 dark:text-indigo-400 font-medium">Khazna App</p>
+            </div>
+            <span class="font-mono text-xs px-3 py-1 rounded-full bg-slate-100 dark:bg-zinc-800 text-slate-600 dark:text-zinc-300">Mar 2023 – Nov 2024</span>
+          </div>
+          <ul class="mt-4 space-y-2 text-xs sm:text-sm text-slate-600 dark:text-zinc-400 list-disc list-inside">
+            <li>Wrote highly optimized <strong>SQL queries in Google BigQuery</strong> to extract and analyze large, complex datasets for strategic decision-making.</li>
+            <li>Developed product dashboards and evaluated feature performance using <strong>A/B Testing</strong> and experimentation insights.</li>
+            <li>Led, mentored, and refined KPI evaluation frameworks for a high-performing operations analytics team.</li>
+          </ul>
+        </div>
+
+        <!-- Role 5 -->
+        <div class="p-6 rounded-2xl bg-white dark:bg-zinc-900/80 border border-slate-200 dark:border-zinc-800">
+          <div class="flex flex-wrap items-center justify-between gap-2">
+            <div>
+              <h3 class="text-lg font-bold">Partner Success Manager & Community Support Specialist</h3>
+              <p class="text-sm text-indigo-600 dark:text-indigo-400 font-medium">Khazna App</p>
+            </div>
+            <span class="font-mono text-xs px-3 py-1 rounded-full bg-slate-100 dark:bg-zinc-800 text-slate-600 dark:text-zinc-300">Nov 2021 – Mar 2023</span>
+          </div>
+          <ul class="mt-4 space-y-2 text-xs sm:text-sm text-slate-600 dark:text-zinc-400 list-disc list-inside">
+            <li>Directly managed a key enterprise portfolio generating over <strong>30 Million EGP in monthly revenue</strong>, ensuring high partner retention and growth.</li>
+            <li>Revitalized digital onboarding and KYC registration processes, delivering a documented <strong>+20% increase in activation conversion rates</strong>.</li>
+          </ul>
+        </div>
+
+        <!-- Role 6 -->
+        <div class="p-6 rounded-2xl bg-white dark:bg-zinc-900/80 border border-slate-200 dark:border-zinc-800">
+          <div class="flex flex-wrap items-center justify-between gap-2">
+            <div>
+              <h3 class="text-lg font-bold">Regional Account Advisor @ Talabat & Customer Operations Specialist @ Vodafone</h3>
+              <p class="text-sm text-indigo-600 dark:text-indigo-400 font-medium">Early Career Foundation • Education: B.A. in Education, Al-Azhar University (2015 – 2018)</p>
+            </div>
+            <span class="font-mono text-xs px-3 py-1 rounded-full bg-slate-100 dark:bg-zinc-800 text-slate-600 dark:text-zinc-300">Mar 2018 – Nov 2021</span>
+          </div>
+          <ul class="mt-4 space-y-2 text-xs sm:text-sm text-slate-600 dark:text-zinc-400 list-disc list-inside">
+            <li><strong>Talabat (2020):</strong> Managed regional restaurant partner onboarding lifecycles, activation funnels, SLA compliance, and workforce coordination.</li>
+            <li><strong>Vodafone (2018 – 2021):</strong> Coached and trained customer service teams, coordinated staffing schedules with HR, and maintained strict SLA targets for high-value accounts.</li>
+          </ul>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- ==========================================
+         5. CERTIFICATIONS & CREDENTIALS
+         ========================================== -->
+    <section id="certifications" class="scroll-mt-24 space-y-8">
+      <div class="border-b border-slate-200 dark:border-zinc-800 pb-6">
+        <span class="text-xs font-mono uppercase tracking-wider text-indigo-600 dark:text-indigo-400">04 // Verified Credentials</span>
+        <h2 class="text-2xl sm:text-3xl font-bold tracking-tight mt-1">Certifications in Product, Data & Process</h2>
+      </div>
+
+      <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4">
+        <div class="p-5 rounded-2xl bg-white dark:bg-zinc-900/80 border border-slate-200 dark:border-zinc-800">
+          <span class="font-mono text-xs text-teal-600 dark:text-teal-400">Sprints • 2025</span>
+          <h3 class="font-bold text-sm mt-1">Specialization Certificate: Product Management</h3>
+        </div>
+        <div class="p-5 rounded-2xl bg-white dark:bg-zinc-900/80 border border-slate-200 dark:border-zinc-800">
+          <span class="font-mono text-xs text-teal-600 dark:text-teal-400">Product School • 2025</span>
+          <h3 class="font-bold text-sm mt-1">Product Discovery (PDC) Micro-Certification</h3>
+        </div>
+        <div class="p-5 rounded-2xl bg-white dark:bg-zinc-900/80 border border-slate-200 dark:border-zinc-800">
+          <span class="font-mono text-xs text-teal-600 dark:text-teal-400">Product School • 2025</span>
+          <h3 class="font-bold text-sm mt-1">Product Roadmapping (PRC) Micro-Certification</h3>
+        </div>
+        <div class="p-5 rounded-2xl bg-white dark:bg-zinc-900/80 border border-slate-200 dark:border-zinc-800">
+          <span class="font-mono text-xs text-amber-600 dark:text-amber-400">Six Sigma School • 2025</span>
+          <h3 class="font-bold text-sm mt-1">Lean Six Sigma Green Belt (LSSGB)</h3>
+        </div>
+        <div class="p-5 rounded-2xl bg-white dark:bg-zinc-900/80 border border-slate-200 dark:border-zinc-800">
+          <span class="font-mono text-xs text-indigo-600 dark:text-indigo-400">DataCamp • 2026</span>
+          <h3 class="font-bold text-sm mt-1">Intermediate Python for Data Science</h3>
+        </div>
+        <div class="p-5 rounded-2xl bg-white dark:bg-zinc-900/80 border border-slate-200 dark:border-zinc-800">
+          <span class="font-mono text-xs text-indigo-600 dark:text-indigo-400">LinkedIn • 2024</span>
+          <h3 class="font-bold text-sm mt-1">Power BI: Dashboards & Executive Reporting</h3>
+        </div>
+        <div class="p-5 rounded-2xl bg-white dark:bg-zinc-900/80 border border-slate-200 dark:border-zinc-800">
+          <span class="font-mono text-xs text-teal-600 dark:text-teal-400">LinkedIn • 2024</span>
+          <h3 class="font-bold text-sm mt-1">Design Thinking: Understanding the Process</h3>
+        </div>
+        <div class="p-5 rounded-2xl bg-white dark:bg-zinc-900/80 border border-slate-200 dark:border-zinc-800">
+          <span class="font-mono text-xs text-indigo-600 dark:text-indigo-400">Cartona • 2023</span>
+          <h3 class="font-bold text-sm mt-1">Data Visualization in Tableau</h3>
         </div>
       </div>
     </section>
 
     <!-- ==========================================
-         SECTION 7: [07] THE ARCADE / SIDE QUESTS (FRIENDLY GAMING ZONE)
+         6. INTERACTIVE PRODUCT & DATA DIAGNOSTIC SIMULATOR
          ========================================== -->
-    <section id="arcade" class="scroll-mt-24 space-y-8 game-only">
-      <div>
-        <span class="text-xs font-hud text-goldLoot uppercase tracking-widest">CHAPTER 07 // BONUS LEVEL & MINI-GAME</span>
-        <h2 class="text-2xl sm:text-4xl font-hud font-bold text-white mt-1">THE ARCADE: PLAY "FIX THE PRODUCT FUNNEL!"</h2>
-      </div>
-
-      <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 items-center">
-        
-        <!-- Gamer Persona Card (PHOTO SLOT #5) -->
-        <div class="lg:col-span-5 hud-card-violet rounded-2xl p-6 space-y-4">
-          <div class="flex items-center justify-between text-xs font-hud text-violetNeon">
-            <span>SIDE QUEST // GAMER MINDSET</span>
-            <span>SLOT #05</span>
+    <section id="simulator" class="scroll-mt-24 no-print">
+      <div class="rounded-2xl p-6 sm:p-8 bg-gradient-to-br from-indigo-950/40 via-zinc-900 to-zinc-950 text-white border border-indigo-500/30 space-y-6">
+        <div class="flex flex-wrap items-center justify-between gap-2">
+          <div>
+            <span class="text-xs font-mono uppercase tracking-wider text-indigo-400">05 // Interactive Case Walkthrough</span>
+            <h2 class="text-xl sm:text-2xl font-bold mt-1">How I Solve Product & Data Challenges</h2>
           </div>
+          <span id="simStepBadge" class="font-mono text-xs px-3 py-1 rounded-full bg-indigo-500/20 text-indigo-300 border border-indigo-500/30">
+            Step 1 of 3
+          </span>
+        </div>
 
-          <!-- Custom Stylized Gamer Avatar of Mohamed (Headset + Signature Glasses + Casual Striped Shirt from solo look) -->
-          <div class="aspect-[16/10] rounded-xl bg-slate-900 border border-violetNeon/30 overflow-hidden flex items-center justify-center relative">
-            <svg viewBox="0 0 360 220" class="w-full h-full" xmlns="http://www.w3.org/2000/svg">
-              <rect width="360" height="220" fill="#090D16"/>
-              <circle cx="180" cy="110" r="85" fill="#8B5CF6" opacity="0.12"/>
-              <!-- Gaming Headset Band -->
-              <path d="M122 105 C122 45, 238 45, 238 105" stroke="#00F5D4" stroke-width="8" fill="none"/>
-              <rect x="112" y="92" width="16" height="34" rx="6" fill="#8B5CF6" stroke="#00F5D4" stroke-width="2"/>
-              <rect x="232" y="92" width="16" height="34" rx="6" fill="#8B5CF6" stroke="#00F5D4" stroke-width="2"/>
-              <!-- Head -->
-              <circle cx="180" cy="112" r="46" fill="#C68B67"/>
-              <!-- Curly Hair -->
-              <path d="M138 95 C142 62, 218 62, 222 95 C205 78, 155 78, 138 95 Z" fill="#18181B"/>
-              <!-- Glasses -->
-              <rect x="148" y="98" width="28" height="16" rx="3" fill="#00F5D4" fill-opacity="0.4" stroke="#0F172A" stroke-width="2.5"/>
-              <rect x="184" y="98" width="28" height="16" rx="3" fill="#00F5D4" fill-opacity="0.4" stroke="#0F172A" stroke-width="2.5"/>
-              <line x1="176" y1="103" x2="184" y2="103" stroke="#0F172A" stroke-width="2.5"/>
-              <!-- Beard & Smile -->
-              <path d="M138 122 C144 162, 216 162, 222 122 C210 146, 150 146, 138 122 Z" fill="#18181B"/>
-              <path d="M168 130 Q180 139 192 130" stroke="#FFF" stroke-width="2.5" fill="none"/>
-              <!-- Mic Boom -->
-              <path d="M120 120 Q145 145 168 142" stroke="#00F5D4" stroke-width="2.5" fill="none"/>
-              <circle cx="170" cy="142" r="3.5" fill="#F59E0B"/>
-              <!-- Shoulders -->
-              <path d="M105 220 C115 170, 245 170, 255 220 Z" fill="#1E293B" stroke="#8B5CF6" stroke-width="2"/>
-            </svg>
-          </div>
-
-          <h3 class="text-lg font-hud font-bold text-white">WHY GAMING MAKES ME A BETTER ANALYST</h3>
-          <p class="text-xs sm:text-sm text-slate-300 leading-relaxed">
-            Strategy and RPG games taught me resource optimization, reading the meta (data patterns), and coordinating cross-functional guild raids under pressure. Whether optimizing a character build or a Fintech activation funnel—it's all about finding the highest-leverage stat!
+        <div id="simBody" class="space-y-4">
+          <p id="simScenario" class="text-sm sm:text-base text-zinc-200">
+            <strong>Scenario:</strong> A Fintech app notices an 18% drop in new user activation after an onboarding update. Select the analytical approach below to walk through my workflow:
           </p>
-        </div>
-
-        <!-- Interactive Mini-Game Box -->
-        <div class="lg:col-span-7 hud-card rounded-2xl p-6 border-2 border-goldLoot/40 space-y-5">
-          <div class="flex items-center justify-between border-b border-slate-800 pb-3">
-            <div>
-              <span class="text-xs font-hud text-goldLoot">INTERACTIVE SIMULATOR // 3 STAGES</span>
-              <h3 class="text-xl font-hud font-bold text-white">MISSION: SAVE THE PRODUCT LAUNCH!</h3>
-            </div>
-            <div class="px-3 py-1 rounded bg-goldLoot/20 border border-goldLoot/40 font-hud text-xs text-goldLoot">
-              SCORE: <span id="gameScore">0</span> / 300 XP
-            </div>
+          <div id="simChoices" class="grid grid-cols-1 sm:grid-cols-2 gap-3">
+            <button onclick="advanceSim(1, true)" class="p-4 rounded-xl bg-zinc-900/90 border border-zinc-700 hover:border-indigo-400 text-left text-xs sm:text-sm transition">
+              <strong>1. Query BigQuery Funnel Logs:</strong> Segment drop-off rates by KYC step, device, and user cohort using SQL Window Functions.
+            </button>
+            <button onclick="advanceSim(1, false)" class="p-4 rounded-xl bg-zinc-900/90 border border-zinc-700 hover:border-rose-400 text-left text-xs sm:text-sm transition">
+              <strong>2. Rollback Without Data:</strong> Revert the entire release based on gut feeling without isolating the root cause.
+            </button>
           </div>
-
-          <!-- Game Stage Content -->
-          <div id="gameContainer" class="space-y-4">
-            <div id="gameScenarioBadge" class="text-xs font-hud text-cyanNeon">STAGE 1 OF 3 // THE DROP-OFF ALERT</div>
-            <p id="gameQuestion" class="text-sm sm:text-base font-semibold text-white">
-              🚨 Alert! New user activation dropped by 18% after yesterday's onboarding update. As Lead Product Analyst, what is your first move?
-            </p>
-
-            <div id="gameOptions" class="grid grid-cols-1 gap-3">
-              <button onclick="handleGameAnswer(1, true)" class="p-3.5 rounded-xl bg-slate-900/90 border border-slate-700 hover:border-cyanNeon text-left text-xs sm:text-sm text-slate-200 hover:text-cyanNeon transition flex items-center justify-between">
-                <span>A) Query BigQuery event logs to isolate the exact KYC funnel step where users drop off.</span>
-                <i data-lucide="chevron-right" class="w-4 h-4"></i>
-              </button>
-              <button onclick="handleGameAnswer(1, false)" class="p-3.5 rounded-xl bg-slate-900/90 border border-slate-700 hover:border-rose-500 text-left text-xs sm:text-sm text-slate-200 transition flex items-center justify-between">
-                <span>B) Immediately roll back the entire app without checking the data first.</span>
-                <i data-lucide="chevron-right" class="w-4 h-4"></i>
-              </button>
-            </div>
-
-            <div id="gameFeedback" class="hidden p-3 rounded-lg text-xs font-space"></div>
-          </div>
+          <div id="simFeedback" class="hidden p-3.5 rounded-xl text-xs font-mono"></div>
         </div>
-
       </div>
     </section>
 
   </main>
 
-  <!-- FOOTER & DIRECT CONTACT PORTAL -->
-  <footer class="border-t border-slate-800 bg-obsidian/95 py-12">
-    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex flex-col sm:flex-row items-center justify-between gap-6">
+  <!-- FOOTER -->
+  <footer class="border-t border-slate-200 dark:border-zinc-800 py-10">
+    <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 flex flex-col sm:flex-row items-center justify-between gap-4 text-xs text-slate-500 dark:text-zinc-400">
       <div>
-        <div class="font-hud font-bold text-lg text-white">MOHAMED ELKASHEF</div>
-        <p class="text-xs text-slate-400 mt-1">Senior Product Analyst | Commercial Analytics & BI Lead • Cairo, Egypt</p>
+        <strong class="text-slate-900 dark:text-white">Mohamed Elkashef</strong> — Senior Product Analyst & Commercial Analytics Lead • Cairo, Egypt
       </div>
-      <div class="flex flex-wrap items-center gap-3">
-        <a href="https://wa.me/201021195267" target="_blank" rel="noopener" class="px-4 py-2 rounded-lg bg-emerald-500/20 border border-emerald-500/40 text-emerald-300 text-xs font-hud hover:bg-emerald-500 hover:text-obsidian transition">
-          WhatsApp: +201021195267
-        </a>
-        <a href="mailto:mokashef96@gmail.com" class="px-4 py-2 rounded-lg bg-cyanNeon/20 border border-cyanNeon/40 text-cyanNeon text-xs font-hud hover:bg-cyanNeon hover:text-obsidian transition">
-          Email Me
-        </a>
-        <a href="https://www.linkedin.com/in/elkashef/" target="_blank" rel="noopener" class="px-4 py-2 rounded-lg bg-violetNeon/20 border border-violetNeon/40 text-violetNeon text-xs font-hud hover:bg-violetNeon hover:text-white transition">
-          LinkedIn
-        </a>
+      <div class="flex items-center gap-4">
+        <a href="mailto:mokashef96@gmail.com" class="hover:text-indigo-500 transition">mokashef96@gmail.com</a>
+        <a href="https://www.linkedin.com/in/elkashef/" target="_blank" rel="noopener" class="hover:text-indigo-500 transition">LinkedIn</a>
+        <a href="https://wa.me/201021195267" target="_blank" rel="noopener" class="hover:text-emerald-500 transition">WhatsApp</a>
       </div>
     </div>
   </footer>
 
-  <!-- JAVASCRIPT ENGINE -->
+  <!-- INTERACTIVE SCRIPTS -->
   <script>
-    // Initialize Lucide Icons
     lucide.createIcons();
 
-    // Web Audio Synthesizer for Subtle Game Clicks (Muted by Default)
-    let soundEnabled = false;
-    let audioCtx = null;
-
-    function toggleSound() {
-      soundEnabled = !soundEnabled;
-      const icon = document.getElementById('soundIcon');
-      icon.setAttribute('data-lucide', soundEnabled ? 'volume-2' : 'volume-x');
+    // Theme Switcher (Dark Mode by default, switches to crisp Light Mode)
+    function toggleTheme() {
+      const html = document.documentElement;
+      html.classList.toggle('dark');
+      const isDark = html.classList.contains('dark');
+      const icon = document.getElementById('themeIcon');
+      icon.setAttribute('data-lucide', isDark ? 'sun' : 'moon');
       lucide.createIcons();
-      if (soundEnabled) playClick();
     }
 
-    function playClick(freq = 620) {
-      if (!soundEnabled) return;
-      try {
-        if (!audioCtx) audioCtx = new (window.AudioContext || window.webkitAudioContext)();
-        const osc = audioCtx.createOscillator();
-        const gain = audioCtx.createGain();
-        osc.type = 'sine';
-        osc.frequency.setValueAtTime(freq, audioCtx.currentTime);
-        gain.gain.setValueAtTime(0.06, audioCtx.currentTime);
-        gain.gain.exponentialRampToValueAtTime(0.001, audioCtx.currentTime + 0.07);
-        osc.connect(gain);
-        gain.connect(audioCtx.destination);
-        osc.start();
-        osc.stop(audioCtx.currentTime + 0.07);
-      } catch (e) {}
-    }
+    // Skills & Tools Matrix Filtering & Live Search
+    let activeCategory = 'all';
 
-    // Live Scroll XP Bar & Dynamic Level Update
-    window.addEventListener('scroll', () => {
-      const scrollTop = window.scrollY;
-      const docHeight = document.documentElement.scrollHeight - window.innerHeight;
-      const pct = Math.min(100, Math.max(14, (scrollTop / (docHeight || 1)) * 100));
-      document.getElementById('xpProgressBar').style.width = pct + '%';
-    });
-
-    // Dual Mode Toggle (Story RPG Mode vs Executive Recruiter Mode)
-    let isRecruiterMode = false;
-    function togglePortfolioMode() {
-      playClick(740);
-      isRecruiterMode = !isRecruiterMode;
-      document.body.classList.toggle('recruiter-mode', isRecruiterMode);
-      document.getElementById('modeIcon').textContent = isRecruiterMode ? '👔' : '🎮';
-      document.getElementById('modeLabel').textContent = isRecruiterMode ? 'Executive Recruiter Mode' : 'Story RPG Mode';
-    }
-
-    // Switch Avatar / Real Portrait View
-    let showingRealPhoto = false;
-    function switchAvatarView() {
-      playClick(520);
-      const rpgView = document.getElementById('rpgAvatarView');
-      const realView = document.getElementById('realPhotoView');
-      const label = document.getElementById('avatarStateLabel');
-      const btnText = document.getElementById('switchBtnText');
-
-      showingRealPhoto = !showingRealPhoto;
-      if (showingRealPhoto) {
-        if (realView.dataset.fallback === 'true' && !realView.src.startsWith('data:')) {
-          alert('Tip: Click "Load Solo Photo" right next to this button to select your solo blazer photo (image_5.png) or white-shirt photo (image_3.png), or place it in assets/photo-pro.jpg!');
-          showingRealPhoto = false;
-          return;
-        }
-        rpgView.classList.add('hidden');
-        realView.classList.remove('hidden');
-        label.textContent = 'REAL STUDIO PORTRAIT';
-        btnText.textContent = 'Switch to RPG Avatar';
-      } else {
-        realView.classList.add('hidden');
-        rpgView.classList.remove('hidden');
-        label.textContent = 'CYBER RPG AVATAR';
-        btnText.textContent = 'Switch to Real Portrait';
-      }
-    }
-
-    // Load User Solo Photo Directly in Browser with Cyber Filter
-    function loadUserSoloPhoto(event) {
-      const file = event.target.files[0];
-      if (!file) return;
-      const reader = new FileReader();
-      reader.onload = function(e) {
-        const realView = document.getElementById('realPhotoView');
-        realView.src = e.target.result;
-        realView.dataset.fallback = 'false';
-        showingRealPhoto = false;
-        switchAvatarView();
-      };
-      reader.readAsDataURL(file);
-    }
-
-    // Reverse Campaign Timeline Order
-    let latestFirst = true;
-    function reverseTimelineOrder() {
-      playClick(600);
-      const container = document.getElementById('timelineContainer');
-      const items = Array.from(container.querySelectorAll('.timeline-item'));
-      items.reverse().forEach(item => container.appendChild(item));
-      latestFirst = !latestFirst;
-      document.getElementById('timelineOrderLabel').textContent = latestFirst
-        ? 'Order: Latest Level First (LVL 7 ➔ LVL 1)'
-        : 'Order: Origin Story First (LVL 1 ➔ LVL 7)';
-    }
-
-    // Filter Certificates
-    function filterCerts(category) {
-      playClick(680);
-      document.querySelectorAll('.cert-card').forEach(card => {
-        if (category === 'all' || card.dataset.category === category) {
-          card.classList.remove('hidden');
+    function setSkillCategory(cat) {
+      activeCategory = cat;
+      document.querySelectorAll('.skill-tab-btn').forEach(btn => {
+        if (btn.dataset.cat === cat) {
+          btn.className = 'skill-tab-btn px-4 py-2 rounded-xl text-xs font-semibold bg-indigo-600 text-white transition';
         } else {
-          card.classList.add('hidden');
+          btn.className = 'skill-tab-btn px-4 py-2 rounded-xl text-xs font-medium bg-white dark:bg-zinc-900 border border-slate-200 dark:border-zinc-800 hover:border-indigo-500 transition';
         }
+      });
+      filterSkillsMatrix();
+    }
+
+    function filterSkillsMatrix() {
+      const query = document.getElementById('skillSearchInput').value.toLowerCase().trim();
+      document.querySelectorAll('.skill-item').forEach(card => {
+        const matchCat = (activeCategory === 'all' || card.dataset.cat === activeCategory);
+        const textContent = (card.textContent + ' ' + card.dataset.keywords).toLowerCase();
+        const matchQuery = (!query || textContent.includes(query));
+        card.style.display = (matchCat && matchQuery) ? 'flex' : 'none';
       });
     }
 
-    // Filter Quests
-    function filterQuests(category) {
-      playClick(680);
-      document.querySelectorAll('.quest-card').forEach(card => {
-        if (category === 'all' || card.dataset.category === category) {
-          card.classList.remove('hidden');
-        } else {
-          card.classList.add('hidden');
-        }
-      });
-    }
-
-    // Inspect Inventory Item
-    function inspectItem(title, mastery, type, desc) {
-      playClick(800);
-      document.getElementById('inspectTitle').textContent = title;
-      document.getElementById('inspectMastery').textContent = 'Mastery: ' + mastery;
-      document.getElementById('inspectType').textContent = type;
-      document.getElementById('inspectDesc').textContent = desc;
-    }
-
-    // Mini-Game Engine ("Fix the Product Funnel!")
-    const gameStages = [
-      null,
-      {
-        badge: 'STAGE 1 OF 3 // DIAGNOSE THE DROP-OFF',
-        question: '🚨 Alert! New user activation dropped by 18% after yesterday\'s onboarding update. As Lead Product Analyst, what is your first move?',
-        options: [
-          { text: 'A) Query BigQuery event logs to isolate the exact KYC funnel step where users drop off.', correct: true },
-          { text: 'B) Immediately roll back the entire app without checking the data first.', correct: false }
-        ]
-      },
-      {
-        badge: 'STAGE 2 OF 3 // FORMULATE PRODUCT STRATEGY',
-        question: '🔍 BigQuery shows 42% of users abandon the KYC upload screen due to unclear instructions. What do you recommend to the Product Manager?',
-        options: [
-          { text: 'A) Redesign the KYC micro-copy & run a controlled A/B test to measure activation lift.', correct: true },
-          { text: 'B) Remove KYC compliance checks completely and risk regulatory penalties.', correct: false }
-        ]
-      },
-      {
-        badge: 'STAGE 3 OF 3 // SCALE & AUTOMATE VISIBILITY',
-        question: '🚀 The A/B test succeeded and boosted conversion by +20%! How do you ensure leadership tracks this metric sustainably?',
-        options: [
-          { text: 'A) Automate a real-time Looker Studio & Power BI executive dashboard connected to BigQuery.', correct: true },
-          { text: 'B) Manually copy-paste numbers into an email every Monday morning.', correct: false }
-        ]
-      }
-    ];
-
-    let currentScore = 0;
-    function handleGameAnswer(stage, isCorrect) {
-      const feedback = document.getElementById('gameFeedback');
+    // Interactive Case Walkthrough
+    function advanceSim(step, isOptimal) {
+      const feedback = document.getElementById('simFeedback');
       feedback.classList.remove('hidden');
 
-      if (!isCorrect) {
-        playClick(240);
-        feedback.className = 'p-3 rounded-lg text-xs font-space bg-rose-500/20 border border-rose-500/40 text-rose-200';
-        feedback.textContent = '⚠️ Not optimal! A Senior Product Analyst always relies on data-backed root cause analysis. Try the other option!';
+      if (!isOptimal) {
+        feedback.className = 'p-3.5 rounded-xl text-xs font-mono bg-rose-500/20 border border-rose-500/40 text-rose-200';
+        feedback.textContent = 'Not quite — rolling back blindly loses product momentum. A Senior Product Analyst first isolates the exact funnel step in BigQuery.';
         return;
       }
 
-      playClick(880);
-      currentScore = stage * 100;
-      document.getElementById('gameScore').textContent = currentScore;
-
-      if (stage < 3) {
-        const next = gameStages[stage + 1];
-        feedback.className = 'p-3 rounded-lg text-xs font-space bg-emerald-500/20 border border-emerald-500/40 text-emerald-200';
-        feedback.textContent = '✅ Spot on! +100 XP unlocked. Loading next stage...';
-
+      if (step === 1) {
+        feedback.className = 'p-3.5 rounded-xl text-xs font-mono bg-emerald-500/20 border border-emerald-500/40 text-emerald-200';
+        feedback.textContent = '✓ Correct: BigQuery logs reveal a 42% drop-off at the KYC ID upload step. Loading Step 2...';
         setTimeout(() => {
           feedback.classList.add('hidden');
-          document.getElementById('gameScenarioBadge').textContent = next.badge;
-          document.getElementById('gameQuestion').textContent = next.question;
-          document.getElementById('gameOptions').innerHTML = next.options.map(opt => `
-            <button onclick="handleGameAnswer(${stage + 1}, ${opt.correct})" class="p-3.5 rounded-xl bg-slate-900/90 border border-slate-700 hover:border-cyanNeon text-left text-xs sm:text-sm text-slate-200 hover:text-cyanNeon transition flex items-center justify-between">
-              <span>${opt.text}</span>
-              <i data-lucide="chevron-right" class="w-4 h-4"></i>
+          document.getElementById('simStepBadge').textContent = 'Step 2 of 3';
+          document.getElementById('simScenario').innerHTML = '<strong>Step 2 (Product Discovery & A/B Testing):</strong> Now that SQL & Sentiment Analysis pinpointed friction on the KYC upload screen, how do we validate the fix?';
+          document.getElementById('simChoices').innerHTML = `
+            <button onclick="advanceSim(2, true)" class="p-4 rounded-xl bg-zinc-900/90 border border-zinc-700 hover:border-indigo-400 text-left text-xs sm:text-sm transition">
+              <strong>1. Partner with Product & Run an A/B Test:</strong> Simplify KYC instructions and test conversion lift against the control group.
             </button>
-          `).join('');
-          lucide.createIcons();
+            <button onclick="advanceSim(2, false)" class="p-4 rounded-xl bg-zinc-900/90 border border-zinc-700 hover:border-rose-400 text-left text-xs sm:text-sm transition">
+              <strong>2. Skip KYC Verification:</strong> Remove compliance checks entirely, risking regulatory issues.
+            </button>
+          `;
         }, 700);
-      } else {
-        document.getElementById('gameContainer').innerHTML = `
-          <div class="p-6 rounded-xl bg-gradient-to-r from-cyanNeon/20 via-violetNeon/20 to-goldLoot/20 border border-goldLoot text-center space-y-4">
-            <div class="text-xs font-hud text-goldLoot">🏆 ACHIEVEMENT UNLOCKED // 300 / 300 XP</div>
-            <h4 class="text-2xl font-hud font-extrabold text-white">FUNNEL MASTER & STRATEGIC HIRING PARTNER!</h4>
-            <p class="text-xs sm:text-sm text-slate-300 max-w-lg mx-auto">
-              You just experienced how Mohamed Elkashef combines BigQuery SQL, Product Funnel Discovery, and Executive BI Automation to drive real business growth. Ready to bring this impact to your team?
+      } else if (step === 2) {
+        feedback.className = 'p-3.5 rounded-xl text-xs font-mono bg-emerald-500/20 border border-emerald-500/40 text-emerald-200';
+        feedback.textContent = '✓ Correct: The redesigned KYC flow lifted activation conversion by +20%! Loading Step 3...';
+        setTimeout(() => {
+          feedback.classList.add('hidden');
+          document.getElementById('simStepBadge').textContent = 'Step 3 of 3';
+          document.getElementById('simScenario').innerHTML = '<strong>Step 3 (BI Automation & Executive Alignment):</strong> How do we ensure leadership tracks this funnel health continuously without manual spreadsheets?';
+          document.getElementById('simChoices').innerHTML = `
+            <button onclick="advanceSim(3, true)" class="p-4 rounded-xl bg-zinc-900/90 border border-zinc-700 hover:border-indigo-400 text-left text-xs sm:text-sm transition">
+              <strong>1. Automate BI Pipelines:</strong> Connect BigQuery & Google Apps Script to real-time Power BI and Looker Studio dashboards.
+            </button>
+            <button onclick="advanceSim(3, false)" class="p-4 rounded-xl bg-zinc-900/90 border border-zinc-700 hover:border-rose-400 text-left text-xs sm:text-sm transition">
+              <strong>2. Manual Weekly Exports:</strong> Download CSVs every Sunday and paste them into static slides.
+            </button>
+          `;
+        }, 700);
+      } else if (step === 3) {
+        document.getElementById('simStepBadge').textContent = 'Workflow Complete';
+        document.getElementById('simBody').innerHTML = `
+          <div class="p-5 rounded-xl bg-emerald-500/10 border border-emerald-500/30 space-y-3">
+            <h3 class="text-lg font-bold text-emerald-300">✓ End-to-End Impact Delivered</h3>
+            <p class="text-xs sm:text-sm text-zinc-300">
+              This exact workflow—combining <strong>BigQuery SQL</strong>, <strong>Product Funnel Discovery</strong>, <strong>A/B Testing</strong>, and <strong>Power BI / Looker Studio Automation</strong>—is how I drive measurable growth across Product and Commercial teams.
             </p>
-            <div class="flex flex-wrap justify-center gap-3 pt-2">
-              <a href="https://wa.me/201021195267" target="_blank" class="px-4 py-2.5 rounded-lg bg-cyanNeon text-obsidian font-hud font-bold text-xs">💬 Chat on WhatsApp</a>
-              <a href="mailto:mokashef96@gmail.com" class="px-4 py-2.5 rounded-lg bg-violetNeon text-white font-hud font-bold text-xs">✉️ Send Email</a>
-              <a href="https://www.linkedin.com/in/elkashef/" target="_blank" class="px-4 py-2.5 rounded-lg bg-slate-900 border border-goldLoot text-goldLoot font-hud font-bold text-xs">🔗 Connect on LinkedIn</a>
+            <div class="flex flex-wrap gap-3 pt-2">
+              <a href="mailto:mokashef96@gmail.com" class="px-4 py-2 rounded-lg bg-indigo-600 text-white text-xs font-semibold">Schedule a Conversation</a>
+              <a href="https://www.linkedin.com/in/elkashef/" target="_blank" class="px-4 py-2 rounded-lg border border-zinc-700 text-xs font-semibold hover:border-white">Connect on LinkedIn</a>
             </div>
           </div>
         `;
