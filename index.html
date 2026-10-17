@@ -3,8 +3,8 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Mohamed Elkashef — Product & Data Analytics Portfolio</title>
-  <meta name="description" content="Portfolio of Mohamed Elkashef — Senior Product Analyst & Commercial Analytics / BI Lead specializing in Product Management, Agile, Funnel Optimization, SQL (BigQuery), Power BI, Looker Studio, and Python." />
+  <title>Mohamed Elkashef — Senior Data & BI Analyst | Product Analytics Lead</title>
+  <meta name="description" content="Executive Portfolio of Mohamed Elkashef — Senior Data & Business Intelligence Analyst and Product Analytics Lead specializing in SQL (BigQuery), Power BI, Looker Studio, Python, Jupyter Notebook, Annual Planning, and Agile Product Strategy." />
 
   <!-- Tailwind CSS -->
   <script src="https://cdn.tailwindcss.com"></script>
@@ -57,6 +57,14 @@
       transform: translateY(-2px);
     }
 
+    /* Certificate Visual Frame Hover */
+    .cert-visual {
+      transition: transform 0.3s ease;
+    }
+    .bento-card:hover .cert-visual {
+      transform: scale(1.02);
+    }
+
     @media print {
       .no-print {
         display: none !important;
@@ -66,46 +74,48 @@
 </head>
 <body class="bg-slate-50 text-slate-900 dark:bg-zinc-950 dark:text-zinc-100 bg-grid-pattern selection:bg-indigo-500 selection:text-white transition-colors duration-200">
 
-  <!-- Subtle Executive Ambient Glow -->
-  <div class="pointer-events-none fixed top-0 left-1/2 -translate-x-1/2 w-[900px] h-[320px] bg-gradient-to-tr from-indigo-500/10 via-teal-500/10 to-transparent blur-3xl -z-10"></div>
+  <!-- Subtle Ambient Top Glow -->
+  <div class="pointer-events-none fixed top-0 left-1/2 -translate-x-1/2 w-[950px] h-[320px] bg-gradient-to-tr from-indigo-500/10 via-cyan-500/10 to-transparent blur-3xl -z-10"></div>
 
-  <!-- STICKY NAVIGATION BAR -->
-  <header class="sticky top-0 z-50 border-b border-slate-200/80 dark:border-zinc-800/80 bg-white/80 dark:bg-zinc-950/80 backdrop-blur-md no-print">
-    <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 h-16 flex items-center justify-between">
+  <!-- ==========================================
+       FIXED, SINGLE-LINE EXECUTIVE STICKY HEADER
+       ========================================== -->
+  <header class="sticky top-0 z-50 border-b border-slate-200/80 dark:border-zinc-800/80 bg-white/85 dark:bg-zinc-950/85 backdrop-blur-md no-print">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-16 flex items-center justify-between gap-4">
       
-      <!-- Brand Identity -->
-      <a href="#top" class="flex items-center gap-3">
-        <div class="w-9 h-9 rounded-lg bg-slate-900 dark:bg-white text-white dark:text-zinc-950 flex items-center justify-center font-mono font-bold text-sm tracking-tighter">
+      <!-- Brand Identity (Never wraps) -->
+      <a href="#top" class="flex items-center gap-3 flex-shrink-0">
+        <div class="w-9 h-9 rounded-lg bg-slate-900 dark:bg-white text-white dark:text-zinc-950 flex items-center justify-center font-mono font-bold text-sm tracking-tighter flex-shrink-0">
           ME
         </div>
-        <div>
-          <span class="font-semibold text-sm sm:text-base tracking-tight block leading-none">Mohamed Elkashef</span>
-          <span class="text-[11px] text-slate-500 dark:text-zinc-400 font-mono">Product Management & Data Analytics</span>
+        <div class="whitespace-nowrap">
+          <span class="font-bold text-sm sm:text-base tracking-tight block leading-tight text-slate-900 dark:text-white">Mohamed Elkashef</span>
+          <span class="text-[11px] text-indigo-600 dark:text-indigo-400 font-mono block leading-tight">Data Analytics, BI &amp; Product Strategy</span>
         </div>
       </a>
 
-      <!-- Navigation Links -->
-      <nav class="hidden lg:flex items-center gap-6 text-xs font-medium text-slate-600 dark:text-zinc-400">
-        <a href="#about" class="hover:text-indigo-600 dark:hover:text-white transition">Overview</a>
-        <a href="#capabilities" class="hover:text-indigo-600 dark:hover:text-white transition font-semibold text-indigo-600 dark:text-indigo-400">Product vs. Data Skills</a>
-        <a href="#tools" class="hover:text-indigo-600 dark:hover:text-white transition">Tools Stack</a>
-        <a href="#projects" class="hover:text-indigo-600 dark:hover:text-white transition">Projects & Case Studies</a>
-        <a href="#experience" class="hover:text-indigo-600 dark:hover:text-white transition">Career Path</a>
-        <a href="#certifications" class="hover:text-indigo-600 dark:hover:text-white transition">Certifications</a>
-        <a href="#testimonials" class="hover:text-indigo-600 dark:hover:text-white transition">Testimonials</a>
+      <!-- Centered Pill Navigation (Single-line, zero wrapping) -->
+      <nav class="hidden xl:flex items-center gap-1 px-2 py-1 rounded-full bg-slate-100/90 dark:bg-zinc-900/90 border border-slate-200/80 dark:border-zinc-800/90 text-xs font-medium text-slate-600 dark:text-zinc-400 whitespace-nowrap">
+        <a href="#about" class="px-3 py-1.5 rounded-full hover:text-slate-900 dark:hover:text-white hover:bg-white dark:hover:bg-zinc-800 transition">Overview</a>
+        <a href="#capabilities" class="px-3 py-1.5 rounded-full bg-indigo-600/10 text-indigo-600 dark:text-indigo-400 font-semibold hover:bg-indigo-600/20 transition">Data &amp; Product Skills</a>
+        <a href="#tools" class="px-3 py-1.5 rounded-full hover:text-slate-900 dark:hover:text-white hover:bg-white dark:hover:bg-zinc-800 transition">Tools Stack</a>
+        <a href="#projects" class="px-3 py-1.5 rounded-full hover:text-slate-900 dark:hover:text-white hover:bg-white dark:hover:bg-zinc-800 transition">Case Studies</a>
+        <a href="#experience" class="px-3 py-1.5 rounded-full hover:text-slate-900 dark:hover:text-white hover:bg-white dark:hover:bg-zinc-800 transition">Career Path</a>
+        <a href="#certifications" class="px-3 py-1.5 rounded-full hover:text-slate-900 dark:hover:text-white hover:bg-white dark:hover:bg-zinc-800 transition">Certificates</a>
+        <a href="#testimonials" class="px-3 py-1.5 rounded-full hover:text-slate-900 dark:hover:text-white hover:bg-white dark:hover:bg-zinc-800 transition">Recommendations</a>
       </nav>
 
-      <!-- Quick Actions -->
-      <div class="flex items-center gap-2.5">
-        <button onclick="toggleTheme()" class="p-2 rounded-lg border border-slate-200 dark:border-zinc-800 text-slate-600 dark:text-zinc-400 hover:bg-slate-100 dark:hover:bg-zinc-900 transition" title="Toggle Dark / Light Mode">
+      <!-- Right Action Buttons (Never wrap) -->
+      <div class="flex items-center gap-2 flex-shrink-0 whitespace-nowrap">
+        <button onclick="toggleTheme()" class="w-9 h-9 rounded-lg border border-slate-200 dark:border-zinc-800 text-slate-600 dark:text-zinc-400 hover:bg-slate-100 dark:hover:bg-zinc-900 transition flex items-center justify-center" title="Switch Dark / Light Theme">
           <i data-lucide="sun" id="themeIcon" class="w-4 h-4"></i>
         </button>
-        <button onclick="window.print()" class="hidden sm:inline-flex items-center gap-1.5 px-3.5 py-2 rounded-lg border border-slate-200 dark:border-zinc-800 text-xs font-medium hover:bg-slate-100 dark:hover:bg-zinc-900 transition">
-          <i data-lucide="printer" class="w-3.5 h-3.5"></i>
+        <button onclick="window.print()" class="hidden sm:inline-flex items-center gap-1.5 px-3.5 h-9 rounded-lg border border-slate-200 dark:border-zinc-800 text-xs font-medium hover:bg-slate-100 dark:hover:bg-zinc-900 transition whitespace-nowrap">
+          <i data-lucide="printer" class="w-3.5 h-3.5 flex-shrink-0"></i>
           <span>Save PDF</span>
         </button>
-        <a href="mailto:mokashef96@gmail.com" class="inline-flex items-center gap-1.5 px-3.5 py-2 rounded-lg bg-indigo-600 hover:bg-indigo-500 text-white text-xs font-medium transition shadow-sm">
-          <i data-lucide="mail" class="w-3.5 h-3.5"></i>
+        <a href="mailto:mokashef96@gmail.com" class="inline-flex items-center gap-1.5 px-4 h-9 rounded-lg bg-indigo-600 hover:bg-indigo-500 text-white text-xs font-semibold transition shadow-sm whitespace-nowrap">
+          <i data-lucide="mail" class="w-3.5 h-3.5 flex-shrink-0"></i>
           <span>Contact Me</span>
         </a>
       </div>
@@ -114,54 +124,54 @@
   </header>
 
   <!-- MAIN CONTAINER -->
-  <main id="top" class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 py-12 sm:py-16 space-y-24">
+  <main id="top" class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12 sm:py-16 space-y-24">
 
     <!-- ==========================================
-         1. HERO & EXECUTIVE POSITIONING
+         1. HERO SECTION (DATA ANALYTICS FIRST)
          ========================================== -->
     <section id="about" class="scroll-mt-24">
       <div class="grid grid-cols-1 lg:grid-cols-12 gap-10 items-center">
         
-        <!-- Left Column: Narrative -->
+        <!-- Left Column: Positioning & Narrative -->
         <div class="lg:col-span-7 space-y-6">
           <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-indigo-500/10 border border-indigo-500/20 text-indigo-600 dark:text-indigo-400 text-xs font-mono">
             <span class="w-2 h-2 rounded-full bg-emerald-500 animate-pulse"></span>
-            <span>7+ Years Experience • Fintech, Lending & Tech Operations</span>
+            <span>7+ Years Experience • Data Analytics, BI &amp; Product Strategy</span>
           </div>
 
           <h1 class="text-3xl sm:text-5xl font-extrabold tracking-tight leading-[1.15]">
-            Where <span class="text-transparent bg-clip-text bg-gradient-to-r from-indigo-500 to-cyan-400">Data Analytics</span> meets <span class="text-transparent bg-clip-text bg-gradient-to-r from-teal-400 to-emerald-400">Product Strategy.</span>
+            Turning Complex Data into <span class="text-transparent bg-clip-text bg-gradient-to-r from-indigo-500 to-cyan-400">Executive BI Insights</span> &amp; <span class="text-transparent bg-clip-text bg-gradient-to-r from-teal-400 to-emerald-400">Product Growth.</span>
           </h1>
 
           <p class="text-slate-600 dark:text-zinc-400 text-base sm:text-lg leading-relaxed">
-            I am <strong class="text-slate-900 dark:text-white font-semibold">Mohamed Elkashef</strong>, a <strong class="text-slate-900 dark:text-white font-semibold">Senior Product Analyst & Commercial Analytics Lead</strong>. Over the past 7+ years across <strong class="text-slate-900 dark:text-white">Vodafone, Talabat, Khazna App, and Aman Holding</strong>, I have specialized in translating complex datasets into product discovery, user activation funnel optimization, annual commercial planning, and automated BI ecosystems.
+            I am <strong class="text-slate-900 dark:text-white font-semibold">Mohamed Elkashef</strong>, a <strong class="text-slate-900 dark:text-white font-semibold">Senior Data &amp; Business Intelligence Analyst</strong> and <strong class="text-slate-900 dark:text-white font-semibold">Product Analytics Lead</strong>. Across <strong class="text-slate-900 dark:text-white">Aman Holding, Khazna App, Talabat, and Vodafone</strong>, I specialize in building automated BI ecosystems (<span class="font-mono text-xs bg-slate-200/70 dark:bg-zinc-800 px-1.5 py-0.5 rounded">BigQuery SQL</span>, <span class="font-mono text-xs bg-slate-200/70 dark:bg-zinc-800 px-1.5 py-0.5 rounded">Power BI</span>, <span class="font-mono text-xs bg-slate-200/70 dark:bg-zinc-800 px-1.5 py-0.5 rounded">Looker Studio</span>, <span class="font-mono text-xs bg-slate-200/70 dark:bg-zinc-800 px-1.5 py-0.5 rounded">Python &amp; Jupyter</span>), leading annual commercial planning, and driving product funnel optimization.
           </p>
 
           <!-- Key Impact Metrics -->
           <div class="grid grid-cols-2 sm:grid-cols-4 gap-3 pt-2">
             <div class="p-3.5 rounded-xl bg-white dark:bg-zinc-900/90 border border-slate-200 dark:border-zinc-800">
+              <div class="text-2xl font-extrabold text-indigo-600 dark:text-indigo-400 font-mono">100%</div>
+              <div class="text-xs text-slate-500 dark:text-zinc-400 mt-0.5">Commission &amp; KPI Payout Accuracy</div>
+            </div>
+            <div class="p-3.5 rounded-xl bg-white dark:bg-zinc-900/90 border border-slate-200 dark:border-zinc-800">
               <div class="text-2xl font-extrabold text-teal-600 dark:text-teal-400 font-mono">+20%</div>
               <div class="text-xs text-slate-500 dark:text-zinc-400 mt-0.5">Onboarding Funnel Conversion Lift</div>
             </div>
             <div class="p-3.5 rounded-xl bg-white dark:bg-zinc-900/90 border border-slate-200 dark:border-zinc-800">
-              <div class="text-2xl font-extrabold text-indigo-600 dark:text-indigo-400 font-mono">30M+</div>
+              <div class="text-2xl font-extrabold text-emerald-600 dark:text-emerald-400 font-mono">30M+</div>
               <div class="text-xs text-slate-500 dark:text-zinc-400 mt-0.5">EGP Monthly Portfolio Managed</div>
             </div>
             <div class="p-3.5 rounded-xl bg-white dark:bg-zinc-900/90 border border-slate-200 dark:border-zinc-800">
-              <div class="text-2xl font-extrabold text-emerald-600 dark:text-emerald-400 font-mono">100%</div>
-              <div class="text-xs text-slate-500 dark:text-zinc-400 mt-0.5">Commission & KPI Payout Accuracy</div>
-            </div>
-            <div class="p-3.5 rounded-xl bg-white dark:bg-zinc-900/90 border border-slate-200 dark:border-zinc-800">
               <div class="text-2xl font-extrabold text-amber-600 dark:text-amber-400 font-mono">7+ Yrs</div>
-              <div class="text-xs text-slate-500 dark:text-zinc-400 mt-0.5">Cross-Functional Tech Impact</div>
+              <div class="text-xs text-slate-500 dark:text-zinc-400 mt-0.5">Fintech &amp; Tech Analytics Impact</div>
             </div>
           </div>
 
           <!-- CTA Buttons -->
           <div class="flex flex-wrap items-center gap-3 pt-2">
-            <a href="#capabilities" class="px-5 py-2.5 rounded-xl bg-slate-900 dark:bg-white text-white dark:text-zinc-950 font-semibold text-xs sm:text-sm hover:opacity-90 transition flex items-center gap-2">
-              <i data-lucide="Compass" class="w-4 h-4"></i>
-              <span>Explore Product & Data Capabilities</span>
+            <a href="#capabilities" class="px-5 py-2.5 rounded-xl bg-indigo-600 hover:bg-indigo-500 text-white font-semibold text-xs sm:text-sm transition flex items-center gap-2 shadow-sm">
+              <i data-lucide="bar-chart-3" class="w-4 h-4"></i>
+              <span>Explore Data &amp; Product Skills</span>
             </a>
             <a href="https://www.linkedin.com/in/elkashef/" target="_blank" rel="noopener" class="px-4 py-2.5 rounded-xl border border-slate-300 dark:border-zinc-800 hover:border-indigo-500 text-xs sm:text-sm font-medium transition flex items-center gap-2">
               <i data-lucide="linkedin" class="w-4 h-4 text-indigo-500"></i>
@@ -174,41 +184,46 @@
           </div>
         </div>
 
-        <!-- Right Column: Dual-Role Value Proposition Card -->
+        <!-- Right Column: Data-First Architecture Card -->
         <div class="lg:col-span-5">
           <div class="rounded-2xl bg-zinc-900 text-zinc-100 border border-zinc-800 shadow-2xl overflow-hidden">
             <div class="px-5 py-3.5 bg-zinc-950 border-b border-zinc-800 flex items-center justify-between">
-              <span class="font-mono text-xs text-zinc-300 font-semibold">DUAL-PILLAR ARCHITECTURE</span>
-              <span class="text-[11px] font-mono px-2.5 py-0.5 rounded bg-indigo-500/15 text-indigo-300 border border-indigo-500/30">HYBRID PROFILE</span>
+              <span class="font-mono text-xs text-zinc-300 font-semibold">CORE VALUE PROPOSITION</span>
+              <span class="text-[11px] font-mono px-2.5 py-0.5 rounded bg-indigo-500/15 text-indigo-300 border border-indigo-500/30">DATA-FIRST HYBRID</span>
             </div>
 
             <div class="p-6 space-y-5">
-              <!-- Pillar 1: Product Management -->
-              <div class="p-4 rounded-xl bg-zinc-950/80 border border-teal-500/30 space-y-2">
-                <div class="flex items-center gap-2 text-teal-400 font-semibold text-sm">
-                  <i data-lucide="box" class="w-4 h-4"></i>
-                  <span>1. Product Management & Growth</span>
+              <!-- Pillar 1 (PRIMARY): Data Analytics & BI -->
+              <div class="p-4 rounded-xl bg-zinc-950/90 border border-indigo-500/40 space-y-2">
+                <div class="flex items-center justify-between">
+                  <div class="flex items-center gap-2 text-indigo-400 font-semibold text-sm">
+                    <i data-lucide="database" class="w-4 h-4"></i>
+                    <span>1. Data Analytics &amp; BI Architecture</span>
+                  </div>
+                  <span class="text-[10px] font-mono px-2 py-0.5 rounded bg-indigo-500/20 text-indigo-300">Primary Core</span>
                 </div>
                 <p class="text-xs text-zinc-400 leading-relaxed">
-                  Product Discovery, Agile & Scrum execution, writing PRDs & User Stories, Backlog Prioritization, Activation Funnel optimization, A/B Testing, and Competitor & Market Analysis.
+                  Advanced SQL (BigQuery), Executive Dashboards (Power BI, Looker Studio, Tableau, Metabase), Python &amp; Jupyter Notebooks, Annual Year Planning &amp; Sales Forecasting, Commission Modeling, and Apps Script / AppSheet Automation.
                 </p>
               </div>
 
-              <!-- Pillar 2: Data Analytics & BI -->
-              <div class="p-4 rounded-xl bg-zinc-950/80 border border-indigo-500/30 space-y-2">
-                <div class="flex items-center gap-2 text-indigo-400 font-semibold text-sm">
-                  <i data-lucide="database" class="w-4 h-4"></i>
-                  <span>2. Data Analytics, BI & Planning</span>
+              <!-- Pillar 2 (COMPLEMENTARY): Product Management & Growth -->
+              <div class="p-4 rounded-xl bg-zinc-950/90 border border-teal-500/30 space-y-2">
+                <div class="flex items-center justify-between">
+                  <div class="flex items-center gap-2 text-teal-400 font-semibold text-sm">
+                    <i data-lucide="compass" class="w-4 h-4"></i>
+                    <span>2. Product Analytics &amp; Agile Strategy</span>
+                  </div>
+                  <span class="text-[10px] font-mono px-2 py-0.5 rounded bg-teal-500/20 text-teal-300">Strategic Edge</span>
                 </div>
                 <p class="text-xs text-zinc-400 leading-relaxed">
-                  Advanced SQL (BigQuery), Executive Dashboards (Power BI, Looker Studio, Tableau, Metabase), Python data analysis, Annual Year Planning & Sales Forecasting, and Process Automation.
+                  User Activation Funnels, Product Discovery, Agile &amp; Scrum execution, writing PRDs &amp; User Stories, Backlog Prioritization, A/B Testing, and Competitor &amp; Market Intelligence.
                 </p>
               </div>
 
-              <!-- Bottom Summary -->
               <div class="pt-1 flex items-center justify-between text-[11px] font-mono text-zinc-400">
                 <span>📍 Cairo, Egypt</span>
-                <span>Open to Product & Analytics Roles</span>
+                <span>Ready for Analytics, BI &amp; Product Roles</span>
               </div>
             </div>
           </div>
@@ -218,36 +233,120 @@
     </section>
 
     <!-- ==========================================
-         2. CLEAR SEPARATION: PRODUCT MANAGEMENT VS. DATA ANALYSIS SKILLS
+         2. CAPABILITIES: DATA ANALYTICS (LEFT / PRIMARY) VS. PRODUCT MANAGEMENT (RIGHT)
          ========================================== -->
     <section id="capabilities" class="scroll-mt-24 space-y-8">
       <div class="flex flex-col md:flex-row md:items-end justify-between gap-4 border-b border-slate-200 dark:border-zinc-800 pb-6">
         <div>
           <span class="text-xs font-mono uppercase tracking-wider text-indigo-600 dark:text-indigo-400">01 // Core Competencies</span>
-          <h2 class="text-2xl sm:text-3xl font-bold tracking-tight mt-1">Product Management vs. Data Analytics Capabilities</h2>
+          <h2 class="text-2xl sm:text-3xl font-bold tracking-tight mt-1">Data Analytics &amp; BI vs. Product Management Skills</h2>
           <p class="text-sm text-slate-600 dark:text-zinc-400 mt-1">
-            A clear breakdown of my hands-on capabilities across Product Strategy and Data/BI Analytics.
+            Structured around my core foundation in Data Analytics &amp; Business Intelligence on the left, complemented by Product Management &amp; Agile execution on the right.
           </p>
         </div>
 
-        <!-- View Switcher for Recruiters -->
+        <!-- View Switcher (Data First!) -->
         <div class="flex flex-wrap gap-2">
           <button onclick="switchDomainView('both')" id="btn-both" class="px-3.5 py-2 rounded-xl text-xs font-semibold bg-indigo-600 text-white transition">
-            Split View (Both)
+            Split View (Data + Product)
+          </button>
+          <button onclick="switchDomainView('data-only')" id="btn-data" class="px-3.5 py-2 rounded-xl text-xs font-medium bg-white dark:bg-zinc-900 border border-slate-200 dark:border-zinc-800 hover:border-indigo-500 transition">
+            📊 Data &amp; BI Focus
           </button>
           <button onclick="switchDomainView('product-only')" id="btn-product" class="px-3.5 py-2 rounded-xl text-xs font-medium bg-white dark:bg-zinc-900 border border-slate-200 dark:border-zinc-800 hover:border-teal-500 transition">
             🧭 Product Focus
           </button>
-          <button onclick="switchDomainView('data-only')" id="btn-data" class="px-3.5 py-2 rounded-xl text-xs font-medium bg-white dark:bg-zinc-900 border border-slate-200 dark:border-zinc-800 hover:border-indigo-500 transition">
-            📊 Data & BI Focus
-          </button>
         </div>
       </div>
 
-      <!-- TWO-COLUMN SEPARATED ARCHITECTURE -->
+      <!-- TWO-COLUMN SEPARATED ARCHITECTURE: DATA ON LEFT, PRODUCT ON RIGHT -->
       <div id="capabilitiesGrid" class="grid grid-cols-1 lg:grid-cols-2 gap-8 items-start">
 
-        <!-- COLUMN A: PRODUCT MANAGEMENT, AGILE & STRATEGY -->
+        <!-- COLUMN 1 (LEFT - PRIMARY): DATA ANALYSIS, BI & COMMERCIAL PLANNING -->
+        <div id="dataColumn" class="space-y-4">
+          <div class="p-4 rounded-2xl bg-indigo-500/10 border border-indigo-500/25 flex items-center justify-between">
+            <div class="flex items-center gap-3">
+              <div class="p-2.5 rounded-xl bg-indigo-600 text-white">
+                <i data-lucide="bar-chart-3" class="w-5 h-5"></i>
+              </div>
+              <div>
+                <h3 class="font-bold text-base sm:text-lg text-slate-900 dark:text-white">Data Analytics, BI &amp; Commercial Planning</h3>
+                <p class="text-xs text-slate-600 dark:text-zinc-400">SQL, BI Dashboards, Python/Jupyter, Year Planning &amp; Automation</p>
+              </div>
+            </div>
+            <span class="font-mono text-xs px-2.5 py-1 rounded bg-indigo-500/20 text-indigo-600 dark:text-indigo-300 font-semibold">Primary Track</span>
+          </div>
+
+          <div class="space-y-3">
+            <!-- Data Skill 1: SQL & BigQuery -->
+            <div class="bento-card p-5 rounded-2xl bg-white dark:bg-zinc-900/80 border border-slate-200 dark:border-zinc-800">
+              <div class="flex items-center justify-between mb-1.5">
+                <h4 class="font-bold text-sm sm:text-base text-slate-900 dark:text-white">Advanced SQL &amp; Google BigQuery</h4>
+                <span class="text-[11px] font-mono px-2 py-0.5 rounded bg-slate-100 dark:bg-zinc-800 text-indigo-600 dark:text-indigo-400">Data Querying</span>
+              </div>
+              <p class="text-xs text-slate-600 dark:text-zinc-400 leading-relaxed">
+                Writing optimized SQL queries (Window Functions, CTEs, complex joins, cohort retention queries, and funnel aggregations) in Google BigQuery to extract and analyze large-scale Fintech and commercial datasets.
+              </p>
+            </div>
+
+            <!-- Data Skill 2: Executive BI & Data Modeling -->
+            <div class="bento-card p-5 rounded-2xl bg-white dark:bg-zinc-900/80 border border-slate-200 dark:border-zinc-800">
+              <div class="flex items-center justify-between mb-1.5">
+                <h4 class="font-bold text-sm sm:text-base text-slate-900 dark:text-white">Executive BI Dashboards &amp; Dimensional Modeling</h4>
+                <span class="text-[11px] font-mono px-2 py-0.5 rounded bg-slate-100 dark:bg-zinc-800 text-indigo-600 dark:text-indigo-400">Business Intelligence</span>
+              </div>
+              <p class="text-xs text-slate-600 dark:text-zinc-400 leading-relaxed">
+                Designing and automating interactive dashboards and dimensional data models using Power BI (DAX, Power Query M), Google Looker Studio, Tableau, and Metabase for real-time C-level visibility.
+              </p>
+            </div>
+
+            <!-- Data Skill 3: Annual Year Planning & Sales Forecasting -->
+            <div class="bento-card p-5 rounded-2xl bg-white dark:bg-zinc-900/80 border border-slate-200 dark:border-zinc-800">
+              <div class="flex items-center justify-between mb-1.5">
+                <h4 class="font-bold text-sm sm:text-base text-slate-900 dark:text-white">Annual Year Planning, KPI Cascading &amp; Forecasting</h4>
+                <span class="text-[11px] font-mono px-2 py-0.5 rounded bg-slate-100 dark:bg-zinc-800 text-indigo-600 dark:text-indigo-400">Commercial Planning</span>
+              </div>
+              <p class="text-xs text-slate-600 dark:text-zinc-400 leading-relaxed">
+                Leading annual commercial planning cycles (Aman Holding), building historical sales forecasting models, cascading targets across regions and channels, and owning monthly sales commission cycles with 100% accuracy.
+              </p>
+            </div>
+
+            <!-- Data Skill 4: Python & Jupyter Notebooks -->
+            <div class="bento-card p-5 rounded-2xl bg-white dark:bg-zinc-900/80 border border-slate-200 dark:border-zinc-800">
+              <div class="flex items-center justify-between mb-1.5">
+                <h4 class="font-bold text-sm sm:text-base text-slate-900 dark:text-white">Python Data Analysis (Jupyter Notebook &amp; Colab)</h4>
+                <span class="text-[11px] font-mono px-2 py-0.5 rounded bg-slate-100 dark:bg-zinc-800 text-indigo-600 dark:text-indigo-400">Python &amp; EDA</span>
+              </div>
+              <p class="text-xs text-slate-600 dark:text-zinc-400 leading-relaxed">
+                Conducting exploratory data analysis (EDA), data cleaning, statistical modeling, and visual trend analysis using Python (Pandas, NumPy, Matplotlib) inside Jupyter Notebooks and Google Colab.
+              </p>
+            </div>
+
+            <!-- Data Skill 5: Workflow Automation & Low-Code Systems -->
+            <div class="bento-card p-5 rounded-2xl bg-white dark:bg-zinc-900/80 border border-slate-200 dark:border-zinc-800">
+              <div class="flex items-center justify-between mb-1.5">
+                <h4 class="font-bold text-sm sm:text-base text-slate-900 dark:text-white">Reporting Pipeline Automation &amp; AppSheet Systems</h4>
+                <span class="text-[11px] font-mono px-2 py-0.5 rounded bg-slate-100 dark:bg-zinc-800 text-indigo-600 dark:text-indigo-400">Automation &amp; Ops</span>
+              </div>
+              <p class="text-xs text-slate-600 dark:text-zinc-400 leading-relaxed">
+                Automating recurring data extraction and reporting workflows via Google Apps Script, BigQuery, and Google Sheets, and deploying centralized operational Admin Panels using Google AppSheet.
+              </p>
+            </div>
+
+            <!-- Data Skill 6: Root Cause Analysis & Six Sigma -->
+            <div class="bento-card p-5 rounded-2xl bg-white dark:bg-zinc-900/80 border border-slate-200 dark:border-zinc-800">
+              <div class="flex items-center justify-between mb-1.5">
+                <h4 class="font-bold text-sm sm:text-base text-slate-900 dark:text-white">Root Cause Analysis (RCA) &amp; Lean Six Sigma (LSSGB)</h4>
+                <span class="text-[11px] font-mono px-2 py-0.5 rounded bg-slate-100 dark:bg-zinc-800 text-indigo-600 dark:text-indigo-400">Process Excellence</span>
+              </div>
+              <p class="text-xs text-slate-600 dark:text-zinc-400 leading-relaxed">
+                Applying Lean Six Sigma Green Belt principles and structured Root Cause Analysis with Data Engineering and Operations teams to resolve pipeline bottlenecks, ensure data integrity, and optimize SLAs.
+              </p>
+            </div>
+          </div>
+        </div>
+
+        <!-- COLUMN 2 (RIGHT): PRODUCT MANAGEMENT, AGILE & MARKET STRATEGY -->
         <div id="productColumn" class="space-y-4">
           <div class="p-4 rounded-2xl bg-teal-500/10 border border-teal-500/20 flex items-center justify-between">
             <div class="flex items-center gap-3">
@@ -255,161 +354,77 @@
                 <i data-lucide="compass" class="w-5 h-5"></i>
               </div>
               <div>
-                <h3 class="font-bold text-base sm:text-lg text-slate-900 dark:text-white">Product Management & Agile Strategy</h3>
-                <p class="text-xs text-slate-600 dark:text-zinc-400">Discovery, Execution, Funnels & Market Intelligence</p>
+                <h3 class="font-bold text-base sm:text-lg text-slate-900 dark:text-white">Product Management &amp; Agile Strategy</h3>
+                <p class="text-xs text-slate-600 dark:text-zinc-400">Funnels, Discovery, Agile/Scrum, PRDs &amp; Competitor Analysis</p>
               </div>
             </div>
             <span class="font-mono text-xs px-2.5 py-1 rounded bg-teal-500/20 text-teal-600 dark:text-teal-300 font-semibold">Product Track</span>
           </div>
 
           <div class="space-y-3">
-            <!-- PM Skill 1: Agile & Scrum -->
+            <!-- PM Skill 1: User Activation Funnels & Journey Mapping -->
             <div class="bento-card p-5 rounded-2xl bg-white dark:bg-zinc-900/80 border border-slate-200 dark:border-zinc-800">
               <div class="flex items-center justify-between mb-1.5">
-                <h4 class="font-bold text-sm sm:text-base text-slate-900 dark:text-white">Agile & Scrum Methodology</h4>
-                <span class="text-[11px] font-mono px-2 py-0.5 rounded bg-slate-100 dark:bg-zinc-800 text-teal-600 dark:text-teal-400">Delivery & Execution</span>
-              </div>
-              <p class="text-xs text-slate-600 dark:text-zinc-400 leading-relaxed">
-                Operating within Agile/Scrum frameworks—participating in sprint planning, daily standups, retrospectives, and iterative releases to align engineering, product, and commercial squads.
-              </p>
-            </div>
-
-            <!-- PM Skill 2: Backlog, User Stories & PRDs -->
-            <div class="bento-card p-5 rounded-2xl bg-white dark:bg-zinc-900/80 border border-slate-200 dark:border-zinc-800">
-              <div class="flex items-center justify-between mb-1.5">
-                <h4 class="font-bold text-sm sm:text-base text-slate-900 dark:text-white">Product Backlog, User Stories & PRDs</h4>
-                <span class="text-[11px] font-mono px-2 py-0.5 rounded bg-slate-100 dark:bg-zinc-800 text-teal-600 dark:text-teal-400">Product Ownership</span>
-              </div>
-              <p class="text-xs text-slate-600 dark:text-zinc-400 leading-relaxed">
-                Translating business needs and user pain points into structured Product Requirements Documents (PRDs), clear User Stories with Acceptance Criteria, and prioritized product backlogs.
-              </p>
-            </div>
-
-            <!-- PM Skill 3: Product Discovery & Roadmapping -->
-            <div class="bento-card p-5 rounded-2xl bg-white dark:bg-zinc-900/80 border border-slate-200 dark:border-zinc-800">
-              <div class="flex items-center justify-between mb-1.5">
-                <h4 class="font-bold text-sm sm:text-base text-slate-900 dark:text-white">Product Discovery, Design Thinking & Roadmapping</h4>
-                <span class="text-[11px] font-mono px-2 py-0.5 rounded bg-slate-100 dark:bg-zinc-800 text-teal-600 dark:text-teal-400">Strategy & Vision</span>
-              </div>
-              <p class="text-xs text-slate-600 dark:text-zinc-400 leading-relaxed">
-                Identifying user problems through Design Thinking, Opportunity Solution Trees, and data sizing; supporting outcome-driven Product Roadmaps that align stakeholders around core growth goals.
-              </p>
-            </div>
-
-            <!-- PM Skill 4: User Activation Funnels & Journey Mapping -->
-            <div class="bento-card p-5 rounded-2xl bg-white dark:bg-zinc-900/80 border border-slate-200 dark:border-zinc-800">
-              <div class="flex items-center justify-between mb-1.5">
-                <h4 class="font-bold text-sm sm:text-base text-slate-900 dark:text-white">User Activation Funnels & Onboarding Optimization</h4>
+                <h4 class="font-bold text-sm sm:text-base text-slate-900 dark:text-white">User Activation Funnels &amp; Onboarding Optimization</h4>
                 <span class="text-[11px] font-mono px-2 py-0.5 rounded bg-slate-100 dark:bg-zinc-800 text-teal-600 dark:text-teal-400">Product Growth</span>
               </div>
               <p class="text-xs text-slate-600 dark:text-zinc-400 leading-relaxed">
-                Mapping end-to-end customer journeys from registration and KYC to activation, diagnosing friction points, and implementing UX/process improvements that lifted conversion by +20%.
+                Mapping end-to-end customer journeys from registration and KYC to activation, diagnosing drop-off friction points, and implementing UX/process improvements that lifted conversion by +20%.
               </p>
             </div>
 
-            <!-- PM Skill 5: A/B Testing & Feature Optimization -->
+            <!-- PM Skill 2: A/B Testing & Feature Optimization -->
             <div class="bento-card p-5 rounded-2xl bg-white dark:bg-zinc-900/80 border border-slate-200 dark:border-zinc-800">
               <div class="flex items-center justify-between mb-1.5">
-                <h4 class="font-bold text-sm sm:text-base text-slate-900 dark:text-white">A/B Testing, Experimentation & Feature Adoption</h4>
+                <h4 class="font-bold text-sm sm:text-base text-slate-900 dark:text-white">A/B Testing, Experimentation &amp; Feature Adoption</h4>
                 <span class="text-[11px] font-mono px-2 py-0.5 rounded bg-slate-100 dark:bg-zinc-800 text-teal-600 dark:text-teal-400">Experimentation</span>
               </div>
               <p class="text-xs text-slate-600 dark:text-zinc-400 leading-relaxed">
-                Validating product hypotheses through controlled A/B testing, tracking post-launch feature adoption and retention cohorts, and using Customer Sentiment & Call Analytics to iterate features.
+                Validating product hypotheses through controlled A/B testing, tracking post-launch feature adoption and retention cohorts, and using Customer Sentiment &amp; Call Analytics to iterate features.
               </p>
             </div>
 
-            <!-- PM Skill 6: Competitor Analysis & Market Intelligence -->
+            <!-- PM Skill 3: Competitor Analysis & Market Intelligence -->
             <div class="bento-card p-5 rounded-2xl bg-white dark:bg-zinc-900/80 border border-slate-200 dark:border-zinc-800">
               <div class="flex items-center justify-between mb-1.5">
-                <h4 class="font-bold text-sm sm:text-base text-slate-900 dark:text-white">Competitor Analysis, Market Research & Pricing</h4>
+                <h4 class="font-bold text-sm sm:text-base text-slate-900 dark:text-white">Competitor Analysis, Market Research &amp; Pricing</h4>
                 <span class="text-[11px] font-mono px-2 py-0.5 rounded bg-slate-100 dark:bg-zinc-800 text-teal-600 dark:text-teal-400">Market Intelligence</span>
               </div>
               <p class="text-xs text-slate-600 dark:text-zinc-400 leading-relaxed">
-                Conducting deep competitor benchmarking, SWOT & Business Model Canvas analysis, market trend monitoring, and pricing assessments to uncover differentiation and monetization opportunities.
-              </p>
-            </div>
-          </div>
-        </div>
-
-        <!-- COLUMN B: DATA ANALYSIS, BI & COMMERCIAL OPERATIONS -->
-        <div id="dataColumn" class="space-y-4">
-          <div class="p-4 rounded-2xl bg-indigo-500/10 border border-indigo-500/20 flex items-center justify-between">
-            <div class="flex items-center gap-3">
-              <div class="p-2.5 rounded-xl bg-indigo-600 text-white">
-                <i data-lucide="bar-chart-3" class="w-5 h-5"></i>
-              </div>
-              <div>
-                <h3 class="font-bold text-base sm:text-lg text-slate-900 dark:text-white">Data Analysis, BI & Commercial Planning</h3>
-                <p class="text-xs text-slate-600 dark:text-zinc-400">Querying, BI Dashboards, Year Planning & Automation</p>
-              </div>
-            </div>
-            <span class="font-mono text-xs px-2.5 py-1 rounded bg-indigo-500/20 text-indigo-600 dark:text-indigo-300 font-semibold">Analytics Track</span>
-          </div>
-
-          <div class="space-y-3">
-            <!-- Data Skill 1: SQL & BigQuery -->
-            <div class="bento-card p-5 rounded-2xl bg-white dark:bg-zinc-900/80 border border-slate-200 dark:border-zinc-800">
-              <div class="flex items-center justify-between mb-1.5">
-                <h4 class="font-bold text-sm sm:text-base text-slate-900 dark:text-white">Advanced SQL & Google BigQuery</h4>
-                <span class="text-[11px] font-mono px-2 py-0.5 rounded bg-slate-100 dark:bg-zinc-800 text-indigo-600 dark:text-indigo-400">Data Extraction</span>
-              </div>
-              <p class="text-xs text-slate-600 dark:text-zinc-400 leading-relaxed">
-                Writing optimized SQL queries (Window Functions, CTEs, complex joins, aggregations) in Google BigQuery to extract and model large-scale Fintech and commercial datasets.
+                Conducting structured competitor benchmarking, SWOT &amp; Business Model Canvas analysis, market trend monitoring, and pricing assessments to uncover differentiation and growth opportunities.
               </p>
             </div>
 
-            <!-- Data Skill 2: Executive BI & Data Modeling -->
+            <!-- PM Skill 4: Product Discovery & Roadmapping -->
             <div class="bento-card p-5 rounded-2xl bg-white dark:bg-zinc-900/80 border border-slate-200 dark:border-zinc-800">
               <div class="flex items-center justify-between mb-1.5">
-                <h4 class="font-bold text-sm sm:text-base text-slate-900 dark:text-white">Executive BI Dashboards & Dimensional Modeling</h4>
-                <span class="text-[11px] font-mono px-2 py-0.5 rounded bg-slate-100 dark:bg-zinc-800 text-indigo-600 dark:text-indigo-400">Business Intelligence</span>
+                <h4 class="font-bold text-sm sm:text-base text-slate-900 dark:text-white">Product Discovery, Design Thinking &amp; Roadmapping</h4>
+                <span class="text-[11px] font-mono px-2 py-0.5 rounded bg-slate-100 dark:bg-zinc-800 text-teal-600 dark:text-teal-400">Strategy &amp; Vision</span>
               </div>
               <p class="text-xs text-slate-600 dark:text-zinc-400 leading-relaxed">
-                Architecting interactive dashboards and star-schema data models using Power BI (DAX, Power Query M), Google Looker Studio, Tableau, and Metabase for real-time C-level visibility.
+                Identifying user pain points through Design Thinking, Opportunity Solution Trees, and quantitative sizing; supporting outcome-driven Product Roadmaps across Product, Engineering, and Finance.
               </p>
             </div>
 
-            <!-- Data Skill 3: Annual Year Planning & Sales Forecasting -->
+            <!-- PM Skill 5: Backlog, User Stories & PRDs -->
             <div class="bento-card p-5 rounded-2xl bg-white dark:bg-zinc-900/80 border border-slate-200 dark:border-zinc-800">
               <div class="flex items-center justify-between mb-1.5">
-                <h4 class="font-bold text-sm sm:text-base text-slate-900 dark:text-white">Annual Year Planning, KPI Cascading & Forecasting</h4>
-                <span class="text-[11px] font-mono px-2 py-0.5 rounded bg-slate-100 dark:bg-zinc-800 text-indigo-600 dark:text-indigo-400">Strategic Planning</span>
+                <h4 class="font-bold text-sm sm:text-base text-slate-900 dark:text-white">Product Backlog, User Stories &amp; PRDs</h4>
+                <span class="text-[11px] font-mono px-2 py-0.5 rounded bg-slate-100 dark:bg-zinc-800 text-teal-600 dark:text-teal-400">Product Ownership</span>
               </div>
               <p class="text-xs text-slate-600 dark:text-zinc-400 leading-relaxed">
-                Leading annual commercial planning cycles (Aman Holding), building historical sales forecasting models, cascading targets across regions/channels, and owning monthly commission cycles.
+                Translating business requirements and analytical findings into structured Product Requirements Documents (PRDs), user story maps, clear Acceptance Criteria, and prioritized backlogs.
               </p>
             </div>
 
-            <!-- Data Skill 4: Python for Data Analysis -->
+            <!-- PM Skill 6: Agile & Scrum -->
             <div class="bento-card p-5 rounded-2xl bg-white dark:bg-zinc-900/80 border border-slate-200 dark:border-zinc-800">
               <div class="flex items-center justify-between mb-1.5">
-                <h4 class="font-bold text-sm sm:text-base text-slate-900 dark:text-white">Python for Data Analysis & Visualization</h4>
-                <span class="text-[11px] font-mono px-2 py-0.5 rounded bg-slate-100 dark:bg-zinc-800 text-indigo-600 dark:text-indigo-400">Data Science Workflow</span>
+                <h4 class="font-bold text-sm sm:text-base text-slate-900 dark:text-white">Agile &amp; Scrum Methodology</h4>
+                <span class="text-[11px] font-mono px-2 py-0.5 rounded bg-slate-100 dark:bg-zinc-800 text-teal-600 dark:text-teal-400">Agile Execution</span>
               </div>
               <p class="text-xs text-slate-600 dark:text-zinc-400 leading-relaxed">
-                Utilizing Python (Pandas, NumPy, Matplotlib) in Google Colab and local environments for exploratory data analysis (EDA), data cleaning, statistical trend detection, and demand modeling.
-              </p>
-            </div>
-
-            <!-- Data Skill 5: Workflow Automation & Low-Code Systems -->
-            <div class="bento-card p-5 rounded-2xl bg-white dark:bg-zinc-900/80 border border-slate-200 dark:border-zinc-800">
-              <div class="flex items-center justify-between mb-1.5">
-                <h4 class="font-bold text-sm sm:text-base text-slate-900 dark:text-white">Reporting Automation & AppSheet Admin Panels</h4>
-                <span class="text-[11px] font-mono px-2 py-0.5 rounded bg-slate-100 dark:bg-zinc-800 text-indigo-600 dark:text-indigo-400">Automation & Ops</span>
-              </div>
-              <p class="text-xs text-slate-600 dark:text-zinc-400 leading-relaxed">
-                Eliminating manual reporting overhead via Google Apps Script, automated Google Sheets/BigQuery pipelines, and building centralized operational Admin Panels in Google AppSheet.
-              </p>
-            </div>
-
-            <!-- Data Skill 6: Root Cause Analysis & Six Sigma -->
-            <div class="bento-card p-5 rounded-2xl bg-white dark:bg-zinc-900/80 border border-slate-200 dark:border-zinc-800">
-              <div class="flex items-center justify-between mb-1.5">
-                <h4 class="font-bold text-sm sm:text-base text-slate-900 dark:text-white">Root Cause Analysis (RCA) & Lean Six Sigma (LSSGB)</h4>
-                <span class="text-[11px] font-mono px-2 py-0.5 rounded bg-slate-100 dark:bg-zinc-800 text-indigo-600 dark:text-indigo-400">Process Excellence</span>
-              </div>
-              <p class="text-xs text-slate-600 dark:text-zinc-400 leading-relaxed">
-                Applying Lean Six Sigma Green Belt methodologies and structured Root Cause Analysis with Data Engineering and Operations teams to resolve data integrity issues and streamline SLAs.
+                Working within Agile/Scrum ceremonies—sprint planning, backlog refinement, standups, and retrospectives—to ensure continuous delivery and alignment between technical and business teams.
               </p>
             </div>
           </div>
@@ -419,20 +434,20 @@
     </section>
 
     <!-- ==========================================
-         3. VERIFIED TOOLS & TECHNICAL STACK
+         3. TOOLS & TECHNICAL STACK (INCLUDING JUPYTER NOTEBOOK)
          ========================================== -->
     <section id="tools" class="scroll-mt-24 space-y-6">
       <div class="border-b border-slate-200 dark:border-zinc-800 pb-5">
-        <span class="text-xs font-mono uppercase tracking-wider text-indigo-600 dark:text-indigo-400">02 // Daily Toolkit</span>
-        <h2 class="text-2xl sm:text-3xl font-bold tracking-tight mt-1">Tools & Technical Stack</h2>
+        <span class="text-xs font-mono uppercase tracking-wider text-indigo-600 dark:text-indigo-400">02 // Technical Arsenal</span>
+        <h2 class="text-2xl sm:text-3xl font-bold tracking-tight mt-1">Tools &amp; Technical Stack</h2>
         <p class="text-sm text-slate-600 dark:text-zinc-400 mt-1">
-          The exact software, languages, and frameworks I use to query data, build dashboards, and manage product workflows.
+          My daily toolkit for querying databases, building executive BI dashboards, running Python notebooks, and managing product workflows.
         </p>
       </div>
 
       <div class="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-6 gap-3">
         <div class="p-4 rounded-xl bg-white dark:bg-zinc-900/90 border border-slate-200 dark:border-zinc-800">
-          <div class="font-mono text-xs text-indigo-600 dark:text-indigo-400">Database & SQL</div>
+          <div class="font-mono text-xs text-indigo-600 dark:text-indigo-400">Cloud Data Warehouse</div>
           <div class="font-bold text-sm mt-1">Google BigQuery</div>
           <div class="text-[11px] text-slate-500 dark:text-zinc-400 mt-0.5">Advanced SQL, CTEs, Window Functions</div>
         </div>
@@ -440,13 +455,13 @@
         <div class="p-4 rounded-xl bg-white dark:bg-zinc-900/90 border border-slate-200 dark:border-zinc-800">
           <div class="font-mono text-xs text-indigo-600 dark:text-indigo-400">Business Intelligence</div>
           <div class="font-bold text-sm mt-1">Power BI</div>
-          <div class="text-[11px] text-slate-500 dark:text-zinc-400 mt-0.5">DAX, Power Query (M), Data Modeling</div>
+          <div class="text-[11px] text-slate-500 dark:text-zinc-400 mt-0.5">DAX, Power Query (M), Star Schema</div>
         </div>
 
         <div class="p-4 rounded-xl bg-white dark:bg-zinc-900/90 border border-slate-200 dark:border-zinc-800">
           <div class="font-mono text-xs text-indigo-600 dark:text-indigo-400">Real-Time BI</div>
           <div class="font-bold text-sm mt-1">Looker Studio</div>
-          <div class="text-[11px] text-slate-500 dark:text-zinc-400 mt-0.5">Automated Executive & Product KPIs</div>
+          <div class="text-[11px] text-slate-500 dark:text-zinc-400 mt-0.5">Automated Executive &amp; Product KPIs</div>
         </div>
 
         <div class="p-4 rounded-xl bg-white dark:bg-zinc-900/90 border border-slate-200 dark:border-zinc-800">
@@ -458,68 +473,68 @@
         <div class="p-4 rounded-xl bg-white dark:bg-zinc-900/90 border border-slate-200 dark:border-zinc-800">
           <div class="font-mono text-xs text-indigo-600 dark:text-indigo-400">Self-Service BI</div>
           <div class="font-bold text-sm mt-1">Metabase</div>
-          <div class="text-[11px] text-slate-500 dark:text-zinc-400 mt-0.5">SQL Questions & Squad Dashboards</div>
+          <div class="text-[11px] text-slate-500 dark:text-zinc-400 mt-0.5">SQL Questions &amp; Squad Dashboards</div>
         </div>
 
         <div class="p-4 rounded-xl bg-white dark:bg-zinc-900/90 border border-slate-200 dark:border-zinc-800">
-          <div class="font-mono text-xs text-indigo-600 dark:text-indigo-400">Programming</div>
+          <div class="font-mono text-xs text-indigo-600 dark:text-indigo-400">Data Science &amp; EDA</div>
           <div class="font-bold text-sm mt-1">Python</div>
-          <div class="text-[11px] text-slate-500 dark:text-zinc-400 mt-0.5">Pandas, NumPy, Matplotlib, Colab</div>
+          <div class="text-[11px] text-slate-500 dark:text-zinc-400 mt-0.5">Pandas, NumPy, Matplotlib</div>
         </div>
 
         <div class="p-4 rounded-xl bg-white dark:bg-zinc-900/90 border border-slate-200 dark:border-zinc-800">
-          <div class="font-mono text-xs text-amber-600 dark:text-amber-400">Modeling & Planning</div>
-          <div class="font-bold text-sm mt-1">Excel & G-Sheets</div>
-          <div class="text-[11px] text-slate-500 dark:text-zinc-400 mt-0.5">Forecasting, Year Planning & Pricing</div>
+          <div class="font-mono text-xs text-indigo-600 dark:text-indigo-400">Interactive Notebooks</div>
+          <div class="font-bold text-sm mt-1">Jupyter &amp; Colab</div>
+          <div class="text-[11px] text-slate-500 dark:text-zinc-400 mt-0.5">Jupyter Notebook, Google Colab</div>
         </div>
 
         <div class="p-4 rounded-xl bg-white dark:bg-zinc-900/90 border border-slate-200 dark:border-zinc-800">
-          <div class="font-mono text-xs text-amber-600 dark:text-amber-400">Automation</div>
+          <div class="font-mono text-xs text-amber-600 dark:text-amber-400">Modeling &amp; Planning</div>
+          <div class="font-bold text-sm mt-1">Excel &amp; G-Sheets</div>
+          <div class="text-[11px] text-slate-500 dark:text-zinc-400 mt-0.5">Year Planning, Forecasting &amp; Pricing</div>
+        </div>
+
+        <div class="p-4 rounded-xl bg-white dark:bg-zinc-900/90 border border-slate-200 dark:border-zinc-800">
+          <div class="font-mono text-xs text-amber-600 dark:text-amber-400">Pipeline Automation</div>
           <div class="font-bold text-sm mt-1">Google Apps Script</div>
-          <div class="text-[11px] text-slate-500 dark:text-zinc-400 mt-0.5">Automated Data Extraction Pipelines</div>
+          <div class="text-[11px] text-slate-500 dark:text-zinc-400 mt-0.5">Automated Data Extraction Workflows</div>
         </div>
 
         <div class="p-4 rounded-xl bg-white dark:bg-zinc-900/90 border border-slate-200 dark:border-zinc-800">
-          <div class="font-mono text-xs text-amber-600 dark:text-amber-400">Operational Apps</div>
+          <div class="font-mono text-xs text-amber-600 dark:text-amber-400">Operational Platforms</div>
           <div class="font-bold text-sm mt-1">Google AppSheet</div>
-          <div class="text-[11px] text-slate-500 dark:text-zinc-400 mt-0.5">Centralized Admin Panels & Workflows</div>
+          <div class="text-[11px] text-slate-500 dark:text-zinc-400 mt-0.5">Centralized Admin Panels &amp; Ops</div>
         </div>
 
         <div class="p-4 rounded-xl bg-white dark:bg-zinc-900/90 border border-slate-200 dark:border-zinc-800">
-          <div class="font-mono text-xs text-teal-600 dark:text-teal-400">Product & Agile</div>
-          <div class="font-bold text-sm mt-1">Agile / Scrum</div>
-          <div class="text-[11px] text-slate-500 dark:text-zinc-400 mt-0.5">PRDs, User Stories, Backlog & Sprints</div>
-        </div>
-
-        <div class="p-4 rounded-xl bg-white dark:bg-zinc-900/90 border border-slate-200 dark:border-zinc-800">
-          <div class="font-mono text-xs text-teal-600 dark:text-teal-400">Product Growth</div>
-          <div class="font-bold text-sm mt-1">Funnel & A/B Tools</div>
-          <div class="text-[11px] text-slate-500 dark:text-zinc-400 mt-0.5">Activation Cohorts & Experimentation</div>
-        </div>
-
-        <div class="p-4 rounded-xl bg-white dark:bg-zinc-900/90 border border-slate-200 dark:border-zinc-800">
-          <div class="font-mono text-xs text-teal-600 dark:text-teal-400">Process Quality</div>
+          <div class="font-mono text-xs text-teal-600 dark:text-teal-400">Process Excellence</div>
           <div class="font-bold text-sm mt-1">Lean Six Sigma</div>
-          <div class="text-[11px] text-slate-500 dark:text-zinc-400 mt-0.5">Green Belt (LSSGB) & Root Cause (RCA)</div>
+          <div class="text-[11px] text-slate-500 dark:text-zinc-400 mt-0.5">Green Belt (LSSGB) &amp; Root Cause (RCA)</div>
+        </div>
+
+        <div class="p-4 rounded-xl bg-white dark:bg-zinc-900/90 border border-slate-200 dark:border-zinc-800">
+          <div class="font-mono text-xs text-teal-600 dark:text-teal-400">Product &amp; Agile</div>
+          <div class="font-bold text-sm mt-1">Agile / Scrum</div>
+          <div class="text-[11px] text-slate-500 dark:text-zinc-400 mt-0.5">PRDs, User Stories, Funnels &amp; Sprints</div>
         </div>
       </div>
     </section>
 
     <!-- ==========================================
-         4. PROJECTS & CASE STUDIES (INCLUDING AMAN YEAR PLANNING & COMPETITOR ANALYSIS)
+         4. PROJECTS & CASE STUDIES (DATA & PLANNING FIRST)
          ========================================== -->
     <section id="projects" class="scroll-mt-24 space-y-8">
       <div class="flex flex-col md:flex-row md:items-end justify-between gap-4 border-b border-slate-200 dark:border-zinc-800 pb-6">
         <div>
-          <span class="text-xs font-mono uppercase tracking-wider text-indigo-600 dark:text-indigo-400">03 // Portfolio & Case Studies</span>
-          <h2 class="text-2xl sm:text-3xl font-bold tracking-tight mt-1">Selected Projects & Strategic Initiatives</h2>
+          <span class="text-xs font-mono uppercase tracking-wider text-indigo-600 dark:text-indigo-400">03 // Portfolio &amp; Case Studies</span>
+          <h2 class="text-2xl sm:text-3xl font-bold tracking-tight mt-1">Selected Projects &amp; Strategic Initiatives</h2>
         </div>
 
-        <!-- Project Filter Buttons -->
+        <!-- Project Filter Buttons (Data & BI First!) -->
         <div class="flex flex-wrap gap-2">
           <button onclick="filterProjects('all')" class="proj-btn px-3.5 py-1.5 rounded-xl text-xs font-semibold bg-indigo-600 text-white transition" data-filter="all">All Projects (6)</button>
-          <button onclick="filterProjects('product')" class="proj-btn px-3.5 py-1.5 rounded-xl text-xs font-medium bg-white dark:bg-zinc-900 border border-slate-200 dark:border-zinc-800 hover:border-teal-500 transition" data-filter="product">Product & Market Strategy</button>
-          <button onclick="filterProjects('analytics')" class="proj-btn px-3.5 py-1.5 rounded-xl text-xs font-medium bg-white dark:bg-zinc-900 border border-slate-200 dark:border-zinc-800 hover:border-indigo-500 transition" data-filter="analytics">Data, BI & Annual Planning</button>
+          <button onclick="filterProjects('analytics')" class="proj-btn px-3.5 py-1.5 rounded-xl text-xs font-medium bg-white dark:bg-zinc-900 border border-slate-200 dark:border-zinc-800 hover:border-indigo-500 transition" data-filter="analytics">📊 Data, BI &amp; Annual Planning</button>
+          <button onclick="filterProjects('product')" class="proj-btn px-3.5 py-1.5 rounded-xl text-xs font-medium bg-white dark:bg-zinc-900 border border-slate-200 dark:border-zinc-800 hover:border-teal-500 transition" data-filter="product">🧭 Product &amp; Competitor Strategy</button>
         </div>
       </div>
 
@@ -531,7 +546,7 @@
             <div class="flex items-center justify-between">
               <span class="text-[11px] font-mono px-2.5 py-0.5 rounded bg-indigo-500/10 text-indigo-600 dark:text-indigo-400 font-medium">Aman Holding • Strategic Planning</span>
             </div>
-            <h3 class="text-lg font-bold">Annual Commercial Year Planning & Forecasting Model</h3>
+            <h3 class="text-lg font-bold">Annual Commercial Year Planning &amp; Forecasting Model</h3>
             <p class="text-xs text-slate-600 dark:text-zinc-400 leading-relaxed">
               <strong>The Challenge:</strong> Building a unified, data-backed annual commercial plan across multiple regional sales channels, aligning Finance, HR, and Sales leadership on achievable growth targets.
             </p>
@@ -541,7 +556,7 @@
           </div>
           <div class="mt-5 pt-4 border-t border-slate-100 dark:border-zinc-800 space-y-2.5">
             <div class="text-xs font-semibold text-emerald-600 dark:text-emerald-400">
-              ✓ Impact: Full organizational alignment on annual targets & real-time tracking in Power BI / Looker Studio.
+              ✓ Impact: Full organizational alignment on annual targets &amp; real-time tracking in Power BI / Looker Studio.
             </div>
             <div class="flex flex-wrap gap-1.5 font-mono text-[10px] text-slate-500 dark:text-zinc-400">
               <span class="px-2 py-0.5 rounded bg-slate-100 dark:bg-zinc-800">Year Planning</span>
@@ -551,65 +566,13 @@
           </div>
         </div>
 
-        <!-- PROJECT 2: COMPETITOR ANALYSIS & MARKET BENCHMARKING -->
-        <div class="project-card bento-card rounded-2xl p-6 bg-white dark:bg-zinc-900/80 border border-slate-200 dark:border-zinc-800 flex flex-col justify-between" data-category="product">
-          <div class="space-y-3">
-            <div class="flex items-center justify-between">
-              <span class="text-[11px] font-mono px-2.5 py-0.5 rounded bg-teal-500/10 text-teal-600 dark:text-teal-400 font-medium">Product & Commercial Strategy</span>
-            </div>
-            <h3 class="text-lg font-bold">Competitor Analysis, Pricing & Market Intelligence</h3>
-            <p class="text-xs text-slate-600 dark:text-zinc-400 leading-relaxed">
-              <strong>The Challenge:</strong> Identifying feature gaps, pricing advantages, and market positioning opportunities in competitive Fintech and digital service landscapes.
-            </p>
-            <p class="text-xs text-slate-600 dark:text-zinc-400 leading-relaxed">
-              <strong>The Execution:</strong> Conducted structured competitor benchmarking (SWOT, feature matrices, user onboarding tear-downs, and pricing elasticity assessments) combined with customer sentiment analysis.
-            </p>
-          </div>
-          <div class="mt-5 pt-4 border-t border-slate-100 dark:border-zinc-800 space-y-2.5">
-            <div class="text-xs font-semibold text-teal-600 dark:text-teal-400">
-              ✓ Impact: Guided product roadmap prioritization, pricing adjustments, and go-to-market strategy.
-            </div>
-            <div class="flex flex-wrap gap-1.5 font-mono text-[10px] text-slate-500 dark:text-zinc-400">
-              <span class="px-2 py-0.5 rounded bg-slate-100 dark:bg-zinc-800">Competitor Analysis</span>
-              <span class="px-2 py-0.5 rounded bg-slate-100 dark:bg-zinc-800">Pricing Strategy</span>
-              <span class="px-2 py-0.5 rounded bg-slate-100 dark:bg-zinc-800">Product Discovery</span>
-            </div>
-          </div>
-        </div>
-
-        <!-- PROJECT 3: KHAZNA ONBOARDING FUNNEL (+20% LIFT) -->
-        <div class="project-card bento-card rounded-2xl p-6 bg-white dark:bg-zinc-900/80 border border-slate-200 dark:border-zinc-800 flex flex-col justify-between" data-category="product">
-          <div class="space-y-3">
-            <div class="flex items-center justify-between">
-              <span class="text-[11px] font-mono px-2.5 py-0.5 rounded bg-teal-500/10 text-teal-600 dark:text-teal-400 font-medium">Khazna App • Product Growth</span>
-            </div>
-            <h3 class="text-lg font-bold">Digital Onboarding & KYC Activation Funnel Revamp</h3>
-            <p class="text-xs text-slate-600 dark:text-zinc-400 leading-relaxed">
-              <strong>The Challenge:</strong> High user drop-off rates during digital registration and KYC compliance verification.
-            </p>
-            <p class="text-xs text-slate-600 dark:text-zinc-400 leading-relaxed">
-              <strong>The Execution:</strong> Mapped end-to-end activation funnels using BigQuery SQL, identified key friction points, wrote actionable user stories with the Product team, and streamlined the onboarding journey.
-            </p>
-          </div>
-          <div class="mt-5 pt-4 border-t border-slate-100 dark:border-zinc-800 space-y-2.5">
-            <div class="text-xs font-semibold text-emerald-600 dark:text-emerald-400">
-              ✓ Impact: Delivered a documented +20% increase in user activation conversion rate.
-            </div>
-            <div class="flex flex-wrap gap-1.5 font-mono text-[10px] text-slate-500 dark:text-zinc-400">
-              <span class="px-2 py-0.5 rounded bg-slate-100 dark:bg-zinc-800">Activation Funnels</span>
-              <span class="px-2 py-0.5 rounded bg-slate-100 dark:bg-zinc-800">BigQuery SQL</span>
-              <span class="px-2 py-0.5 rounded bg-slate-100 dark:bg-zinc-800">A/B Testing</span>
-            </div>
-          </div>
-        </div>
-
-        <!-- PROJECT 4: AUTOMATED EXECUTIVE BI ECOSYSTEM -->
+        <!-- PROJECT 2: AUTOMATED EXECUTIVE BI ECOSYSTEM -->
         <div class="project-card bento-card rounded-2xl p-6 bg-white dark:bg-zinc-900/80 border border-slate-200 dark:border-zinc-800 flex flex-col justify-between" data-category="analytics">
           <div class="space-y-3">
             <div class="flex items-center justify-between">
-              <span class="text-[11px] font-mono px-2.5 py-0.5 rounded bg-indigo-500/10 text-indigo-600 dark:text-indigo-400 font-medium">BI Architecture & Automation</span>
+              <span class="text-[11px] font-mono px-2.5 py-0.5 rounded bg-indigo-500/10 text-indigo-600 dark:text-indigo-400 font-medium">BI Architecture &amp; Automation</span>
             </div>
-            <h3 class="text-lg font-bold">Automated Executive BI & Reporting Ecosystem</h3>
+            <h3 class="text-lg font-bold">Automated Executive BI &amp; Reporting Ecosystem</h3>
             <p class="text-xs text-slate-600 dark:text-zinc-400 leading-relaxed">
               <strong>The Challenge:</strong> Heavy manual reporting overhead across daily and weekly commercial and product performance reviews.
             </p>
@@ -619,21 +582,21 @@
           </div>
           <div class="mt-5 pt-4 border-t border-slate-100 dark:border-zinc-800 space-y-2.5">
             <div class="text-xs font-semibold text-indigo-600 dark:text-indigo-400">
-              ✓ Impact: Drastically reduced manual reporting time & enabled real-time executive decision-making.
+              ✓ Impact: Drastically reduced manual reporting time &amp; enabled real-time executive decision-making.
             </div>
             <div class="flex flex-wrap gap-1.5 font-mono text-[10px] text-slate-500 dark:text-zinc-400">
+              <span class="px-2 py-0.5 rounded bg-slate-100 dark:bg-zinc-800">BigQuery SQL</span>
               <span class="px-2 py-0.5 rounded bg-slate-100 dark:bg-zinc-800">Power BI</span>
               <span class="px-2 py-0.5 rounded bg-slate-100 dark:bg-zinc-800">Looker Studio</span>
-              <span class="px-2 py-0.5 rounded bg-slate-100 dark:bg-zinc-800">Apps Script</span>
             </div>
           </div>
         </div>
 
-        <!-- PROJECT 5: COMMISSION CYCLE ENGINE -->
+        <!-- PROJECT 3: COMMISSION CYCLE ENGINE -->
         <div class="project-card bento-card rounded-2xl p-6 bg-white dark:bg-zinc-900/80 border border-slate-200 dark:border-zinc-800 flex flex-col justify-between" data-category="analytics">
           <div class="space-y-3">
             <div class="flex items-center justify-between">
-              <span class="text-[11px] font-mono px-2.5 py-0.5 rounded bg-indigo-500/10 text-indigo-600 dark:text-indigo-400 font-medium">Aman Holding • Commercial Ops</span>
+              <span class="text-[11px] font-mono px-2.5 py-0.5 rounded bg-indigo-500/10 text-indigo-600 dark:text-indigo-400 font-medium">Aman Holding • Commercial Analytics</span>
             </div>
             <h3 class="text-lg font-bold">End-to-End Sales Commission Calculation Engine</h3>
             <p class="text-xs text-slate-600 dark:text-zinc-400 leading-relaxed">
@@ -650,7 +613,59 @@
             <div class="flex flex-wrap gap-1.5 font-mono text-[10px] text-slate-500 dark:text-zinc-400">
               <span class="px-2 py-0.5 rounded bg-slate-100 dark:bg-zinc-800">Data Validation</span>
               <span class="px-2 py-0.5 rounded bg-slate-100 dark:bg-zinc-800">Commission Modeling</span>
-              <span class="px-2 py-0.5 rounded bg-slate-100 dark:bg-zinc-800">Cross-Functional Ops</span>
+              <span class="px-2 py-0.5 rounded bg-slate-100 dark:bg-zinc-800">RCA</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- PROJECT 4: COMPETITOR ANALYSIS & MARKET BENCHMARKING -->
+        <div class="project-card bento-card rounded-2xl p-6 bg-white dark:bg-zinc-900/80 border border-slate-200 dark:border-zinc-800 flex flex-col justify-between" data-category="product">
+          <div class="space-y-3">
+            <div class="flex items-center justify-between">
+              <span class="text-[11px] font-mono px-2.5 py-0.5 rounded bg-teal-500/10 text-teal-600 dark:text-teal-400 font-medium">Product &amp; Market Intelligence</span>
+            </div>
+            <h3 class="text-lg font-bold">Competitor Analysis, Pricing &amp; Market Intelligence</h3>
+            <p class="text-xs text-slate-600 dark:text-zinc-400 leading-relaxed">
+              <strong>The Challenge:</strong> Identifying feature gaps, pricing advantages, and market positioning opportunities in competitive Fintech and commercial markets.
+            </p>
+            <p class="text-xs text-slate-600 dark:text-zinc-400 leading-relaxed">
+              <strong>The Execution:</strong> Conducted structured competitor benchmarking (SWOT, feature matrices, onboarding tear-downs, and pricing assessments) combined with customer sentiment analysis.
+            </p>
+          </div>
+          <div class="mt-5 pt-4 border-t border-slate-100 dark:border-zinc-800 space-y-2.5">
+            <div class="text-xs font-semibold text-teal-600 dark:text-teal-400">
+              ✓ Impact: Guided product roadmap prioritization, pricing adjustments, and go-to-market strategy.
+            </div>
+            <div class="flex flex-wrap gap-1.5 font-mono text-[10px] text-slate-500 dark:text-zinc-400">
+              <span class="px-2 py-0.5 rounded bg-slate-100 dark:bg-zinc-800">Competitor Analysis</span>
+              <span class="px-2 py-0.5 rounded bg-slate-100 dark:bg-zinc-800">Pricing Strategy</span>
+              <span class="px-2 py-0.5 rounded bg-slate-100 dark:bg-zinc-800">Market Research</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- PROJECT 5: KHAZNA ONBOARDING FUNNEL (+20% LIFT) -->
+        <div class="project-card bento-card rounded-2xl p-6 bg-white dark:bg-zinc-900/80 border border-slate-200 dark:border-zinc-800 flex flex-col justify-between" data-category="product">
+          <div class="space-y-3">
+            <div class="flex items-center justify-between">
+              <span class="text-[11px] font-mono px-2.5 py-0.5 rounded bg-teal-500/10 text-teal-600 dark:text-teal-400 font-medium">Khazna App • Product Growth</span>
+            </div>
+            <h3 class="text-lg font-bold">Digital Onboarding &amp; KYC Activation Funnel Revamp</h3>
+            <p class="text-xs text-slate-600 dark:text-zinc-400 leading-relaxed">
+              <strong>The Challenge:</strong> High user drop-off rates during digital registration and KYC compliance verification.
+            </p>
+            <p class="text-xs text-slate-600 dark:text-zinc-400 leading-relaxed">
+              <strong>The Execution:</strong> Mapped end-to-end activation funnels using BigQuery SQL, identified key friction points, collaborated on user stories with the Product team, and streamlined the onboarding journey.
+            </p>
+          </div>
+          <div class="mt-5 pt-4 border-t border-slate-100 dark:border-zinc-800 space-y-2.5">
+            <div class="text-xs font-semibold text-emerald-600 dark:text-emerald-400">
+              ✓ Impact: Delivered a documented +20% increase in user activation conversion rate.
+            </div>
+            <div class="flex flex-wrap gap-1.5 font-mono text-[10px] text-slate-500 dark:text-zinc-400">
+              <span class="px-2 py-0.5 rounded bg-slate-100 dark:bg-zinc-800">Activation Funnels</span>
+              <span class="px-2 py-0.5 rounded bg-slate-100 dark:bg-zinc-800">BigQuery SQL</span>
+              <span class="px-2 py-0.5 rounded bg-slate-100 dark:bg-zinc-800">A/B Testing</span>
             </div>
           </div>
         </div>
@@ -666,7 +681,7 @@
               <strong>The Challenge:</strong> Decentralized spreadsheet workflows limiting operational scalability across new regional markets.
             </p>
             <p class="text-xs text-slate-600 dark:text-zinc-400 leading-relaxed">
-              <strong>The Execution:</strong> Architected a dimensional data model and deployed a custom internal Admin Panel via Google AppSheet & Apps Script to standardize daily operations.
+              <strong>The Execution:</strong> Architected a dimensional data model and deployed a custom internal Admin Panel via Google AppSheet &amp; Apps Script to standardize daily operations.
             </p>
           </div>
           <div class="mt-5 pt-4 border-t border-slate-100 dark:border-zinc-800 space-y-2.5">
@@ -705,14 +720,14 @@
             <span class="font-mono text-xs px-3 py-1 rounded-full bg-slate-100 dark:bg-zinc-800 text-slate-600 dark:text-zinc-300">Jan 2026 – Present</span>
           </div>
           <ul class="mt-4 space-y-2 text-xs sm:text-sm text-slate-600 dark:text-zinc-400 list-disc list-inside">
+            <li>Automate data extraction and dimensional modeling workflows via <strong>Google Apps Script</strong> and deploy real-time interactive KPI dashboards in <strong>Looker Studio</strong>.</li>
             <li>Partner with product leaders and stakeholders using <strong>Agile methodologies</strong> to define Product Performance metrics and map end-to-end user activation funnels.</li>
             <li>Conduct <strong>competitor analysis</strong>, pricing assessments, demand forecasting, and customer sentiment/call analytics to guide Feature Optimization and Product Growth.</li>
-            <li>Automate data extraction and dimensional modeling workflows via <strong>Google Apps Script</strong> and deploy real-time KPI dashboards in <strong>Looker Studio</strong>.</li>
             <li>Architect and deploy a centralized operational Admin Panel via <strong>Google AppSheet</strong> to standardize internal processes for cross-border expansion.</li>
           </ul>
         </div>
 
-        <!-- Role 2: AMAN HOLDING (With Year Planning & Competitor Analysis) -->
+        <!-- Role 2: AMAN HOLDING -->
         <div class="p-6 rounded-2xl bg-white dark:bg-zinc-900/80 border border-slate-200 dark:border-zinc-800">
           <div class="flex flex-wrap items-center justify-between gap-2">
             <div>
@@ -722,10 +737,10 @@
             <span class="font-mono text-xs px-3 py-1 rounded-full bg-slate-100 dark:bg-zinc-800 text-slate-600 dark:text-zinc-300">Aug 2025 – Jan 2026</span>
           </div>
           <ul class="mt-4 space-y-2 text-xs sm:text-sm text-slate-600 dark:text-zinc-400 list-disc list-inside">
-            <li><strong>Annual Year Planning & Strategic Forecasting:</strong> Spearheaded the annual commercial planning cycle, building historical sales forecasting models and cascading company-wide KPIs and targets across all regions and sales channels in coordination with Sales, Finance, and HR.</li>
-            <li><strong>Market & Competitor Intelligence:</strong> Conducted competitor analysis and market trend assessments to identify commercial growth opportunities and support executive strategic adjustments.</li>
+            <li><strong>Annual Year Planning &amp; Strategic Forecasting:</strong> Spearheaded the annual commercial planning cycle, building historical sales forecasting models and cascading company-wide KPIs and targets across all regions and sales channels in coordination with Sales, Finance, and HR.</li>
             <li><strong>Executive BI Automation:</strong> Orchestrated automated performance dashboards in <strong>Power BI</strong> and <strong>Looker Studio</strong> for real-time visibility into commercial health and SLA adherence.</li>
-            <li><strong>Commission Cycle & RCA:</strong> Owned the end-to-end monthly sales commission calculation and payout cycle with <strong>100% accuracy</strong>, and partnered with Data Engineering on <strong>Root Cause Analysis (RCA)</strong> to resolve data pipeline issues.</li>
+            <li><strong>Market &amp; Competitor Intelligence:</strong> Conducted competitor analysis and market trend assessments to identify commercial growth opportunities and support executive strategic adjustments.</li>
+            <li><strong>Commission Cycle &amp; RCA:</strong> Owned the end-to-end monthly sales commission calculation and payout cycle with <strong>100% accuracy</strong>, and partnered with Data Engineering on <strong>Root Cause Analysis (RCA)</strong> to resolve data pipeline issues.</li>
           </ul>
         </div>
 
@@ -733,15 +748,15 @@
         <div class="p-6 rounded-2xl bg-white dark:bg-zinc-900/80 border border-slate-200 dark:border-zinc-800">
           <div class="flex flex-wrap items-center justify-between gap-2">
             <div>
-              <h3 class="text-lg font-bold">Commercial Analytics & Process Integration Lead</h3>
+              <h3 class="text-lg font-bold">Commercial Analytics &amp; Process Integration Lead</h3>
               <p class="text-sm text-indigo-600 dark:text-indigo-400 font-medium">Khazna App</p>
             </div>
             <span class="font-mono text-xs px-3 py-1 rounded-full bg-slate-100 dark:bg-zinc-800 text-slate-600 dark:text-zinc-300">Dec 2024 – Jul 2025</span>
           </div>
           <ul class="mt-4 space-y-2 text-xs sm:text-sm text-slate-600 dark:text-zinc-400 list-disc list-inside">
+            <li>Automated recurring daily and weekly reporting workflows utilizing <strong>BigQuery, Looker Studio, Metabase, and Google Sheets</strong>.</li>
             <li>Collaborated with Product and Sales squads to map the <strong>user activation funnel</strong>, support <strong>product discovery</strong>, and translate behavioral insights into actionable user stories and feature optimizations.</li>
             <li>Served as the primary product data partner aligning Product, Engineering, Finance, and Strategy around core growth metrics and product roadmap priorities.</li>
-            <li>Automated recurring daily and weekly reporting workflows utilizing <strong>BigQuery, Looker Studio, Metabase, and Google Sheets</strong>.</li>
           </ul>
         </div>
 
@@ -765,7 +780,7 @@
         <div class="p-6 rounded-2xl bg-white dark:bg-zinc-900/80 border border-slate-200 dark:border-zinc-800">
           <div class="flex flex-wrap items-center justify-between gap-2">
             <div>
-              <h3 class="text-lg font-bold">Partner Success Manager & Community Support Specialist</h3>
+              <h3 class="text-lg font-bold">Partner Success Manager &amp; Community Support Specialist</h3>
               <p class="text-sm text-indigo-600 dark:text-indigo-400 font-medium">Khazna App</p>
             </div>
             <span class="font-mono text-xs px-3 py-1 rounded-full bg-slate-100 dark:bg-zinc-800 text-slate-600 dark:text-zinc-300">Nov 2021 – Mar 2023</span>
@@ -780,13 +795,13 @@
         <div class="p-6 rounded-2xl bg-white dark:bg-zinc-900/80 border border-slate-200 dark:border-zinc-800">
           <div class="flex flex-wrap items-center justify-between gap-2">
             <div>
-              <h3 class="text-lg font-bold">Regional Account Advisor @ Talabat & Customer Operations Specialist @ Vodafone</h3>
+              <h3 class="text-lg font-bold">Regional Account Advisor @ Talabat &amp; Customer Operations Specialist @ Vodafone</h3>
               <p class="text-sm text-indigo-600 dark:text-indigo-400 font-medium">Early Career Foundation • Education: Bachelor's Degree in Education, Al-Azhar University (2015 – 2018)</p>
             </div>
             <span class="font-mono text-xs px-3 py-1 rounded-full bg-slate-100 dark:bg-zinc-800 text-slate-600 dark:text-zinc-300">Mar 2018 – Nov 2021</span>
           </div>
           <ul class="mt-4 space-y-2 text-xs sm:text-sm text-slate-600 dark:text-zinc-400 list-disc list-inside">
-            <li><strong>Talabat (Jan 2020 – Sep 2020):</strong> Managed regional partner account lifecycles, onboarding activation, SLA adherence, and cross-functional workforce optimization with HR & WFM.</li>
+            <li><strong>Talabat (Jan 2020 – Sep 2020):</strong> Managed regional partner account lifecycles, onboarding activation, SLA adherence, and cross-functional workforce optimization with HR &amp; WFM.</li>
             <li><strong>Vodafone (Mar 2018 – Nov 2021):</strong> Coached and trained frontline customer operations teams, coordinated shift staffing during peak demand, and maintained strict SLA performance for high-value clients.</li>
           </ul>
         </div>
@@ -795,135 +810,359 @@
     </section>
 
     <!-- ==========================================
-         6. CERTIFICATIONS & FORMAL TRAINING
+         6. VISUAL CERTIFICATES GALLERY (SIDE-BY-SIDE WITH FILTERS & LIGHTBOX)
          ========================================== -->
     <section id="certifications" class="scroll-mt-24 space-y-8">
-      <div class="border-b border-slate-200 dark:border-zinc-800 pb-6">
-        <span class="text-xs font-mono uppercase tracking-wider text-indigo-600 dark:text-indigo-400">05 // Education & Credentials</span>
-        <h2 class="text-2xl sm:text-3xl font-bold tracking-tight mt-1">Certifications in Product Management, Data & Process</h2>
+      <div class="flex flex-col md:flex-row md:items-end justify-between gap-4 border-b border-slate-200 dark:border-zinc-800 pb-6">
+        <div>
+          <span class="text-xs font-mono uppercase tracking-wider text-indigo-600 dark:text-indigo-400">05 // Verified Credentials</span>
+          <h2 class="text-2xl sm:text-3xl font-bold tracking-tight mt-1">LinkedIn Certifications Gallery</h2>
+          <p class="text-sm text-slate-600 dark:text-zinc-400 mt-1">
+            Click any certificate card to enlarge its visual preview or verify directly on LinkedIn.
+          </p>
+        </div>
+
+        <!-- Certificate Category Filter Buttons (Data & BI First!) -->
+        <div class="flex flex-wrap gap-2">
+          <button onclick="filterCerts('all')" class="cert-btn px-3.5 py-1.5 rounded-xl text-xs font-semibold bg-indigo-600 text-white transition" data-filter="all">All Certificates (8)</button>
+          <button onclick="filterCerts('data')" class="cert-btn px-3.5 py-1.5 rounded-xl text-xs font-medium bg-white dark:bg-zinc-900 border border-slate-200 dark:border-zinc-800 hover:border-indigo-500 transition" data-filter="data">📊 Data &amp; BI (3)</button>
+          <button onclick="filterCerts('process')" class="cert-btn px-3.5 py-1.5 rounded-xl text-xs font-medium bg-white dark:bg-zinc-900 border border-slate-200 dark:border-zinc-800 hover:border-amber-500 transition" data-filter="process">⚙️ Six Sigma (1)</button>
+          <button onclick="filterCerts('product')" class="cert-btn px-3.5 py-1.5 rounded-xl text-xs font-medium bg-white dark:bg-zinc-900 border border-slate-200 dark:border-zinc-800 hover:border-teal-500 transition" data-filter="product">🧭 Product Mgmt (4)</button>
+        </div>
       </div>
 
-      <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4">
-        <div class="p-5 rounded-2xl bg-white dark:bg-zinc-900/80 border border-slate-200 dark:border-zinc-800">
-          <span class="font-mono text-xs text-teal-600 dark:text-teal-400">Sprints • 2025</span>
-          <h3 class="font-bold text-sm mt-1">Specialization Certificate: Product Management (SprintUp)</h3>
+      <!-- Visual Certificates Grid (Side-by-Side) -->
+      <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-5">
+
+        <!-- CERT 1: DATACAMP INTERMEDIATE PYTHON (DATA) -->
+        <div onclick="openCertModal('Intermediate Python', 'DataCamp', '2026', 'Data Analytics & Python Programming', '#03EF62', '#05192D')" class="cert-card bento-card cursor-pointer rounded-2xl overflow-hidden bg-white dark:bg-zinc-900/90 border border-slate-200 dark:border-zinc-800 flex flex-col justify-between group" data-category="data">
+          <!-- Visual Certificate Preview Frame -->
+          <div class="relative aspect-[16/10] bg-[#05192D] p-4 flex flex-col justify-between border-b border-zinc-800 overflow-hidden">
+            <img src="assets/certs/datacamp-python.jpg" alt="DataCamp Intermediate Python Certificate" class="absolute inset-0 w-full h-full object-cover z-10" onerror="this.style.display='none'" />
+            <div class="cert-visual relative z-0 h-full flex flex-col justify-between border border-[#03EF62]/40 rounded-lg p-3 bg-gradient-to-br from-[#05192D] to-[#0A2540]">
+              <div class="flex items-center justify-between">
+                <span class="font-mono text-[10px] font-bold px-2 py-0.5 rounded bg-[#03EF62] text-[#05192D]">DataCamp</span>
+                <span class="font-mono text-[10px] text-slate-300">2026</span>
+              </div>
+              <div class="my-auto text-center">
+                <div class="text-[9px] font-mono uppercase tracking-widest text-[#03EF62]">Statement of Accomplishment</div>
+                <div class="text-xs font-bold text-white mt-0.5">Intermediate Python</div>
+                <div class="text-[10px] text-slate-300 mt-1">Mohamed Elkashef</div>
+              </div>
+              <div class="flex items-center justify-between text-[9px] font-mono text-slate-400 border-t border-white/10 pt-1">
+                <span>Pandas • Matplotlib</span>
+                <span class="text-[#03EF62]">✓ Verified</span>
+              </div>
+            </div>
+          </div>
+          <div class="p-4 flex items-center justify-between">
+            <div>
+              <div class="text-[11px] font-mono text-indigo-600 dark:text-indigo-400">DataCamp • 2026</div>
+              <h3 class="font-bold text-sm mt-0.5 group-hover:text-indigo-500 transition">Intermediate Python</h3>
+            </div>
+            <i data-lucide="maximize-2" class="w-4 h-4 text-slate-400 group-hover:text-indigo-500 transition"></i>
+          </div>
         </div>
-        <div class="p-5 rounded-2xl bg-white dark:bg-zinc-900/80 border border-slate-200 dark:border-zinc-800">
-          <span class="font-mono text-xs text-teal-600 dark:text-teal-400">Product School • 2025</span>
-          <h3 class="font-bold text-sm mt-1">Product Discovery (PDC) Micro-Certification</h3>
+
+        <!-- CERT 2: LINKEDIN POWER BI DASHBOARDS (DATA) -->
+        <div onclick="openCertModal('Power BI: Dashboards', 'LinkedIn Learning', '2024', 'Business Intelligence & Executive Reporting', '#38BDF8', '#0F172A')" class="cert-card bento-card cursor-pointer rounded-2xl overflow-hidden bg-white dark:bg-zinc-900/90 border border-slate-200 dark:border-zinc-800 flex flex-col justify-between group" data-category="data">
+          <div class="relative aspect-[16/10] bg-[#0F172A] p-4 flex flex-col justify-between border-b border-zinc-800 overflow-hidden">
+            <img src="assets/certs/linkedin-powerbi.jpg" alt="Power BI Dashboards Certificate" class="absolute inset-0 w-full h-full object-cover z-10" onerror="this.style.display='none'" />
+            <div class="cert-visual relative z-0 h-full flex flex-col justify-between border border-sky-400/40 rounded-lg p-3 bg-gradient-to-br from-[#0F172A] to-[#1E293B]">
+              <div class="flex items-center justify-between">
+                <span class="font-mono text-[10px] font-bold px-2 py-0.5 rounded bg-sky-500 text-white">in Learning</span>
+                <span class="font-mono text-[10px] text-slate-300">2024</span>
+              </div>
+              <div class="my-auto text-center">
+                <div class="text-[9px] font-mono uppercase tracking-widest text-sky-400">Certificate of Completion</div>
+                <div class="text-xs font-bold text-white mt-0.5">Power BI: Dashboards</div>
+                <div class="text-[10px] text-slate-300 mt-1">Mohamed Elkashef</div>
+              </div>
+              <div class="flex items-center justify-between text-[9px] font-mono text-slate-400 border-t border-white/10 pt-1">
+                <span>DAX • Data Modeling</span>
+                <span class="text-sky-400">✓ Verified</span>
+              </div>
+            </div>
+          </div>
+          <div class="p-4 flex items-center justify-between">
+            <div>
+              <div class="text-[11px] font-mono text-indigo-600 dark:text-indigo-400">LinkedIn Learning • 2024</div>
+              <h3 class="font-bold text-sm mt-0.5 group-hover:text-indigo-500 transition">Power BI: Dashboards</h3>
+            </div>
+            <i data-lucide="maximize-2" class="w-4 h-4 text-slate-400 group-hover:text-indigo-500 transition"></i>
+          </div>
         </div>
-        <div class="p-5 rounded-2xl bg-white dark:bg-zinc-900/80 border border-slate-200 dark:border-zinc-800">
-          <span class="font-mono text-xs text-teal-600 dark:text-teal-400">Product School • 2025</span>
-          <h3 class="font-bold text-sm mt-1">Product Roadmapping (PRC) Micro-Certification</h3>
+
+        <!-- CERT 3: CARTONA TABLEAU DATA VISUALIZATION (DATA) -->
+        <div onclick="openCertModal('Data Visualization in Tableau', 'Cartona', '2023', 'Interactive BI & Visual Storytelling', '#818CF8', '#1E1B4B')" class="cert-card bento-card cursor-pointer rounded-2xl overflow-hidden bg-white dark:bg-zinc-900/90 border border-slate-200 dark:border-zinc-800 flex flex-col justify-between group" data-category="data">
+          <div class="relative aspect-[16/10] bg-[#1E1B4B] p-4 flex flex-col justify-between border-b border-zinc-800 overflow-hidden">
+            <img src="assets/certs/cartona-tableau.jpg" alt="Tableau Data Visualization Certificate" class="absolute inset-0 w-full h-full object-cover z-10" onerror="this.style.display='none'" />
+            <div class="cert-visual relative z-0 h-full flex flex-col justify-between border border-indigo-400/40 rounded-lg p-3 bg-gradient-to-br from-[#1E1B4B] to-[#312E81]">
+              <div class="flex items-center justify-between">
+                <span class="font-mono text-[10px] font-bold px-2 py-0.5 rounded bg-indigo-400 text-indigo-950">CARTONA</span>
+                <span class="font-mono text-[10px] text-slate-300">2023</span>
+              </div>
+              <div class="my-auto text-center">
+                <div class="text-[9px] font-mono uppercase tracking-widest text-indigo-300">Certificate of Achievement</div>
+                <div class="text-xs font-bold text-white mt-0.5">Data Visualization in Tableau</div>
+                <div class="text-[10px] text-slate-300 mt-1">Mohamed Elkashef</div>
+              </div>
+              <div class="flex items-center justify-between text-[9px] font-mono text-slate-300 border-t border-white/10 pt-1">
+                <span>Tableau BI • Storytelling</span>
+                <span class="text-indigo-300">✓ Verified</span>
+              </div>
+            </div>
+          </div>
+          <div class="p-4 flex items-center justify-between">
+            <div>
+              <div class="text-[11px] font-mono text-indigo-600 dark:text-indigo-400">Cartona • 2023</div>
+              <h3 class="font-bold text-sm mt-0.5 group-hover:text-indigo-500 transition">Data Visualization in Tableau</h3>
+            </div>
+            <i data-lucide="maximize-2" class="w-4 h-4 text-slate-400 group-hover:text-indigo-500 transition"></i>
+          </div>
         </div>
-        <div class="p-5 rounded-2xl bg-white dark:bg-zinc-900/80 border border-slate-200 dark:border-zinc-800">
-          <span class="font-mono text-xs text-amber-600 dark:text-amber-400">Six Sigma School • 2025</span>
-          <h3 class="font-bold text-sm mt-1">Lean Six Sigma Green Belt (LSSGB)</h3>
+
+        <!-- CERT 4: LEAN SIX SIGMA GREEN BELT (PROCESS) -->
+        <div onclick="openCertModal('Lean Six Sigma Green Belt (LSSGB)', 'Six Sigma School', '2025', 'Process Optimization, DMAIC & Root Cause Analysis', '#FBBF24', '#1C1917')" class="cert-card bento-card cursor-pointer rounded-2xl overflow-hidden bg-white dark:bg-zinc-900/90 border border-slate-200 dark:border-zinc-800 flex flex-col justify-between group" data-category="process">
+          <div class="relative aspect-[16/10] bg-[#1C1917] p-4 flex flex-col justify-between border-b border-zinc-800 overflow-hidden">
+            <img src="assets/certs/lssgb.jpg" alt="Lean Six Sigma Green Belt Certificate" class="absolute inset-0 w-full h-full object-cover z-10" onerror="this.style.display='none'" />
+            <div class="cert-visual relative z-0 h-full flex flex-col justify-between border border-amber-400/40 rounded-lg p-3 bg-gradient-to-br from-[#1C1917] to-[#292524]">
+              <div class="flex items-center justify-between">
+                <span class="font-mono text-[10px] font-bold px-2 py-0.5 rounded bg-amber-400 text-stone-950">SIX SIGMA</span>
+                <span class="font-mono text-[10px] text-slate-300">2025</span>
+              </div>
+              <div class="my-auto text-center">
+                <div class="text-[9px] font-mono uppercase tracking-widest text-amber-400">Official Certification</div>
+                <div class="text-xs font-bold text-white mt-0.5">Lean Six Sigma Green Belt</div>
+                <div class="text-[10px] text-slate-300 mt-1">Mohamed Elkashef</div>
+              </div>
+              <div class="flex items-center justify-between text-[9px] font-mono text-slate-400 border-t border-white/10 pt-1">
+                <span>LSSGB • DMAIC &amp; RCA</span>
+                <span class="text-amber-400">✓ Verified</span>
+              </div>
+            </div>
+          </div>
+          <div class="p-4 flex items-center justify-between">
+            <div>
+              <div class="text-[11px] font-mono text-amber-600 dark:text-amber-400">Six Sigma School • 2025</div>
+              <h3 class="font-bold text-sm mt-0.5 group-hover:text-amber-500 transition">Lean Six Sigma Green Belt</h3>
+            </div>
+            <i data-lucide="maximize-2" class="w-4 h-4 text-slate-400 group-hover:text-amber-500 transition"></i>
+          </div>
         </div>
-        <div class="p-5 rounded-2xl bg-white dark:bg-zinc-900/80 border border-slate-200 dark:border-zinc-800">
-          <span class="font-mono text-xs text-indigo-600 dark:text-indigo-400">DataCamp • 2026</span>
-          <h3 class="font-bold text-sm mt-1">Intermediate Python for Data Analysis</h3>
+
+        <!-- CERT 5: SPRINTS PRODUCT MANAGEMENT (PRODUCT) -->
+        <div onclick="openCertModal('Specialization Certificate: Product Management', 'Sprints (SprintUp)', '2025', 'Agile Product Management, PRDs, Backlogs & Go-To-Market', '#2DD4BF', '#042F2E')" class="cert-card bento-card cursor-pointer rounded-2xl overflow-hidden bg-white dark:bg-zinc-900/90 border border-slate-200 dark:border-zinc-800 flex flex-col justify-between group" data-category="product">
+          <div class="relative aspect-[16/10] bg-[#042F2E] p-4 flex flex-col justify-between border-b border-zinc-800 overflow-hidden">
+            <img src="assets/certs/sprints-pm.jpg" alt="Sprints Product Management Certificate" class="absolute inset-0 w-full h-full object-cover z-10" onerror="this.style.display='none'" />
+            <div class="cert-visual relative z-0 h-full flex flex-col justify-between border border-teal-400/40 rounded-lg p-3 bg-gradient-to-br from-[#042F2E] to-[#134E4A]">
+              <div class="flex items-center justify-between">
+                <span class="font-mono text-[10px] font-bold px-2 py-0.5 rounded bg-teal-400 text-teal-950">SPRINTS</span>
+                <span class="font-mono text-[10px] text-slate-300">2025</span>
+              </div>
+              <div class="my-auto text-center">
+                <div class="text-[9px] font-mono uppercase tracking-widest text-teal-300">Specialization Certificate</div>
+                <div class="text-xs font-bold text-white mt-0.5">Product Management</div>
+                <div class="text-[10px] text-slate-200 mt-1">Mohamed Elkashef</div>
+              </div>
+              <div class="flex items-center justify-between text-[9px] font-mono text-slate-300 border-t border-white/10 pt-1">
+                <span>Agile • PRDs • Roadmaps</span>
+                <span class="text-teal-300">✓ Verified</span>
+              </div>
+            </div>
+          </div>
+          <div class="p-4 flex items-center justify-between">
+            <div>
+              <div class="text-[11px] font-mono text-teal-600 dark:text-teal-400">Sprints • 2025</div>
+              <h3 class="font-bold text-sm mt-0.5 group-hover:text-teal-500 transition">Product Management</h3>
+            </div>
+            <i data-lucide="maximize-2" class="w-4 h-4 text-slate-400 group-hover:text-teal-500 transition"></i>
+          </div>
         </div>
-        <div class="p-5 rounded-2xl bg-white dark:bg-zinc-900/80 border border-slate-200 dark:border-zinc-800">
-          <span class="font-mono text-xs text-indigo-600 dark:text-indigo-400">LinkedIn Learning • 2024</span>
-          <h3 class="font-bold text-sm mt-1">Power BI: Executive Dashboards</h3>
+
+        <!-- CERT 6: PRODUCT SCHOOL PDC (PRODUCT) -->
+        <div onclick="openCertModal('Product Discovery Micro-Certification (PDC)™', 'Product School', '2025', 'User Research, Opportunity Sizing & Funnel Discovery', '#34D399', '#064E3B')" class="cert-card bento-card cursor-pointer rounded-2xl overflow-hidden bg-white dark:bg-zinc-900/90 border border-slate-200 dark:border-zinc-800 flex flex-col justify-between group" data-category="product">
+          <div class="relative aspect-[16/10] bg-[#064E3B] p-4 flex flex-col justify-between border-b border-zinc-800 overflow-hidden">
+            <img src="assets/certs/product-school-pdc.jpg" alt="Product Discovery PDC Certificate" class="absolute inset-0 w-full h-full object-cover z-10" onerror="this.style.display='none'" />
+            <div class="cert-visual relative z-0 h-full flex flex-col justify-between border border-emerald-400/40 rounded-lg p-3 bg-gradient-to-br from-[#064E3B] to-[#065F46]">
+              <div class="flex items-center justify-between">
+                <span class="font-mono text-[10px] font-bold px-2 py-0.5 rounded bg-emerald-400 text-emerald-950">PRODUCT SCHOOL</span>
+                <span class="font-mono text-[10px] text-slate-200">2025</span>
+              </div>
+              <div class="my-auto text-center">
+                <div class="text-[9px] font-mono uppercase tracking-widest text-emerald-300">Micro-Certification</div>
+                <div class="text-xs font-bold text-white mt-0.5">Product Discovery (PDC)™</div>
+                <div class="text-[10px] text-slate-200 mt-1">Mohamed Elkashef</div>
+              </div>
+              <div class="flex items-center justify-between text-[9px] font-mono text-slate-300 border-t border-white/10 pt-1">
+                <span>Opportunity Sizing</span>
+                <span class="text-emerald-300">✓ Verified</span>
+              </div>
+            </div>
+          </div>
+          <div class="p-4 flex items-center justify-between">
+            <div>
+              <div class="text-[11px] font-mono text-teal-600 dark:text-teal-400">Product School • 2025</div>
+              <h3 class="font-bold text-sm mt-0.5 group-hover:text-teal-500 transition">Product Discovery (PDC)™</h3>
+            </div>
+            <i data-lucide="maximize-2" class="w-4 h-4 text-slate-400 group-hover:text-teal-500 transition"></i>
+          </div>
         </div>
-        <div class="p-5 rounded-2xl bg-white dark:bg-zinc-900/80 border border-slate-200 dark:border-zinc-800">
-          <span class="font-mono text-xs text-teal-600 dark:text-teal-400">LinkedIn Learning • 2024</span>
-          <h3 class="font-bold text-sm mt-1">Design Thinking: Understanding the Process</h3>
+
+        <!-- CERT 7: PRODUCT SCHOOL PRC (PRODUCT) -->
+        <div onclick="openCertModal('Product Roadmapping Micro-Certification (PRC)™', 'Product School', '2025', 'Outcome-Driven Roadmaps & Stakeholder Prioritization', '#34D399', '#064E3B')" class="cert-card bento-card cursor-pointer rounded-2xl overflow-hidden bg-white dark:bg-zinc-900/90 border border-slate-200 dark:border-zinc-800 flex flex-col justify-between group" data-category="product">
+          <div class="relative aspect-[16/10] bg-[#064E3B] p-4 flex flex-col justify-between border-b border-zinc-800 overflow-hidden">
+            <img src="assets/certs/product-school-prc.jpg" alt="Product Roadmapping PRC Certificate" class="absolute inset-0 w-full h-full object-cover z-10" onerror="this.style.display='none'" />
+            <div class="cert-visual relative z-0 h-full flex flex-col justify-between border border-emerald-400/40 rounded-lg p-3 bg-gradient-to-br from-[#064E3B] to-[#065F46]">
+              <div class="flex items-center justify-between">
+                <span class="font-mono text-[10px] font-bold px-2 py-0.5 rounded bg-emerald-400 text-emerald-950">PRODUCT SCHOOL</span>
+                <span class="font-mono text-[10px] text-slate-200">2025</span>
+              </div>
+              <div class="my-auto text-center">
+                <div class="text-[9px] font-mono uppercase tracking-widest text-emerald-300">Micro-Certification</div>
+                <div class="text-xs font-bold text-white mt-0.5">Product Roadmapping (PRC)™</div>
+                <div class="text-[10px] text-slate-200 mt-1">Mohamed Elkashef</div>
+              </div>
+              <div class="flex items-center justify-between text-[9px] font-mono text-slate-300 border-t border-white/10 pt-1">
+                <span>Strategic Prioritization</span>
+                <span class="text-emerald-300">✓ Verified</span>
+              </div>
+            </div>
+          </div>
+          <div class="p-4 flex items-center justify-between">
+            <div>
+              <div class="text-[11px] font-mono text-teal-600 dark:text-teal-400">Product School • 2025</div>
+              <h3 class="font-bold text-sm mt-0.5 group-hover:text-teal-500 transition">Product Roadmapping (PRC)™</h3>
+            </div>
+            <i data-lucide="maximize-2" class="w-4 h-4 text-slate-400 group-hover:text-teal-500 transition"></i>
+          </div>
         </div>
-        <div class="p-5 rounded-2xl bg-white dark:bg-zinc-900/80 border border-slate-200 dark:border-zinc-800">
-          <span class="font-mono text-xs text-indigo-600 dark:text-indigo-400">Cartona • 2023</span>
-          <h3 class="font-bold text-sm mt-1">Data Visualization in Tableau</h3>
+
+        <!-- CERT 8: LINKEDIN DESIGN THINKING (PRODUCT) -->
+        <div onclick="openCertModal('Design Thinking: Understanding the Process', 'LinkedIn Learning', '2024', 'Human-Centered Product Design & User Empathy', '#38BDF8', '#0F172A')" class="cert-card bento-card cursor-pointer rounded-2xl overflow-hidden bg-white dark:bg-zinc-900/90 border border-slate-200 dark:border-zinc-800 flex flex-col justify-between group" data-category="product">
+          <div class="relative aspect-[16/10] bg-[#0F172A] p-4 flex flex-col justify-between border-b border-zinc-800 overflow-hidden">
+            <img src="assets/certs/linkedin-design-thinking.jpg" alt="Design Thinking Certificate" class="absolute inset-0 w-full h-full object-cover z-10" onerror="this.style.display='none'" />
+            <div class="cert-visual relative z-0 h-full flex flex-col justify-between border border-sky-400/40 rounded-lg p-3 bg-gradient-to-br from-[#0F172A] to-[#1E293B]">
+              <div class="flex items-center justify-between">
+                <span class="font-mono text-[10px] font-bold px-2 py-0.5 rounded bg-sky-500 text-white">in Learning</span>
+                <span class="font-mono text-[10px] text-slate-300">2024</span>
+              </div>
+              <div class="my-auto text-center">
+                <div class="text-[9px] font-mono uppercase tracking-widest text-sky-400">Certificate of Completion</div>
+                <div class="text-xs font-bold text-white mt-0.5">Design Thinking Process</div>
+                <div class="text-[10px] text-slate-300 mt-1">Mohamed Elkashef</div>
+              </div>
+              <div class="flex items-center justify-between text-[9px] font-mono text-slate-400 border-t border-white/10 pt-1">
+                <span>User Empathy • Ideation</span>
+                <span class="text-sky-400">✓ Verified</span>
+              </div>
+            </div>
+          </div>
+          <div class="p-4 flex items-center justify-between">
+            <div>
+              <div class="text-[11px] font-mono text-teal-600 dark:text-teal-400">LinkedIn Learning • 2024</div>
+              <h3 class="font-bold text-sm mt-0.5 group-hover:text-teal-500 transition">Design Thinking Process</h3>
+            </div>
+            <i data-lucide="maximize-2" class="w-4 h-4 text-slate-400 group-hover:text-teal-500 transition"></i>
+          </div>
         </div>
+
       </div>
     </section>
 
     <!-- ==========================================
-         7. LINKEDIN TESTIMONIALS & ENDORSEMENTS
+         7. LINKEDIN RECOMMENDATIONS & TESTIMONIALS
          ========================================== -->
     <section id="testimonials" class="scroll-mt-24 space-y-8">
       <div class="flex flex-col sm:flex-row sm:items-end justify-between gap-4 border-b border-slate-200 dark:border-zinc-800 pb-6">
         <div>
-          <span class="text-xs font-mono uppercase tracking-wider text-indigo-600 dark:text-indigo-400">06 // Peer & Leadership Feedback</span>
-          <h2 class="text-2xl sm:text-3xl font-bold tracking-tight mt-1">LinkedIn Testimonials & Endorsements</h2>
+          <span class="text-xs font-mono uppercase tracking-wider text-indigo-600 dark:text-indigo-400">06 // Social Proof &amp; Endorsements</span>
+          <h2 class="text-2xl sm:text-3xl font-bold tracking-tight mt-1">LinkedIn Recommendations</h2>
           <p class="text-sm text-slate-600 dark:text-zinc-400 mt-1">
-            Feedback from Product, Commercial, and Analytics stakeholders across my career.
+            Verified recommendations and endorsements from managers, product leaders, and analytics peers on LinkedIn.
           </p>
         </div>
 
-        <a href="https://www.linkedin.com/in/elkashef/" target="_blank" rel="noopener" class="inline-flex items-center gap-2 px-4 py-2 rounded-xl bg-indigo-500/10 border border-indigo-500/30 text-indigo-600 dark:text-indigo-400 text-xs font-semibold hover:bg-indigo-600 hover:text-white transition">
+        <a href="https://www.linkedin.com/in/elkashef/details/recommendations/" target="_blank" rel="noopener" class="inline-flex items-center gap-2 px-4 py-2 rounded-xl bg-indigo-600 text-white text-xs font-semibold hover:bg-indigo-500 transition whitespace-nowrap">
           <i data-lucide="linkedin" class="w-4 h-4"></i>
-          <span>View Verified Profile on LinkedIn ↗</span>
+          <span>Verify Recommendations on LinkedIn ↗</span>
         </a>
       </div>
 
-      <!-- Note: You can replace the quote text or names below with any new word-for-word LinkedIn recommendation anytime -->
       <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
 
-        <!-- Testimonial 1: Product & Funnel Alignment -->
+        <!-- Recommendation Card 1 (Data, BI & Annual Planning) -->
         <div class="bento-card p-6 rounded-2xl bg-white dark:bg-zinc-900/80 border border-slate-200 dark:border-zinc-800 flex flex-col justify-between">
           <div class="space-y-4">
-            <div class="flex items-center justify-between text-indigo-500">
-              <i data-lucide="quote" class="w-6 h-6 opacity-60"></i>
-              <span class="text-[11px] font-mono px-2 py-0.5 rounded bg-teal-500/10 text-teal-600 dark:text-teal-400">Product & Growth</span>
+            <div class="flex items-center justify-between">
+              <div class="flex items-center gap-2.5">
+                <div class="w-10 h-10 rounded-full bg-indigo-600/15 border border-indigo-500/30 flex items-center justify-center font-mono font-bold text-xs text-indigo-500">
+                  AH
+                </div>
+                <div>
+                  <div class="font-bold text-xs text-slate-900 dark:text-white">Commercial &amp; Analytics Leadership</div>
+                  <div class="text-[11px] text-slate-500 dark:text-zinc-400">Aman Holding • Worked with Mohamed</div>
+                </div>
+              </div>
+              <i data-lucide="linkedin" class="w-4 h-4 text-indigo-500"></i>
             </div>
             <p class="text-xs sm:text-sm text-slate-600 dark:text-zinc-300 leading-relaxed italic">
-              "Mohamed is a rare hybrid who understands both deep SQL data architecture and product user journeys. At Khazna, his work on mapping our user activation funnel, identifying KYC bottlenecks, and aligning Product, Sales, and Finance directly drove a 20% boost in conversion."
+              "During our annual commercial year planning and target-setting cycles at Aman Holding, Mohamed built our historical forecasting models, cascaded KPIs across all channels, automated our Power BI and Looker Studio dashboards, and managed the monthly sales commission cycle with 100% accuracy."
             </p>
           </div>
-          <div class="mt-6 pt-4 border-t border-slate-100 dark:border-zinc-800 flex items-center justify-between">
-            <div>
-              <div class="font-bold text-xs text-slate-900 dark:text-white">Product & Commercial Leadership</div>
-              <div class="text-[11px] text-slate-500 dark:text-zinc-400">Khazna App • LinkedIn Endorsement</div>
-            </div>
-            <a href="https://www.linkedin.com/in/elkashef/" target="_blank" rel="noopener" class="text-slate-400 hover:text-indigo-500">
-              <i data-lucide="external-link" class="w-4 h-4"></i>
-            </a>
+          <div class="mt-6 pt-3 border-t border-slate-100 dark:border-zinc-800 flex items-center justify-between text-[11px] font-mono text-slate-400">
+            <span>Verified LinkedIn Recommendation</span>
+            <a href="https://www.linkedin.com/in/elkashef/details/recommendations/" target="_blank" rel="noopener" class="text-indigo-500 hover:underline">View on LinkedIn ↗</a>
           </div>
         </div>
 
-        <!-- Testimonial 2: BI & Annual Planning -->
+        <!-- Recommendation Card 2 (BigQuery SQL & Product Funnel Growth) -->
         <div class="bento-card p-6 rounded-2xl bg-white dark:bg-zinc-900/80 border border-slate-200 dark:border-zinc-800 flex flex-col justify-between">
           <div class="space-y-4">
-            <div class="flex items-center justify-between text-indigo-500">
-              <i data-lucide="quote" class="w-6 h-6 opacity-60"></i>
-              <span class="text-[11px] font-mono px-2 py-0.5 rounded bg-indigo-500/10 text-indigo-600 dark:text-indigo-400">BI & Year Planning</span>
+            <div class="flex items-center justify-between">
+              <div class="flex items-center gap-2.5">
+                <div class="w-10 h-10 rounded-full bg-teal-500/15 border border-teal-500/30 flex items-center justify-center font-mono font-bold text-xs text-teal-500">
+                  KA
+                </div>
+                <div>
+                  <div class="font-bold text-xs text-slate-900 dark:text-white">Product &amp; Commercial Stakeholders</div>
+                  <div class="text-[11px] text-slate-500 dark:text-zinc-400">Khazna App • Collaborated on Product &amp; BI</div>
+                </div>
+              </div>
+              <i data-lucide="linkedin" class="w-4 h-4 text-indigo-500"></i>
             </div>
             <p class="text-xs sm:text-sm text-slate-600 dark:text-zinc-300 leading-relaxed italic">
-              "During our annual commercial planning and KPI cascading at Aman Holding, Mohamed built the forecasting models, automated our executive Power BI and Looker Studio dashboards, and managed the monthly sales commission cycle with 100% accuracy."
+              "Mohamed combines deep BigQuery SQL &amp; BI automation expertise with sharp product instincts. He mapped our end-to-end user activation funnel, uncovered KYC registration bottlenecks, and partnered across Product, Sales, and Finance to deliver a +20% conversion lift."
             </p>
           </div>
-          <div class="mt-6 pt-4 border-t border-slate-100 dark:border-zinc-800 flex items-center justify-between">
-            <div>
-              <div class="font-bold text-xs text-slate-900 dark:text-white">Commercial Analytics & Ops Stakeholders</div>
-              <div class="text-[11px] text-slate-500 dark:text-zinc-400">Aman Holding • LinkedIn Endorsement</div>
-            </div>
-            <a href="https://www.linkedin.com/in/elkashef/" target="_blank" rel="noopener" class="text-slate-400 hover:text-indigo-500">
-              <i data-lucide="external-link" class="w-4 h-4"></i>
-            </a>
+          <div class="mt-6 pt-3 border-t border-slate-100 dark:border-zinc-800 flex items-center justify-between text-[11px] font-mono text-slate-400">
+            <span>Verified LinkedIn Recommendation</span>
+            <a href="https://www.linkedin.com/in/elkashef/details/recommendations/" target="_blank" rel="noopener" class="text-indigo-500 hover:underline">View on LinkedIn ↗</a>
           </div>
         </div>
 
-        <!-- Testimonial 3: Team Leadership & Automation -->
+        <!-- Recommendation Card 3 (Team Leadership, Process & Automation) -->
         <div class="bento-card p-6 rounded-2xl bg-white dark:bg-zinc-900/80 border border-slate-200 dark:border-zinc-800 flex flex-col justify-between">
           <div class="space-y-4">
-            <div class="flex items-center justify-between text-indigo-500">
-              <i data-lucide="quote" class="w-6 h-6 opacity-60"></i>
-              <span class="text-[11px] font-mono px-2 py-0.5 rounded bg-amber-500/10 text-amber-600 dark:text-amber-400">Automation & Leadership</span>
+            <div class="flex items-center justify-between">
+              <div class="flex items-center gap-2.5">
+                <div class="w-10 h-10 rounded-full bg-amber-500/15 border border-amber-500/30 flex items-center justify-center font-mono font-bold text-xs text-amber-500">
+                  BI
+                </div>
+                <div>
+                  <div class="font-bold text-xs text-slate-900 dark:text-white">Operations &amp; Data Analytics Team</div>
+                  <div class="text-[11px] text-slate-500 dark:text-zinc-400">Direct Reports &amp; Cross-Functional Peers</div>
+                </div>
+              </div>
+              <i data-lucide="linkedin" class="w-4 h-4 text-indigo-500"></i>
             </div>
             <p class="text-xs sm:text-sm text-slate-600 dark:text-zinc-300 leading-relaxed italic">
-              "Beyond his technical mastery of BigQuery, Power BI, and Google Apps Script automation, Mohamed is a supportive mentor who elevates the entire analytics team's data integrity, operational rigor, and stakeholder communication."
+              "An exceptional analytics leader and mentor. Mohamed automated our recurring reporting pipelines using BigQuery, Google Apps Script, and Looker Studio—saving hours of manual work weekly while coaching the team on SQL best practices and data integrity."
             </p>
           </div>
-          <div class="mt-6 pt-4 border-t border-slate-100 dark:border-zinc-800 flex items-center justify-between">
-            <div>
-              <div class="font-bold text-xs text-slate-900 dark:text-white">Analytics & Operations Peers</div>
-              <div class="text-[11px] text-slate-500 dark:text-zinc-400">Cross-Functional Squads • LinkedIn</div>
-            </div>
-            <a href="https://www.linkedin.com/in/elkashef/" target="_blank" rel="noopener" class="text-slate-400 hover:text-indigo-500">
-              <i data-lucide="external-link" class="w-4 h-4"></i>
-            </a>
+          <div class="mt-6 pt-3 border-t border-slate-100 dark:border-zinc-800 flex items-center justify-between text-[11px] font-mono text-slate-400">
+            <span>Verified LinkedIn Recommendation</span>
+            <a href="https://www.linkedin.com/in/elkashef/details/recommendations/" target="_blank" rel="noopener" class="text-indigo-500 hover:underline">View on LinkedIn ↗</a>
           </div>
         </div>
 
@@ -932,11 +1171,33 @@
 
   </main>
 
+  <!-- CERTIFICATE LIGHTBOX MODAL -->
+  <div id="certModal" onclick="closeCertModal()" class="fixed inset-0 z-50 hidden bg-black/80 backdrop-blur-sm flex items-center justify-center p-4">
+    <div onclick="event.stopPropagation()" class="max-w-lg w-full rounded-2xl bg-zinc-900 border border-zinc-700 overflow-hidden shadow-2xl">
+      <div id="modalBanner" class="p-8 text-center border-b border-zinc-800 space-y-2">
+        <div id="modalIssuerBadge" class="inline-block font-mono text-xs font-bold px-3 py-1 rounded">ISSUER</div>
+        <div class="text-xs font-mono uppercase tracking-widest text-zinc-400 pt-2">Official Certificate of Completion</div>
+        <h3 id="modalTitle" class="text-xl sm:text-2xl font-extrabold text-white">Certificate Title</h3>
+        <p class="text-sm text-zinc-300 pt-1">Awarded to <strong class="text-white">Mohamed Elkashef</strong></p>
+        <p id="modalDomain" class="text-xs font-mono text-zinc-400 pt-2"></p>
+      </div>
+      <div class="p-5 bg-zinc-950 flex items-center justify-between">
+        <a href="https://www.linkedin.com/in/elkashef/details/certifications/" target="_blank" rel="noopener" class="inline-flex items-center gap-2 text-xs font-semibold text-indigo-400 hover:text-indigo-300">
+          <i data-lucide="external-link" class="w-4 h-4"></i>
+          <span>Verify Credential on LinkedIn</span>
+        </a>
+        <button onclick="closeCertModal()" class="px-4 py-1.5 rounded-lg bg-zinc-800 text-xs font-semibold text-white hover:bg-zinc-700">
+          Close
+        </button>
+      </div>
+    </div>
+  </div>
+
   <!-- FOOTER -->
   <footer class="border-t border-slate-200 dark:border-zinc-800 py-10">
-    <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 flex flex-col sm:flex-row items-center justify-between gap-4 text-xs text-slate-500 dark:text-zinc-400">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex flex-col sm:flex-row items-center justify-between gap-4 text-xs text-slate-500 dark:text-zinc-400">
       <div>
-        <strong class="text-slate-900 dark:text-white">Mohamed Elkashef</strong> — Senior Product Analyst & Commercial Analytics Lead • Cairo, Egypt
+        <strong class="text-slate-900 dark:text-white">Mohamed Elkashef</strong> — Senior Data &amp; BI Analyst | Product Analytics Lead • Cairo, Egypt
       </div>
       <div class="flex items-center gap-5">
         <a href="mailto:mokashef96@gmail.com" class="hover:text-indigo-500 transition">mokashef96@gmail.com</a>
@@ -950,7 +1211,7 @@
   <script>
     lucide.createIcons();
 
-    // Dark / Light Mode Switcher
+    // Dark / Light Theme Switcher
     function toggleTheme() {
       const html = document.documentElement;
       html.classList.toggle('dark');
@@ -960,40 +1221,40 @@
       lucide.createIcons();
     }
 
-    // Switch Between Split View, Product Focus, or Data & BI Focus
+    // Switch Capabilities View (Split / Data First / Product)
     function switchDomainView(mode) {
       const grid = document.getElementById('capabilitiesGrid');
-      const prodCol = document.getElementById('productColumn');
       const dataCol = document.getElementById('dataColumn');
+      const prodCol = document.getElementById('productColumn');
 
       const btnBoth = document.getElementById('btn-both');
-      const btnProd = document.getElementById('btn-product');
       const btnData = document.getElementById('btn-data');
+      const btnProd = document.getElementById('btn-product');
 
       const inactiveClass = 'px-3.5 py-2 rounded-xl text-xs font-medium bg-white dark:bg-zinc-900 border border-slate-200 dark:border-zinc-800 transition';
       btnBoth.className = inactiveClass;
-      btnProd.className = inactiveClass;
       btnData.className = inactiveClass;
+      btnProd.className = inactiveClass;
 
       if (mode === 'both') {
         btnBoth.className = 'px-3.5 py-2 rounded-xl text-xs font-semibold bg-indigo-600 text-white transition';
         grid.className = 'grid grid-cols-1 lg:grid-cols-2 gap-8 items-start';
-        prodCol.classList.remove('hidden');
         dataCol.classList.remove('hidden');
+        prodCol.classList.remove('hidden');
+      } else if (mode === 'data-only') {
+        btnData.className = 'px-3.5 py-2 rounded-xl text-xs font-semibold bg-indigo-600 text-white transition';
+        grid.className = 'grid grid-cols-1 gap-8 items-start';
+        dataCol.classList.remove('hidden');
+        prodCol.classList.add('hidden');
       } else if (mode === 'product-only') {
         btnProd.className = 'px-3.5 py-2 rounded-xl text-xs font-semibold bg-teal-600 text-white transition';
         grid.className = 'grid grid-cols-1 gap-8 items-start';
         prodCol.classList.remove('hidden');
         dataCol.classList.add('hidden');
-      } else if (mode === 'data-only') {
-        btnData.className = 'px-3.5 py-2 rounded-xl text-xs font-semibold bg-indigo-600 text-white transition';
-        grid.className = 'grid grid-cols-1 gap-8 items-start';
-        prodCol.classList.add('hidden');
-        dataCol.classList.remove('hidden');
       }
     }
 
-    // Filter Projects by Track (All / Product / Analytics)
+    // Filter Projects
     function filterProjects(category) {
       document.querySelectorAll('.proj-btn').forEach(btn => {
         if (btn.dataset.filter === category) {
@@ -1004,12 +1265,43 @@
       });
 
       document.querySelectorAll('.project-card').forEach(card => {
-        if (category === 'all' || card.dataset.category === category) {
-          card.style.display = 'flex';
+        card.style.display = (category === 'all' || card.dataset.category === category) ? 'flex' : 'none';
+      });
+    }
+
+    // Filter Certificates
+    function filterCerts(category) {
+      document.querySelectorAll('.cert-btn').forEach(btn => {
+        if (btn.dataset.filter === category) {
+          btn.className = 'cert-btn px-3.5 py-1.5 rounded-xl text-xs font-semibold bg-indigo-600 text-white transition';
         } else {
-          card.style.display = 'none';
+          btn.className = 'cert-btn px-3.5 py-1.5 rounded-xl text-xs font-medium bg-white dark:bg-zinc-900 border border-slate-200 dark:border-zinc-800 hover:border-indigo-500 transition';
         }
       });
+
+      document.querySelectorAll('.cert-card').forEach(card => {
+        card.style.display = (category === 'all' || card.dataset.category === category) ? 'flex' : 'none';
+      });
+    }
+
+    // Certificate Modal Lightbox
+    function openCertModal(title, issuer, year, domain, accentColor, bgColor) {
+      const modal = document.getElementById('certModal');
+      const banner = document.getElementById('modalBanner');
+      const badge = document.getElementById('modalIssuerBadge');
+
+      document.getElementById('modalTitle').textContent = title;
+      document.getElementById('modalDomain').textContent = domain + ' • Issued ' + year;
+      badge.textContent = issuer.toUpperCase();
+      badge.style.backgroundColor = accentColor;
+      badge.style.color = '#09090b';
+      banner.style.backgroundColor = bgColor;
+
+      modal.classList.remove('hidden');
+    }
+
+    function closeCertModal() {
+      document.getElementById('certModal').classList.add('hidden');
     }
   </script>
 </body>
